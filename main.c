@@ -32,6 +32,8 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
+#include <stddef.h>
+
 #include "mcc_generated_files/system/system.h"
 #include "mcc_generated_files/system/pins.h"
 #include "mcc_generated_files/adc/adc.h"
@@ -41,6 +43,7 @@
 #include "controller.h"
 #include "mcc_generated_files/timer/tmr6.h"
 #include "ledstrip.h"
+#include "I2Creader.h"
 
 /*
     Main application
@@ -67,13 +70,14 @@ int main(void)
 
     initAdcMultiplexer();
     tmr_controller_OverflowCallbackRegister(controller);
-    initLedstrip();
+    // initLedstrip();
+    I2C_Master_Init();
     
     while(1)
     {
         uartHandler();
         
-        LED_D4_SetLow();
+        /*LED_D4_SetLow();
         LED_D5_SetLow();
         LED_D6_SetLow();
 
@@ -87,10 +91,15 @@ int main(void)
         }
         if (potwaarde > 768) { //bepaal een goede grenswaarde
             LED_D6_SetHigh();
-        }
+        }*/
+        
         __delay_ms(100); //korte delay voor zichtbaar effect
         
-        printLogs();
-        tmr_ledstrip_Tasks();
+        printOut("HHH\r\n");
+        // staat tijdelijk af
+        // printLogs();
+        
+        // turned off until I²C works. make sure to set pins B4 to SDO1 and B6 to SCK1
+        // tmr_ledstrip_Tasks();
     }    
 }

@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"61 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 61: void SYSTEM_Initialize(void);
+"62 ./mcc_generated_files/system/system.h
+[; ;./mcc_generated_files/system/system.h: 62: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 357:     struct {
@@ -17,43 +17,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17 ./adcMeasurements.h
 [; ;./adcMeasurements.h: 17: void initAdcMultiplexer(void);
 [v _initAdcMultiplexer `(v ~T0 @X0 0 ef ]
-[v F7269 `(v ~T0 @X0 0 tf ]
+[v F7369 `(v ~T0 @X0 0 tf ]
 "260 ./mcc_generated_files/system/../timer/tmr4.h
 [; ;./mcc_generated_files/system/../timer/tmr4.h: 260: void TMR4_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR4_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F7269 ]
+[v _TMR4_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F7369 ]
 "15 ./controller.h
 [; ;./controller.h: 15: void controller(void);
 [v _controller `(v ~T0 @X0 0 ef ]
-"15 ./ledstrip.h
-[; ;./ledstrip.h: 15: void initLedstrip(void);
-[v _initLedstrip `(v ~T0 @X0 0 ef ]
+"15 ./I2Creader.h
+[; ;./I2Creader.h: 15: void I2C_Master_Init(void);
+[v _I2C_Master_Init `(v ~T0 @X0 0 ef ]
 "16 ./UART.h
 [; ;./UART.h: 16: void uartHandler(void);
 [v _uartHandler `(v ~T0 @X0 0 ef ]
-"2299 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2299:     struct {
-[s S119 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S119 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"2298
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2298: typedef union {
-[u S118 `S119 1 ]
-[n S118 . . ]
-"2308
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2308: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS118 ~T0 @X0 0 e@268 ]
-"19 ./adcMeasurements.h
-[; ;./adcMeasurements.h: 19: uint16_t getPotentiometer(void);
-[v _getPotentiometer `(us ~T0 @X0 0 ef ]
-[v F202 `(v ~T0 @X0 1 tf1`ul ]
+[v F203 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
-[v __delay `JF202 ~T0 @X0 0 e ]
+[v __delay `JF203 ~T0 @X0 0 e ]
 [p i __delay ]
-"15 ./UART.h
-[; ;./UART.h: 15: void printLogs(void);
-[v _printLogs `(v ~T0 @X0 0 ef ]
-"260 ./mcc_generated_files/system/../timer/tmr6.h
-[; ;./mcc_generated_files/system/../timer/tmr6.h: 260: void TMR6_Tasks(void);
-[v _TMR6_Tasks `(v ~T0 @X0 0 ef ]
+"20 ./UART.h
+[; ;./UART.h: 20: void printOut(char*);
+[v _printOut `(v ~T0 @X0 0 ef1`*uc ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1114,127 +1097,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 19640: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49 main.c
-[; ;main.c: 49: int main(void)
+"52 main.c
+[; ;main.c: 52: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"50
-[; ;main.c: 50: {
+"53
+[; ;main.c: 53: {
 {
 [e :U _main ]
 [f ]
-"51
-[; ;main.c: 51:     SYSTEM_Initialize();
+"54
+[; ;main.c: 54:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"57
-[; ;main.c: 57:     (INTCONbits.GIE = 1);
+"60
+[; ;main.c: 60:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"63
-[; ;main.c: 63:     (INTCONbits.PEIE = 1);
+"66
+[; ;main.c: 66:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"68
-[; ;main.c: 68:     initAdcMultiplexer();
+"71
+[; ;main.c: 71:     initAdcMultiplexer();
 [e ( _initAdcMultiplexer ..  ]
-"69
-[; ;main.c: 69:     TMR4_PeriodMatchCallbackRegister(controller);
-[e ( _TMR4_PeriodMatchCallbackRegister (1 &U _controller ]
-"70
-[; ;main.c: 70:     initLedstrip();
-[e ( _initLedstrip ..  ]
 "72
-[; ;main.c: 72:     while(1)
-[e :U 970 ]
-"73
-[; ;main.c: 73:     {
-{
+[; ;main.c: 72:     TMR4_PeriodMatchCallbackRegister(controller);
+[e ( _TMR4_PeriodMatchCallbackRegister (1 &U _controller ]
 "74
-[; ;main.c: 74:         uartHandler();
-[e ( _uartHandler ..  ]
+[; ;main.c: 74:     I2C_Master_Init();
+[e ( _I2C_Master_Init ..  ]
 "76
-[; ;main.c: 76:         do { LATAbits.LATA5 = 0; } while(0);
-[e :U 974 ]
-{
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-}
+[; ;main.c: 76:     while(1)
 [e :U 973 ]
 "77
-[; ;main.c: 77:         do { LATAbits.LATA1 = 0; } while(0);
-[e :U 977 ]
+[; ;main.c: 77:     {
 {
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 976 ]
 "78
-[; ;main.c: 78:         do { LATAbits.LATA2 = 0; } while(0);
-[e :U 980 ]
-{
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 979 ]
-"80
-[; ;main.c: 80:         uint16_t potwaarde = getPotentiometer();
-[v _potwaarde `us ~T0 @X0 1 a ]
-[e = _potwaarde ( _getPotentiometer ..  ]
-"82
-[; ;main.c: 82:         if (potwaarde > 256) {
-[e $ ! > -> _potwaarde `ui -> -> 256 `i `ui 981  ]
-{
-"83
-[; ;main.c: 83:             do { LATAbits.LATA5 = 1; } while(0);
-[e :U 984 ]
-{
-[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-}
-[e :U 983 ]
-"84
-[; ;main.c: 84:         }
-}
-[e :U 981 ]
-"85
-[; ;main.c: 85:         if (potwaarde > 512) {
-[e $ ! > -> _potwaarde `ui -> -> 512 `i `ui 985  ]
-{
-"86
-[; ;main.c: 86:             do { LATAbits.LATA1 = 1; } while(0);
-[e :U 988 ]
-{
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-}
-[e :U 987 ]
-"87
-[; ;main.c: 87:         }
-}
-[e :U 985 ]
-"88
-[; ;main.c: 88:         if (potwaarde > 768) {
-[e $ ! > -> _potwaarde `ui -> -> 768 `i `ui 989  ]
-{
-"89
-[; ;main.c: 89:             do { LATAbits.LATA2 = 1; } while(0);
-[e :U 992 ]
-{
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
-}
-[e :U 991 ]
-"90
-[; ;main.c: 90:         }
-}
-[e :U 989 ]
-"91
-[; ;main.c: 91:         _delay((unsigned long)((100)*(32000000U/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
-"93
-[; ;main.c: 93:         printLogs();
-[e ( _printLogs ..  ]
-"94
-[; ;main.c: 94:         TMR6_Tasks();
-[e ( _TMR6_Tasks ..  ]
-"95
-[; ;main.c: 95:     }
-}
-[e :U 969 ]
-[e $U 970  ]
-[e :U 971 ]
+[; ;main.c: 78:         uartHandler();
+[e ( _uartHandler ..  ]
 "96
-[; ;main.c: 96: }
-[e :UE 968 ]
+[; ;main.c: 96:         _delay((unsigned long)((100)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"98
+[; ;main.c: 98:         printOut("HHH\r\n");
+[e ( _printOut (1 :s 1C ]
+"104
+[; ;main.c: 104:     }
 }
+[e :U 972 ]
+[e $U 973  ]
+[e :U 974 ]
+"105
+[; ;main.c: 105: }
+[e :UE 971 ]
+}
+[a 1C 72 72 72 13 10 0 ]

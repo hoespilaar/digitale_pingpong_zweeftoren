@@ -17,6 +17,8 @@ void uartHandler(void);
 void printFloat(float);
 float str2float(char);
 
+void printOut(char*);
+
 #ifdef	__cplusplus
 }
 #endif

@@ -88,6 +88,10 @@ void printLogs(void) {
     }
 }
 
+void printOut(char* str) {
+    printf(str);
+}
+
 void uartHandler(void) {
     char *str = readLine();
     switch (*str) { //*str is het eerste karakter van de gelezen lijn
@@ -121,5 +125,3 @@ void uartHandler(void) {
             printf("Unkown command\r\n");
     };
 }
-
-//Print een float met 3 cijfers na de komma

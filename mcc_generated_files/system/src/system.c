@@ -45,6 +45,7 @@ void SYSTEM_Initialize(void)
     TMR6_Initialize();
     ADC_Initialize();
     EUSART_Initialize();
+    I2C2_Initialize();
     pwm_fan_Initialize();
     SPI1_Initialize();
     INTERRUPT_Initialize();

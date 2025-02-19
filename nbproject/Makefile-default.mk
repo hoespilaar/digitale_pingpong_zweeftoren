@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/adc/src/adc.c mcc_generated_files/pwm/src/pwm5.c mcc_generated_files/spi/src/mssp1.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/timer/src/tmr2.c mcc_generated_files/timer/src/tmr4.c mcc_generated_files/timer/src/tmr6.c mcc_generated_files/uart/src/eusart.c main.c adcMeasurements.c UART.c controller.c ledstrip.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/adc/src/adc.c mcc_generated_files/pwm/src/pwm5.c mcc_generated_files/spi/src/mssp1.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/timer/src/tmr2.c mcc_generated_files/timer/src/tmr4.c mcc_generated_files/timer/src/tmr6.c mcc_generated_files/uart/src/eusart.c main.c adcMeasurements.c UART.c controller.c ledstrip.c mcc_generated_files/i2c_host/src/mssp2.c I2Creader.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm5.p1 ${OBJECTDIR}/mcc_generated_files/spi/src/mssp1.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr4.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/eusart.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/adcMeasurements.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/controller.p1 ${OBJECTDIR}/ledstrip.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1.d ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm5.p1.d ${OBJECTDIR}/mcc_generated_files/spi/src/mssp1.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr2.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr4.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d ${OBJECTDIR}/mcc_generated_files/uart/src/eusart.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/adcMeasurements.p1.d ${OBJECTDIR}/UART.p1.d ${OBJECTDIR}/controller.p1.d ${OBJECTDIR}/ledstrip.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm5.p1 ${OBJECTDIR}/mcc_generated_files/spi/src/mssp1.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr4.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/eusart.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/adcMeasurements.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/controller.p1 ${OBJECTDIR}/ledstrip.p1 ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1 ${OBJECTDIR}/I2Creader.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1.d ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm5.p1.d ${OBJECTDIR}/mcc_generated_files/spi/src/mssp1.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr2.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr4.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d ${OBJECTDIR}/mcc_generated_files/uart/src/eusart.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/adcMeasurements.p1.d ${OBJECTDIR}/UART.p1.d ${OBJECTDIR}/controller.p1.d ${OBJECTDIR}/ledstrip.p1.d ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1.d ${OBJECTDIR}/I2Creader.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm5.p1 ${OBJECTDIR}/mcc_generated_files/spi/src/mssp1.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr4.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/eusart.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/adcMeasurements.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/controller.p1 ${OBJECTDIR}/ledstrip.p1
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1 ${OBJECTDIR}/mcc_generated_files/pwm/src/pwm5.p1 ${OBJECTDIR}/mcc_generated_files/spi/src/mssp1.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr4.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 ${OBJECTDIR}/mcc_generated_files/uart/src/eusart.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/adcMeasurements.p1 ${OBJECTDIR}/UART.p1 ${OBJECTDIR}/controller.p1 ${OBJECTDIR}/ledstrip.p1 ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1 ${OBJECTDIR}/I2Creader.p1
 
 # Source Files
-SOURCEFILES=mcc_generated_files/adc/src/adc.c mcc_generated_files/pwm/src/pwm5.c mcc_generated_files/spi/src/mssp1.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/timer/src/tmr2.c mcc_generated_files/timer/src/tmr4.c mcc_generated_files/timer/src/tmr6.c mcc_generated_files/uart/src/eusart.c main.c adcMeasurements.c UART.c controller.c ledstrip.c
+SOURCEFILES=mcc_generated_files/adc/src/adc.c mcc_generated_files/pwm/src/pwm5.c mcc_generated_files/spi/src/mssp1.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/system.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/timer/src/tmr2.c mcc_generated_files/timer/src/tmr4.c mcc_generated_files/timer/src/tmr6.c mcc_generated_files/uart/src/eusart.c main.c adcMeasurements.c UART.c controller.c ledstrip.c mcc_generated_files/i2c_host/src/mssp2.c I2Creader.c
 
 
 
@@ -224,6 +224,22 @@ ${OBJECTDIR}/ledstrip.p1: ledstrip.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/ledstrip.d ${OBJECTDIR}/ledstrip.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ledstrip.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1: mcc_generated_files/i2c_host/src/mssp2.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/i2c_host/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1 mcc_generated_files/i2c_host/src/mssp2.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.d ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/I2Creader.p1: I2Creader.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2Creader.p1.d 
+	@${RM} ${OBJECTDIR}/I2Creader.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/I2Creader.p1 I2Creader.c 
+	@-${MV} ${OBJECTDIR}/I2Creader.d ${OBJECTDIR}/I2Creader.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/I2Creader.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1: mcc_generated_files/adc/src/adc.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/adc/src" 
@@ -360,6 +376,22 @@ ${OBJECTDIR}/ledstrip.p1: ledstrip.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/ledstrip.p1 ledstrip.c 
 	@-${MV} ${OBJECTDIR}/ledstrip.d ${OBJECTDIR}/ledstrip.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ledstrip.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1: mcc_generated_files/i2c_host/src/mssp2.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/i2c_host/src" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1 mcc_generated_files/i2c_host/src/mssp2.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.d ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/I2Creader.p1: I2Creader.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2Creader.p1.d 
+	@${RM} ${OBJECTDIR}/I2Creader.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/I2Creader.p1 I2Creader.c 
+	@-${MV} ${OBJECTDIR}/I2Creader.d ${OBJECTDIR}/I2Creader.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/I2Creader.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

@@ -859,11 +859,11 @@ static char dbuf[32];
 
 
 
+static int nout;
 
 
 
-
-static void pad(FILE *fp, char *buf, int p)
+static int pad(FILE *fp, char *buf, int p)
 {
     int i;
 
@@ -894,11 +894,11 @@ static void pad(FILE *fp, char *buf, int p)
 
 
 
-
+    return (int)(strlen(buf) + (size_t)p);
 
 }
 # 513 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
-static void dtoa(FILE *fp, vfpf_sint_t d)
+static int dtoa(FILE *fp, vfpf_sint_t d)
 {
  char s;
     int i, w;
@@ -951,10 +951,10 @@ static void dtoa(FILE *fp, vfpf_sint_t d)
     }
 
 
-    return (void) pad(fp, &dbuf[i], w);
+    return (int) pad(fp, &dbuf[i], w);
 }
 # 1001 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
-static void utoa(FILE *fp, vfpf_uint_t d)
+static int utoa(FILE *fp, vfpf_uint_t d)
 {
     int i, w;
 
@@ -989,7 +989,7 @@ static void utoa(FILE *fp, vfpf_uint_t d)
     }
 
 
-    return (void) pad(fp, &dbuf[i], w);
+    return (int) pad(fp, &dbuf[i], w);
 }
 # 1157 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
 static int
@@ -1011,7 +1011,7 @@ read_prec_or_width (const char **fmt, va_list *ap) {
 
 
 
-static void
+static int
 vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
 {
     char c, *cp;
@@ -1068,7 +1068,7 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
 
    *fmt = cp+1;
 # 1432 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
-   return (void) dtoa(fp, convarg.sint);
+   return (int) dtoa(fp, convarg.sint);
 
   }
 
@@ -1088,19 +1088,38 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
 # 1523 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
     case 'u':
 # 1542 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
-     return (void) utoa(fp, convarg.uint);
+     return (int) utoa(fp, convarg.uint);
 # 1589 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
    }
   }
-# 1806 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+
+
+
+
+  if (*cp == 'n') {
+# 1638 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+   *(*(int* *)__va_arg(*(int* **)ap, (int*)0)) = (int) nout;
+
+   *fmt = cp+1;
+   return (int) 0;
+  }
+# 1798 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
+        if ((*fmt)[0] == '%') {
+            ++*fmt;
+            fputc((int)'%', fp);
+            return (int) 1;
+        }
+
+
+
         ++*fmt;
-        return (void) 0;
+        return (int) 0;
     }
 
 
     fputc((int)(*fmt)[0], fp);
     ++*fmt;
-    return (void) 1;
+    return (int) 1;
 }
 
 
@@ -1111,11 +1130,11 @@ int vfprintf(FILE *fp, const char *fmt, va_list ap)
 
     cfmt = (char *)fmt;
 
-
+    nout = 0;
 
     while (*cfmt) {
 
-
+        nout +=
 
    vfpfcnvrt(fp, &cfmt, ap);
     }

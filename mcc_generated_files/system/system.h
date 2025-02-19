@@ -43,6 +43,7 @@
 #include "../system/pins.h"
 #include "../adc/adc.h"
 #include "../uart/eusart.h"
+#include "../i2c_host/mssp2.h"
 #include "../pwm/pwm5.h"
 #include "../spi/mssp1.h"
 #include "../system/interrupt.h"

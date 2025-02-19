@@ -8,6 +8,27 @@
 # 2 "<built-in>" 2
 # 1 "main.c" 2
 # 35 "main.c"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef long int wchar_t;
+# 128 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef unsigned size_t;
+# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 174 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 210 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __uint24 uint24_t;
+# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
+# 36 "main.c" 2
+
 # 1 "./mcc_generated_files/system/system.h" 1
 # 39 "./mcc_generated_files/system/system.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -22,28 +43,11 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
-
-
-
-
-
+# 10 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/features.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef long int wchar_t;
-# 128 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef unsigned size_t;
-# 174 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 210 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef __uint24 uint24_t;
 # 22 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
 
 int atoi (const char *);
@@ -11448,14 +11452,7 @@ char *tempnam(const char *, const char *);
 # 1 "./mcc_generated_files/system/system.h" 1
 # 47 "./mcc_generated_files/system/../uart/eusart.h" 2
 # 1 "./mcc_generated_files/system/../uart/uart_drv_interface.h" 1
-# 41 "./mcc_generated_files/system/../uart/uart_drv_interface.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
-# 42 "./mcc_generated_files/system/../uart/uart_drv_interface.h" 2
+# 42 "./mcc_generated_files/system/../uart/uart_drv_interface.h"
 # 1 "./mcc_generated_files/system/../uart/uart_types.h" 1
 # 57 "./mcc_generated_files/system/../uart/uart_types.h"
 enum UART_STANDARD_BAUDS{
@@ -11728,6 +11725,113 @@ int getch(void);
 
 void putch(char txData);
 # 46 "./mcc_generated_files/system/system.h" 2
+# 1 "./mcc_generated_files/system/../i2c_host/mssp2.h" 1
+# 45 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+# 1 "./mcc_generated_files/system/../i2c_host/i2c_host_event_types.h" 1
+# 39 "./mcc_generated_files/system/../i2c_host/i2c_host_event_types.h"
+# 1 "./mcc_generated_files/system/../i2c_host/i2c_host_types.h" 1
+# 46 "./mcc_generated_files/system/../i2c_host/i2c_host_types.h"
+typedef enum
+{
+    I2C_ERROR_NONE,
+    I2C_ERROR_ADDR_NACK,
+    I2C_ERROR_DATA_NACK,
+    I2C_ERROR_BUS_COLLISION,
+} i2c_host_error_t;
+# 64 "./mcc_generated_files/system/../i2c_host/i2c_host_types.h"
+typedef struct i2c_transfer_setup
+{
+  uint32_t clkSpeed;
+} i2c_host_transfer_setup_t;
+# 40 "./mcc_generated_files/system/../i2c_host/i2c_host_event_types.h" 2
+# 49 "./mcc_generated_files/system/../i2c_host/i2c_host_event_types.h"
+typedef enum
+{
+    I2C_STATE_IDLE = 0,
+    I2C_STATE_SEND_RD_ADDR,
+    I2C_STATE_SEND_WR_ADDR,
+    I2C_STATE_TX,
+    I2C_STATE_RX,
+    I2C_STATE_NACK,
+    I2C_STATE_ERROR,
+    I2C_STATE_STOP,
+    I2C_STATE_RESET
+} i2c_host_event_states_t;
+
+
+
+
+
+
+typedef struct
+{
+    _Bool busy;
+    uint16_t address;
+    uint8_t *writePtr;
+    size_t writeLength;
+    uint8_t *readPtr;
+    size_t readLength;
+    _Bool switchToRead;
+    i2c_host_error_t errorState;
+    i2c_host_event_states_t state;
+} i2c_host_event_status_t;
+
+typedef i2c_host_event_states_t (*i2c2eventHandler)(void);
+
+extern volatile i2c_host_event_status_t i2c2Status;
+extern const i2c2eventHandler i2c2_eventTable[(9)];
+# 46 "./mcc_generated_files/system/../i2c_host/mssp2.h" 2
+# 1 "./mcc_generated_files/system/../i2c_host/i2c_host_interface.h" 1
+# 52 "./mcc_generated_files/system/../i2c_host/i2c_host_interface.h"
+typedef struct
+{
+    void (*Initialize)(void);
+    void (*Deinitialize)(void);
+    _Bool (*Write)(uint16_t address, uint8_t *data, size_t dataLength);
+    _Bool (*Read)(uint16_t address, uint8_t *data, size_t dataLength);
+    _Bool (*WriteRead)(uint16_t address, uint8_t *writeData, size_t writeLength, uint8_t *readData, size_t readLength);
+    _Bool (*TransferSetup)(struct i2c_transfer_setup* setup, uint32_t srcClkFreq);
+    i2c_host_error_t (*ErrorGet)(void);
+    _Bool (*IsBusy)(void);
+    void (*CallbackRegister)(void (*callback)(void));
+    void (*Tasks)(void);
+}i2c_host_interface_t;
+# 47 "./mcc_generated_files/system/../i2c_host/mssp2.h" 2
+# 68 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+extern const i2c_host_interface_t I2C2_Host;
+# 77 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+void I2C2_Initialize(void);
+# 86 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+void I2C2_Deinitialize(void);
+# 117 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+_Bool I2C2_Write(uint16_t address, uint8_t *data, size_t dataLength);
+# 148 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+_Bool I2C2_Read(uint16_t address, uint8_t *data, size_t dataLength);
+# 183 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+_Bool I2C2_WriteRead(uint16_t address, uint8_t *writeData, size_t writeLength, uint8_t *readData, size_t readLength);
+# 194 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+i2c_host_error_t I2C2_ErrorGet(void);
+# 205 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+_Bool I2C2_IsBusy(void);
+# 232 "./mcc_generated_files/system/../i2c_host/mssp2.h"
+void I2C2_CallbackRegister(void (*callbackHandler)(void));
+
+
+
+
+
+
+
+void I2C2_ISR(void);
+
+
+
+
+
+
+
+void I2C2_ERROR_ISR(void);
+# 47 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../pwm/pwm5.h" 1
 # 57 "./mcc_generated_files/system/../pwm/pwm5.h"
  void pwm_fan_Initialize(void);
@@ -11739,7 +11843,7 @@ void putch(char txData);
 
 
  void pwm_fan_LoadDutyValue(uint16_t dutyValue);
-# 47 "./mcc_generated_files/system/system.h" 2
+# 48 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../spi/mssp1.h" 1
 # 38 "./mcc_generated_files/system/../spi/mssp1.h"
 # 1 "./mcc_generated_files/system/../spi/spi_interface.h" 1
@@ -11828,7 +11932,7 @@ uint8_t SPI1_ByteRead(void);
 _Bool SPI1_IsRxReady(void);
 # 223 "./mcc_generated_files/system/../spi/mssp1.h"
 _Bool SPI1_IsTxReady(void);
-# 48 "./mcc_generated_files/system/system.h" 2
+# 49 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../system/interrupt.h" 1
 # 85 "./mcc_generated_files/system/../system/interrupt.h"
 void INTERRUPT_Initialize (void);
@@ -11842,7 +11946,7 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 175 "./mcc_generated_files/system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
-# 49 "./mcc_generated_files/system/system.h" 2
+# 50 "./mcc_generated_files/system/system.h" 2
 
 # 1 "./mcc_generated_files/system/../timer/tmr2.h" 1
 # 41 "./mcc_generated_files/system/../timer/tmr2.h"
@@ -11910,7 +12014,7 @@ void TMR2_ISR(void);
 
 
 void TMR2_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-# 51 "./mcc_generated_files/system/system.h" 2
+# 52 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../timer/tmr4.h" 1
 # 41 "./mcc_generated_files/system/../timer/tmr4.h"
 # 1 "./mcc_generated_files/system/../timer/tmr4_deprecated.h" 1
@@ -11977,7 +12081,7 @@ void TMR4_ISR(void);
 
 
 void TMR4_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-# 52 "./mcc_generated_files/system/system.h" 2
+# 53 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../timer/tmr6.h" 1
 # 41 "./mcc_generated_files/system/../timer/tmr6.h"
 # 1 "./mcc_generated_files/system/../timer/tmr6_deprecated.h" 1
@@ -12038,7 +12142,7 @@ void TMR6_PeriodMatchStatusClear(void);
 
 
 void TMR6_Tasks(void);
-# 53 "./mcc_generated_files/system/system.h" 2
+# 54 "./mcc_generated_files/system/system.h" 2
 
 
 
@@ -12048,7 +12152,7 @@ void TMR6_Tasks(void);
 
 
 void SYSTEM_Initialize(void);
-# 36 "main.c" 2
+# 38 "main.c" 2
 
 
 # 1 "./adcMeasurements.h" 1
@@ -12058,14 +12162,16 @@ void initAdcMultiplexer(void);
 
 uint16_t getPotentiometer(void);
 uint16_t getHoogtesensor(void);
-# 39 "main.c" 2
+# 41 "main.c" 2
 # 1 "./UART.h" 1
 # 15 "./UART.h"
 void printLogs(void);
 void uartHandler(void);
 void printFloat(float);
 float str2float(char);
-# 40 "main.c" 2
+
+void printOut(char*);
+# 42 "main.c" 2
 
 # 1 "./controller.h" 1
 # 15 "./controller.h"
@@ -12080,7 +12186,7 @@ void setSetpoint(uint16_t);
 void setDutycycle(uint16_t);
 void setKp(float);
 void setKi(float);
-# 42 "main.c" 2
+# 44 "main.c" 2
 
 # 1 "./ledstrip.h" 1
 # 15 "./ledstrip.h"
@@ -12090,7 +12196,11 @@ void sendLedstripFrame(uint8_t, uint8_t, uint8_t, uint8_t);
 void sendLedstripEndFrame(void);
 void sendLedstripStartFrame(void);
 void dutycycle_led_strip(void);
-# 44 "main.c" 2
+# 46 "main.c" 2
+# 1 "./I2Creader.h" 1
+# 15 "./I2Creader.h"
+void I2C_Master_Init(void);
+# 47 "main.c" 2
 
 
 
@@ -12117,30 +12227,20 @@ int main(void)
 
     initAdcMultiplexer();
     TMR4_PeriodMatchCallbackRegister(controller);
-    initLedstrip();
+
+    I2C_Master_Init();
 
     while(1)
     {
         uartHandler();
-
-        do { LATAbits.LATA5 = 0; } while(0);
-        do { LATAbits.LATA1 = 0; } while(0);
-        do { LATAbits.LATA2 = 0; } while(0);
-
-        uint16_t potwaarde = getPotentiometer();
-
-        if (potwaarde > 256) {
-            do { LATAbits.LATA5 = 1; } while(0);
-        }
-        if (potwaarde > 512) {
-            do { LATAbits.LATA1 = 1; } while(0);
-        }
-        if (potwaarde > 768) {
-            do { LATAbits.LATA2 = 1; } while(0);
-        }
+# 96 "main.c"
         _delay((unsigned long)((100)*(32000000U/4000.0)));
 
-        printLogs();
-        TMR6_Tasks();
+        printOut("HHH\r\n");
+
+
+
+
+
     }
 }
