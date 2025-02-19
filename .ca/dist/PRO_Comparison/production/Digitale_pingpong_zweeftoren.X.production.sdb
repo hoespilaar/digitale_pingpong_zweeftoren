@@ -1,0 +1,1420 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18345 ]
+[d frameptr 6 ]
+"82 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/adc/src/adc.c
+[e E6663 . `uc
+channel_AVSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+potentiometer 16
+hoogtesensor 18
+]
+"10 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\adcMeasurements.c
+[e E6663 . `uc
+channel_AVSS 60
+channel_Temp 61
+channel_DAC1 62
+channel_FVR 63
+potentiometer 16
+hoogtesensor 18
+]
+"117 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\ledstrip.c
+[e E82 . `uc
+HOST_CONFIG 0
+MSSP1_DEFAULT 1
+]
+"5 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\adcMeasurements.c
+[v _adcConversionDoneHandler adcConversionDoneHandler `(v  1 e 1 0 ]
+"24
+[v _initAdcMultiplexer initAdcMultiplexer `(v  1 e 1 0 ]
+"29
+[v _getPotentiometer getPotentiometer `(us  1 e 2 0 ]
+"33
+[v _getHoogtesensor getHoogtesensor `(us  1 e 2 0 ]
+[v i1_getHoogtesensor getHoogtesensor `(us  1 e 2 0 ]
+"1 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"193 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\doprnt.c
+[v _pad pad `(v  1 s 1 pad ]
+"513
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
+"1001
+[v _utoa utoa `(v  1 s 1 utoa ]
+"1158
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"43 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+[v i1___fltol __fltol `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+[v i1___fladd __fladd `(d  1 e 4 0 ]
+"242
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+[v i1___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+[v i1__Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+[v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"13 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\controller.c
+[v _controller controller `(v  1 e 1 0 ]
+"39
+[v _getSetpoint getSetpoint `(us  1 e 2 0 ]
+"40
+[v _getDutycycle getDutycycle `(us  1 e 2 0 ]
+"41
+[v _getKp getKp `(f  1 e 4 0 ]
+"42
+[v _getKi getKi `(f  1 e 4 0 ]
+"45
+[v _setSetpoint setSetpoint `(v  1 e 1 0 ]
+"47
+[v _setKp setKp `(v  1 e 1 0 ]
+"48
+[v _setKi setKi `(v  1 e 1 0 ]
+"6 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\ledstrip.c
+[v _sendLedstripStartFrame sendLedstripStartFrame `(v  1 e 1 0 ]
+"14
+[v _sendLedstripEndFrame sendLedstripEndFrame `(v  1 e 1 0 ]
+"22
+[v _sendLedstripFrame sendLedstripFrame `(v  1 e 1 0 ]
+"33
+[v _getLedNumber getLedNumber `(i  1 e 2 0 ]
+"60
+[v _position_led_strip position_led_strip `(v  1 e 1 0 ]
+"112
+[v _updateLedstripAnimation updateLedstripAnimation `(v  1 e 1 0 ]
+"116
+[v _initLedstrip initLedstrip `(v  1 e 1 0 ]
+"49 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"55 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"82
+[v _ADC_SelectChannel ADC_SelectChannel `(v  1 e 1 0 ]
+[v i1_ADC_SelectChannel ADC_SelectChannel `(v  1 e 1 0 ]
+"100
+[v _ADC_GetConversionResult ADC_GetConversionResult `(us  1 e 2 0 ]
+"134
+[v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
+"145
+[v _ADC_SetInterruptHandler ADC_SetInterruptHandler `(v  1 e 1 0 ]
+"150
+[v _ADC_DefaultInterruptHandler ADC_DefaultInterruptHandler `(v  1 s 1 ADC_DefaultInterruptHandler ]
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/pwm/src/pwm5.c
+[v _pwm_fan_Initialize pwm_fan_Initialize `(v  1 e 1 0 ]
+"63
+[v _pwm_fan_LoadDutyValue pwm_fan_LoadDutyValue `(v  1 e 1 0 ]
+"60 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/spi/src/mssp1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"72
+[v _SPI1_Deinitialize SPI1_Deinitialize `(v  1 e 1 0 ]
+"81
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+"102
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+"107
+[v _SPI1_BufferExchange SPI1_BufferExchange `(v  1 e 1 0 ]
+"125
+[v _SPI1_BufferWrite SPI1_BufferWrite `(v  1 e 1 0 ]
+"142
+[v _SPI1_BufferRead SPI1_BufferRead `(v  1 e 1 0 ]
+"160
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+"171
+[v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+"176
+[v _SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+"185
+[v _SPI1_IsRxReady SPI1_IsRxReady `(a  1 e 1 0 ]
+"199
+[v _SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
+"39 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"40 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"59
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"104
+[v _INT_CallBack INT_CallBack `(v  1 e 1 0 ]
+"113
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+"117
+[v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"39 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"114
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+"129
+[v _TMR2_DefaultPeriodMatchCallback TMR2_DefaultPeriodMatchCallback `(v  1 s 1 TMR2_DefaultPeriodMatchCallback ]
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr4.c
+[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+"114
+[v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
+"124
+[v _TMR4_PeriodMatchCallbackRegister TMR4_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
+"129
+[v _TMR4_DefaultPeriodMatchCallback TMR4_DefaultPeriodMatchCallback `(v  1 s 1 TMR4_DefaultPeriodMatchCallback ]
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr6.c
+[v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
+"104
+[v _TMR6_PeriodMatchCallbackRegister TMR6_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
+"109
+[v _TMR6_DefaultPeriodMatchCallback TMR6_DefaultPeriodMatchCallback `(v  1 s 1 TMR6_DefaultPeriodMatchCallback ]
+"124
+[v _TMR6_Tasks TMR6_Tasks `(v  1 e 1 0 ]
+"131 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/uart/src/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"167
+[v _EUSART_Deinitialize EUSART_Deinitialize `(v  1 e 1 0 ]
+"190
+[v _EUSART_TransmitEnable EUSART_TransmitEnable `(v  1 e 1 0 ]
+"195
+[v _EUSART_TransmitDisable EUSART_TransmitDisable `(v  1 e 1 0 ]
+"220
+[v _EUSART_AutoBaudSet EUSART_AutoBaudSet `(v  1 e 1 0 ]
+"232
+[v _EUSART_AutoBaudQuery EUSART_AutoBaudQuery `(a  1 e 1 0 ]
+"267
+[v _EUSART_IsRxReady EUSART_IsRxReady `(a  1 e 1 0 ]
+"272
+[v _EUSART_IsTxReady EUSART_IsTxReady `(a  1 e 1 0 ]
+"277
+[v _EUSART_IsTxDone EUSART_IsTxDone `(a  1 e 1 0 ]
+"282
+[v _EUSART_ErrorGet EUSART_ErrorGet `(ui  1 e 2 0 ]
+"288
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"308
+[v _EUSART_ReceiveISR EUSART_ReceiveISR `(v  1 e 1 0 ]
+"353
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"377
+[v _EUSART_TransmitISR EUSART_TransmitISR `(v  1 e 1 0 ]
+"409
+[v _putch putch `(v  1 e 1 0 ]
+"418
+[v _EUSART_DefaultFramingErrorCallback EUSART_DefaultFramingErrorCallback `(v  1 s 1 EUSART_DefaultFramingErrorCallback ]
+"423
+[v _EUSART_DefaultOverrunErrorCallback EUSART_DefaultOverrunErrorCallback `(v  1 s 1 EUSART_DefaultOverrunErrorCallback ]
+"430
+[v _EUSART_FramingErrorCallbackRegister EUSART_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+"438
+[v _EUSART_OverrunErrorCallbackRegister EUSART_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+"446
+[v _EUSART_RxCompleteCallbackRegister EUSART_RxCompleteCallbackRegister `(v  1 e 1 0 ]
+"454
+[v _EUSART_TxCompleteCallbackRegister EUSART_TxCompleteCallbackRegister `(v  1 e 1 0 ]
+"14 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\UART.c
+[v _printFloat printFloat `(v  1 e 1 0 ]
+"25
+[v _str2float str2float `(f  1 e 4 0 ]
+"50
+[v _readLine readLine `(*.5uc  1 e 2 0 ]
+"77
+[v _printLogs printLogs `(v  1 e 1 0 ]
+"93
+[v _uartHandler uartHandler `(v  1 e 1 0 ]
+"3 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\adcMeasurements.c
+[v _ADC_potentiometer ADC_potentiometer `VEus  1 e 2 0 ]
+[v _ADC_hoogtesensor ADC_hoogtesensor `VEus  1 e 2 0 ]
+[s S466 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"364 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
+[u S471 . 1 `S466 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES471  1 e 1 @11 ]
+[s S453 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"548
+[u S458 . 1 `S453 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES458  1 e 1 @16 ]
+[s S28 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 BCL1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"585
+[u S37 . 1 `S28 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES37  1 e 1 @17 ]
+[s S538 . 1 `uc 1 NCO1IF 1 0 :1:0 
+`uc 1 TMR4IF 1 0 :1:1 
+`uc 1 BCL2IF 1 0 :1:2 
+`uc 1 SSP2IF 1 0 :1:3 
+`uc 1 NVMIF 1 0 :1:4 
+`uc 1 C1IF 1 0 :1:5 
+`uc 1 C2IF 1 0 :1:6 
+`uc 1 TMR6IF 1 0 :1:7 
+]
+"647
+[u S547 . 1 `S538 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES547  1 e 1 @18 ]
+"1439
+[v _TMR2 TMR2 `VEuc  1 e 1 @29 ]
+"1459
+[v _PR2 PR2 `VEuc  1 e 1 @30 ]
+"1479
+[v _T2CON T2CON `VEuc  1 e 1 @31 ]
+"1550
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1595
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1634
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+[s S59 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 BCL1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1746
+[u S68 . 1 `S59 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES68  1 e 1 @145 ]
+[s S517 . 1 `uc 1 NCO1IE 1 0 :1:0 
+`uc 1 TMR4IE 1 0 :1:1 
+`uc 1 BCL2IE 1 0 :1:2 
+`uc 1 SSP2IE 1 0 :1:3 
+`uc 1 NVMIE 1 0 :1:4 
+`uc 1 C1IE 1 0 :1:5 
+`uc 1 C2IE 1 0 :1:6 
+`uc 1 TMR6IE 1 0 :1:7 
+]
+"1808
+[u S526 . 1 `S517 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES526  1 e 1 @146 ]
+"2043
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"2063
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"2083
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+[s S87 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :6:2 
+]
+"2109
+[s S91 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+`uc 1 CHS5 1 0 :1:7 
+]
+[s S100 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[u S103 . 1 `S87 1 . 1 0 `S91 1 . 1 0 `S100 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES103  1 e 1 @157 ]
+"2169
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2241
+[v _ADACT ADACT `VEuc  1 e 1 @159 ]
+"2293
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S1411 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"2308
+[u S1418 . 1 `S1411 1 . 1 0 ]
+[v _LATAbits LATAbits `VES1418  1 e 1 @268 ]
+"2338
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2377
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2932
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2977
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3016
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3099
+[v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
+"3153
+[v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
+"3219
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @411 ]
+"3273
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @412 ]
+"3327
+[v _RC1STA RC1STA `VEuc  1 e 1 @413 ]
+[s S1177 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3353
+[u S1186 . 1 `S1177 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES1186  1 e 1 @413 ]
+"3507
+[v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
+[s S1198 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3533
+[u S1207 . 1 `S1198 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES1207  1 e 1 @414 ]
+"3687
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @415 ]
+[s S1219 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"3721
+[u S1228 . 1 `S1219 1 . 1 0 ]
+[v _BAUD1CONbits BAUD1CONbits `VES1228  1 e 1 @415 ]
+"3933
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3983
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"4022
+[v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"4084
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"4338
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"4846
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+"4968
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S368 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5001
+[s S374 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S379 . 1 `S368 1 . 1 0 `S374 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES379  1 e 1 @533 ]
+"5360
+[v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @535 ]
+"6190
+[v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
+"6235
+[v _ODCONB ODCONB `VEuc  1 e 1 @653 ]
+"6274
+[v _ODCONC ODCONC `VEuc  1 e 1 @654 ]
+"6740
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
+"6785
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @781 ]
+"6824
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @782 ]
+"7202
+[v _INLVLA INLVLA `VEuc  1 e 1 @908 ]
+"7252
+[v _INLVLB INLVLB `VEuc  1 e 1 @909 ]
+"7291
+[v _INLVLC INLVLC `VEuc  1 e 1 @910 ]
+"7353
+[v _IOCAP IOCAP `VEuc  1 e 1 @913 ]
+"7403
+[v _IOCAN IOCAN `VEuc  1 e 1 @914 ]
+"7453
+[v _IOCAF IOCAF `VEuc  1 e 1 @915 ]
+"7503
+[v _IOCBP IOCBP `VEuc  1 e 1 @916 ]
+"7542
+[v _IOCBN IOCBN `VEuc  1 e 1 @917 ]
+"7581
+[v _IOCBF IOCBF `VEuc  1 e 1 @918 ]
+"7620
+[v _IOCCP IOCCP `VEuc  1 e 1 @919 ]
+"7682
+[v _IOCCN IOCCN `VEuc  1 e 1 @920 ]
+"7744
+[v _IOCCF IOCCF `VEuc  1 e 1 @921 ]
+"8264
+[v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
+"8284
+[v _PR4 PR4 `VEuc  1 e 1 @1046 ]
+"8304
+[v _T4CON T4CON `VEuc  1 e 1 @1047 ]
+"8564
+[v _TMR6 TMR6 `VEuc  1 e 1 @1052 ]
+"8584
+[v _PR6 PR6 `VEuc  1 e 1 @1053 ]
+"8604
+[v _T6CON T6CON `VEuc  1 e 1 @1054 ]
+"8921
+[v _PWM5DCL PWM5DCL `VEuc  1 e 1 @1559 ]
+"8957
+[v _PWM5DCH PWM5DCH `VEuc  1 e 1 @1560 ]
+"9027
+[v _PWM5CON PWM5CON `VEuc  1 e 1 @1561 ]
+[s S182 . 1 `uc 1 P5TSEL 1 0 :2:0 
+`uc 1 P6TSEL 1 0 :2:2 
+]
+"9282
+[s S185 . 1 `uc 1 P5TSEL0 1 0 :1:0 
+`uc 1 P5TSEL1 1 0 :1:1 
+`uc 1 P6TSEL0 1 0 :1:2 
+`uc 1 P6TSEL1 1 0 :1:3 
+]
+[u S190 . 1 `S182 1 . 1 0 `S185 1 . 1 0 ]
+[v _PWMTMRSbits PWMTMRSbits `VES190  1 e 1 @1567 ]
+"12477
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2329 ]
+"12617
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2331 ]
+"12662
+[v _OSCSTAT1 OSCSTAT1 `VEuc  1 e 1 @2332 ]
+"12714
+[v _OSCEN OSCEN `VEuc  1 e 1 @2333 ]
+"12760
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2334 ]
+"12818
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
+"13716
+[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3616 ]
+"13768
+[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3617 ]
+"13872
+[v _RXPPS RXPPS `VEuc  1 e 1 @3620 ]
+"14524
+[v _RB4PPS RB4PPS `VEuc  1 e 1 @3740 ]
+"14628
+[v _RB6PPS RB6PPS `VEuc  1 e 1 @3742 ]
+"14680
+[v _RB7PPS RB7PPS `VEuc  1 e 1 @3743 ]
+"14992
+[v _RC5PPS RC5PPS `VEuc  1 e 1 @3749 ]
+"153 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"185
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"4 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\controller.c
+[v _hoogte_bal hoogte_bal `us  1 s 2 hoogte_bal ]
+"5
+[v _setpoint setpoint `us  1 s 2 setpoint ]
+"6
+[v _dutycycle dutycycle `us  1 s 2 dutycycle ]
+"8
+[v _integraal integraal `f  1 s 4 integraal ]
+"10
+[v _kp kp `f  1 s 4 kp ]
+"11
+[v _ki ki `f  1 s 4 ki ]
+"58 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\ledstrip.c
+[v _is_on_target is_on_target `a  1 s 1 is_on_target ]
+"48 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_InterruptHandler ADC_InterruptHandler `*.37(v  1 e 2 0 ]
+[s S334 . 5 `uc 1 stat 1 0 `uc 1 con1 1 1 `uc 1 con3 1 2 `uc 1 baud 1 3 `uc 1 clock 1 4 ]
+"55 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/spi/src/mssp1.c
+[v _spi1_configuration spi1_configuration `DC[2]S334  1 s 10 spi1_configuration ]
+"38 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/interrupt.c
+[v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
+"38 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_PeriodMatchCallback TMR2_PeriodMatchCallback `*.37(v  1 s 2 TMR2_PeriodMatchCallback ]
+"38 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr4.c
+[v _TMR4_PeriodMatchCallback TMR4_PeriodMatchCallback `*.37(v  1 s 2 TMR4_PeriodMatchCallback ]
+"38 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr6.c
+[v _TMR6_PeriodMatchCallback TMR6_PeriodMatchCallback `*.37(v  1 s 2 TMR6_PeriodMatchCallback ]
+"83 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/uart/src/eusart.c
+[v _eusartTxHead eusartTxHead `VEuc  1 s 1 eusartTxHead ]
+"84
+[v _eusartTxTail eusartTxTail `VEuc  1 s 1 eusartTxTail ]
+"85
+[v _eusartTxBuffer eusartTxBuffer `VE[8]uc  1 s 8 eusartTxBuffer ]
+"86
+[v _eusartTxBufferRemaining eusartTxBufferRemaining `VEuc  1 s 1 eusartTxBufferRemaining ]
+"88
+[v _eusartRxHead eusartRxHead `VEuc  1 s 1 eusartRxHead ]
+"89
+[v _eusartRxTail eusartRxTail `VEuc  1 s 1 eusartRxTail ]
+"90
+[v _eusartRxBuffer eusartRxBuffer `VE[8]uc  1 s 8 eusartRxBuffer ]
+[s S1126 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"96
+[u S1131 . 2 `S1126 1 . 1 0 `ui 1 status 2 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S1131  1 s 16 eusartRxStatusBuffer ]
+"97
+[v _eusartRxCount eusartRxCount `VEuc  1 s 1 eusartRxCount ]
+"104
+[v _eusartRxLastError eusartRxLastError `VES1131  1 s 2 eusartRxLastError ]
+"110
+[v _EUSART_TxInterruptHandler EUSART_TxInterruptHandler `*.37(v  1 e 2 0 ]
+"112
+[v _EUSART_TxCompleteInterruptHandler EUSART_TxCompleteInterruptHandler `*.37(v  1 s 2 EUSART_TxCompleteInterruptHandler ]
+"114
+[v _EUSART_RxInterruptHandler EUSART_RxInterruptHandler `*.37(v  1 e 2 0 ]
+"115
+[v _EUSART_RxCompleteInterruptHandler EUSART_RxCompleteInterruptHandler `*.37(v  1 s 2 EUSART_RxCompleteInterruptHandler ]
+"117
+[v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 s 2 EUSART_FramingErrorHandler ]
+"118
+[v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 s 2 EUSART_OverrunErrorHandler ]
+"9 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\UART.c
+[v _mustPrintLogs mustPrintLogs `a  1 e 1 0 ]
+"12
+[v _line line `[20]uc  1 e 20 0 ]
+"49 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"80
+[v main@potwaarde potwaarde `us  1 a 2 14 ]
+"96
+} 0
+"93 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\UART.c
+[v _uartHandler uartHandler `(v  1 e 1 0 ]
+{
+"94
+[v uartHandler@str str `*.5uc  1 a 1 4 ]
+"125
+} 0
+"25
+[v _str2float str2float `(f  1 e 4 0 ]
+{
+"43
+[v str2float@i i `uc  1 a 1 74 ]
+"30
+[v str2float@digit digit `uc  1 a 1 79 ]
+"26
+[v str2float@number number `f  1 a 4 75 ]
+"28
+[v str2float@multiplier multiplier `uc  1 a 1 73 ]
+"27
+[v str2float@decimal_separator decimal_separator `a  1 a 1 72 ]
+"25
+[v str2float@str str `*.5uc  1 p 1 68 ]
+"47
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 20 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 13 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 18 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 25 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 24 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 17 ]
+"8
+[v ___fldiv@a a `d  1 p 4 0 ]
+[v ___fldiv@b b `d  1 p 4 4 ]
+"185
+} 0
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\controller.c
+[v _setSetpoint setSetpoint `(v  1 e 1 0 ]
+{
+[v setSetpoint@new_setpoint new_setpoint `us  1 p 2 13 ]
+} 0
+"47
+[v _setKp setKp `(v  1 e 1 0 ]
+{
+[v setKp@new_kp new_kp `f  1 p 4 0 ]
+} 0
+"48
+[v _setKi setKi `(v  1 e 1 0 ]
+{
+[v setKi@new_ki new_ki `f  1 p 4 0 ]
+} 0
+"50 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\UART.c
+[v _readLine readLine `(*.5uc  1 e 2 0 ]
+{
+"51
+[v readLine@index index `uc  1 s 1 index ]
+"75
+} 0
+"288 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/uart/src/eusart.c
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+{
+"290
+[v EUSART_Read@readValue readValue `uc  1 a 1 1 ]
+"291
+[v EUSART_Read@tempRxTail tempRxTail `uc  1 a 1 0 ]
+"306
+} 0
+"267
+[v _EUSART_IsRxReady EUSART_IsRxReady `(a  1 e 1 0 ]
+{
+"270
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
+{
+"7
+[v atoi@n n `i  1 a 2 11 ]
+"8
+[v atoi@neg neg `a  1 a 1 10 ]
+"5
+[v atoi@s s `*.5DCuc  1 p 1 6 ]
+"24
+} 0
+"77 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\UART.c
+[v _printLogs printLogs `(v  1 e 1 0 ]
+{
+"91
+} 0
+"14
+[v _printFloat printFloat `(v  1 e 1 0 ]
+{
+"16
+[v printFloat@fractional_part fractional_part `us  1 a 2 4 ]
+"15
+[v printFloat@integer_part integer_part `c  1 a 1 6 ]
+"14
+[v printFloat@number number `f  1 p 4 0 ]
+"22
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.4v  1 a 1 70 ]
+"5
+[v printf@fmt fmt `*.25DCuc  1 p 2 64 ]
+"13
+} 0
+"1817 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 62 ]
+[s S2084 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.2S2084  1 p 2 56 ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 58 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 60 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[u S2108 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S2108  1 a 4 50 ]
+"1179
+[v vfpfcnvrt@cp cp `*.25uc  1 a 2 54 ]
+"1180
+[v vfpfcnvrt@done done `a  1 a 1 49 ]
+[s S2084 _IO_FILE 0 ]
+"1177
+[v vfpfcnvrt@fp fp `*.2S2084  1 p 2 41 ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 43 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 44 ]
+"1814
+} 0
+"1001
+[v _utoa utoa `(v  1 s 1 utoa ]
+{
+"1003
+[v utoa@i i `i  1 a 2 36 ]
+[v utoa@w w `i  1 a 2 34 ]
+"1007
+[v utoa@p p `a  1 a 1 33 ]
+[s S2084 _IO_FILE 0 ]
+"1001
+[v utoa@fp fp `*.2S2084  1 p 2 28 ]
+[v utoa@d d `ui  1 p 2 30 ]
+"1047
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 6 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"1158 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\doprnt.c
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+{
+"1164
+[v read_prec_or_width@c c `uc  1 a 1 11 ]
+"1159
+[v read_prec_or_width@n n `i  1 a 2 12 ]
+"1158
+[v read_prec_or_width@fmt fmt `*.4*.25DCuc  1 p 1 6 ]
+[v read_prec_or_width@ap ap `*.4[1]*.4v  1 p 1 7 ]
+"1171
+} 0
+"513
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
+{
+"516
+[v dtoa@i i `i  1 a 2 39 ]
+[v dtoa@w w `i  1 a 2 36 ]
+"515
+[v dtoa@s s `uc  1 a 1 38 ]
+"520
+[v dtoa@p p `a  1 a 1 35 ]
+[s S2084 _IO_FILE 0 ]
+"513
+[v dtoa@fp fp `*.2S2084  1 p 2 28 ]
+[v dtoa@d d `i  1 p 2 30 ]
+"583
+} 0
+"193
+[v _pad pad `(v  1 s 1 pad ]
+{
+"195
+[v pad@i i `i  1 a 2 26 ]
+[s S2084 _IO_FILE 0 ]
+"193
+[v pad@fp fp `*.2S2084  1 p 2 20 ]
+[v pad@buf buf `*.5uc  1 p 1 22 ]
+[v pad@p p `i  1 p 2 23 ]
+"226
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+"11
+[v fputs@i i `i  1 a 2 18 ]
+"10
+[v fputs@c c `uc  1 a 1 17 ]
+"8
+[v fputs@s s `*.5DCuc  1 p 1 12 ]
+[u S2063 . 2 `*.2uc 1 buffer 2 0 `*.2DCuc 1 source 2 0 ]
+[s S2066 _IO_FILE 11 `S2063 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.2S2066  1 p 2 13 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 3 ]
+[u S2063 . 2 `*.2uc 1 buffer 2 0 `*.2DCuc 1 source 2 0 ]
+[s S2066 _IO_FILE 11 `S2063 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.2S2066  1 p 2 5 ]
+"24
+} 0
+"409 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/uart/src/eusart.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 p 1 wreg ]
+[v putch@txData txData `uc  1 p 1 wreg ]
+[v putch@txData txData `uc  1 p 1 2 ]
+"416
+} 0
+"353
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+"355
+[v EUSART_Write@tempTxHead tempTxHead `uc  1 a 1 1 ]
+"353
+[v EUSART_Write@txData txData `uc  1 p 1 0 ]
+"375
+} 0
+"272
+[v _EUSART_IsTxReady EUSART_IsTxReady `(a  1 e 1 0 ]
+{
+"275
+} 0
+"1 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 6 ]
+"4
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"242 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@a a `d  1 p 4 34 ]
+[v ___flsub@b b `d  1 p 4 38 ]
+"250
+} 0
+"41 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\controller.c
+[v _getKp getKp `(f  1 e 4 0 ]
+{
+} 0
+"42
+[v _getKi getKi `(f  1 e 4 0 ]
+{
+} 0
+"40
+[v _getDutycycle getDutycycle `(us  1 e 2 0 ]
+{
+} 0
+"116 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\ledstrip.c
+[v _initLedstrip initLedstrip `(v  1 e 1 0 ]
+{
+"119
+} 0
+"104 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr6.c
+[v _TMR6_PeriodMatchCallbackRegister TMR6_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR6_PeriodMatchCallbackRegister@CallbackHandler CallbackHandler `*.37(v  1 p 2 0 ]
+"107
+} 0
+"81 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/spi/src/mssp1.c
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+{
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 6 ]
+"100
+} 0
+"15 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"24 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\adcMeasurements.c
+[v _initAdcMultiplexer initAdcMultiplexer `(v  1 e 1 0 ]
+{
+"27
+} 0
+"82 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_SelectChannel ADC_SelectChannel `(v  1 e 1 0 ]
+{
+[v ADC_SelectChannel@channel channel `E6663  1 p 1 wreg ]
+[v ADC_SelectChannel@channel channel `E6663  1 p 1 wreg ]
+"85
+[v ADC_SelectChannel@channel channel `E6663  1 p 1 1 ]
+"86
+} 0
+"29 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\adcMeasurements.c
+[v _getPotentiometer getPotentiometer `(us  1 e 2 0 ]
+{
+"31
+} 0
+"124 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr6.c
+[v _TMR6_Tasks TMR6_Tasks `(v  1 e 1 0 ]
+{
+"134
+} 0
+"109
+[v _TMR6_DefaultPeriodMatchCallback TMR6_DefaultPeriodMatchCallback `(v  1 s 1 TMR6_DefaultPeriodMatchCallback ]
+{
+"112
+} 0
+"112 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\ledstrip.c
+[v _updateLedstripAnimation updateLedstripAnimation `(v  1 e 1 0 ]
+{
+"114
+} 0
+"60
+[v _position_led_strip position_led_strip `(v  1 e 1 0 ]
+{
+"75
+[v position_led_strip@led led `uc  1 a 1 9 ]
+"61
+[v position_led_strip@led_on led_on `i  1 a 2 10 ]
+"68
+[v position_led_strip@target target `i  1 a 2 7 ]
+"109
+} 0
+"6
+[v _sendLedstripStartFrame sendLedstripStartFrame `(v  1 e 1 0 ]
+{
+"12
+} 0
+"22
+[v _sendLedstripFrame sendLedstripFrame `(v  1 e 1 0 ]
+{
+[v sendLedstripFrame@red red `uc  1 p 1 wreg ]
+[v sendLedstripFrame@red red `uc  1 p 1 wreg ]
+[v sendLedstripFrame@green green `uc  1 p 1 1 ]
+[v sendLedstripFrame@blue blue `uc  1 p 1 2 ]
+[v sendLedstripFrame@intensity intensity `uc  1 p 1 3 ]
+[v sendLedstripFrame@red red `uc  1 p 1 4 ]
+"28
+} 0
+"14
+[v _sendLedstripEndFrame sendLedstripEndFrame `(v  1 e 1 0 ]
+{
+"20
+} 0
+"160 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/spi/src/mssp1.c
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+{
+[v SPI1_ByteExchange@byteData byteData `uc  1 p 1 0 ]
+"169
+} 0
+"39 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\controller.c
+[v _getSetpoint getSetpoint `(us  1 e 2 0 ]
+{
+} 0
+"33 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\ledstrip.c
+[v _getLedNumber getLedNumber `(i  1 e 2 0 ]
+{
+"34
+[v getLedNumber@result result `f  1 a 4 0 ]
+"33
+[v getLedNumber@height height `us  1 p 2 78 ]
+"39
+} 0
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v ___xxtofl@sign sign `uc  1 p 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 77 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 76 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 68 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1908 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1913 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1916 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1908 1 fAsBytes 4 0 `S1913 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1916  1 a 4 62 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 57 ]
+[s S1985 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1988 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1985 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1988  1 a 2 66 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 61 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 56 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 55 ]
+"8
+[v ___flmul@b b `d  1 p 4 42 ]
+[v ___flmul@a a `d  1 p 4 46 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `us  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `us  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 8 ]
+"60
+} 0
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 33 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 32 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 31 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 30 ]
+"10
+[v ___fladd@b b `d  1 p 4 14 ]
+[v ___fladd@a a `d  1 p 4 18 ]
+"237
+} 0
+"33 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\adcMeasurements.c
+[v _getHoogtesensor getHoogtesensor `(us  1 e 2 0 ]
+{
+"35
+} 0
+"124 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr4.c
+[v _TMR4_PeriodMatchCallbackRegister TMR4_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR4_PeriodMatchCallbackRegister@CallbackHandler CallbackHandler `*.37(v  1 p 2 0 ]
+"127
+} 0
+"39 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"51
+} 0
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/pwm/src/pwm5.c
+[v _pwm_fan_Initialize pwm_fan_Initialize `(v  1 e 1 0 ]
+{
+"61
+} 0
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr6.c
+[v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr4.c
+[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+{
+"57
+} 0
+"45 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"57
+} 0
+"60 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/spi/src/mssp1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"38 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"117
+} 0
+"40 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"50
+} 0
+"113
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"115
+} 0
+"131 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/uart/src/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"165
+} 0
+"438
+[v _EUSART_OverrunErrorCallbackRegister EUSART_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v EUSART_OverrunErrorCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
+"444
+} 0
+"430
+[v _EUSART_FramingErrorCallbackRegister EUSART_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v EUSART_FramingErrorCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
+"436
+} 0
+"39 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"55
+} 0
+"55 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"80
+} 0
+"145
+[v _ADC_SetInterruptHandler ADC_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v ADC_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"148
+} 0
+"59 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"93
+} 0
+"114 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr4.c
+[v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
+{
+"122
+} 0
+"129
+[v _TMR4_DefaultPeriodMatchCallback TMR4_DefaultPeriodMatchCallback `(v  1 s 1 TMR4_DefaultPeriodMatchCallback ]
+{
+"132
+} 0
+"13 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\controller.c
+[v _controller controller `(v  1 e 1 0 ]
+{
+"18
+[v controller@error error `s  1 a 2 51 ]
+"23
+[v controller@I I `s  1 a 2 49 ]
+"22
+[v controller@P P `s  1 a 2 47 ]
+"36
+} 0
+"33 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\adcMeasurements.c
+[v i1_getHoogtesensor getHoogtesensor `(us  1 e 2 0 ]
+{
+"35
+} 0
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c
+[v i1___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v i1___xxtofl@sign sign `uc  1 p 1 wreg ]
+"13
+[v i1___xxtofl@arg arg `ul  1 a 4 10 ]
+"12
+[v i1___xxtofl@exp exp `uc  1 a 1 9 ]
+"10
+[v i1___xxtofl@sign sign `uc  1 p 1 wreg ]
+[v i1___xxtofl@val val `l  1 p 4 0 ]
+"15
+[v i1___xxtofl@sign sign `uc  1 p 1 8 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fltol.c
+[v i1___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v i1___fltol@exp1 exp1 `uc  1 a 1 35 ]
+[v i1___fltol@sign1 sign1 `uc  1 a 1 34 ]
+"43
+[v i1___fltol@f1 f1 `d  1 p 4 26 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
+[v i1___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1908 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1913 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1916 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1908 1 fAsBytes 4 0 `S1913 1 fAsWords 4 0 ]
+[v i1___flmul@prod prod `S1916  1 a 4 20 ]
+"12
+[v i1___flmul@grs grs `ul  1 a 4 15 ]
+[s S1985 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1988 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1985 1 nAsBytes 2 0 ]
+[v i1___flmul@temp temp `S1988  1 a 2 24 ]
+"10
+[v i1___flmul@bexp bexp `uc  1 a 1 19 ]
+"11
+[v i1___flmul@aexp aexp `uc  1 a 1 14 ]
+"9
+[v i1___flmul@sign sign `uc  1 a 1 13 ]
+"8
+[v i1___flmul@b b `d  1 p 4 0 ]
+[v i1___flmul@a a `d  1 p 4 4 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v i1__Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v i1__Umul8_16@multiplier multiplier `uc  1 p 1 wreg ]
+"6
+[v i1__Umul8_16@word_mpld word_mpld `us  1 a 2 6 ]
+"5
+[v i1__Umul8_16@product product `us  1 a 2 4 ]
+"4
+[v i1__Umul8_16@multiplier multiplier `uc  1 p 1 wreg ]
+[v i1__Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v i1__Umul8_16@multiplier multiplier `uc  1 p 1 8 ]
+"60
+} 0
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v i1___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v i1___fladd@grs grs `uc  1 a 1 45 ]
+"15
+[v i1___fladd@bexp bexp `uc  1 a 1 44 ]
+"16
+[v i1___fladd@aexp aexp `uc  1 a 1 43 ]
+"13
+[v i1___fladd@signs signs `uc  1 a 1 42 ]
+"10
+[v i1___fladd@b b `d  1 p 4 26 ]
+[v i1___fladd@a a `d  1 p 4 30 ]
+"237
+} 0
+"63 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/pwm/src/pwm5.c
+[v _pwm_fan_LoadDutyValue pwm_fan_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v pwm_fan_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
+"70
+} 0
+"114 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/timer/src/tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"122
+} 0
+"129
+[v _TMR2_DefaultPeriodMatchCallback TMR2_DefaultPeriodMatchCallback `(v  1 s 1 TMR2_DefaultPeriodMatchCallback ]
+{
+"132
+} 0
+"377 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/uart/src/eusart.c
+[v _EUSART_TransmitISR EUSART_TransmitISR `(v  1 e 1 0 ]
+{
+"379
+[v EUSART_TransmitISR@tempTxTail tempTxTail `uc  1 a 1 0 ]
+"398
+} 0
+"308
+[v _EUSART_ReceiveISR EUSART_ReceiveISR `(v  1 e 1 0 ]
+{
+"311
+[v EUSART_ReceiveISR@tempRxHead tempRxHead `uc  1 a 1 1 ]
+"310
+[v EUSART_ReceiveISR@regValue regValue `uc  1 a 1 0 ]
+"351
+} 0
+"423
+[v _EUSART_DefaultOverrunErrorCallback EUSART_DefaultOverrunErrorCallback `(v  1 s 1 EUSART_DefaultOverrunErrorCallback ]
+{
+"428
+} 0
+"418
+[v _EUSART_DefaultFramingErrorCallback EUSART_DefaultFramingErrorCallback `(v  1 s 1 EUSART_DefaultFramingErrorCallback ]
+{
+"421
+} 0
+"134 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
+{
+"143
+} 0
+"150
+[v _ADC_DefaultInterruptHandler ADC_DefaultInterruptHandler `(v  1 s 1 ADC_DefaultInterruptHandler ]
+{
+"154
+} 0
+"5 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\adcMeasurements.c
+[v _adcConversionDoneHandler adcConversionDoneHandler `(v  1 e 1 0 ]
+{
+"10
+[v adcConversionDoneHandler@new_channel new_channel `E6663  1 s 1 new_channel ]
+"22
+} 0
+"82 C:\Users\Wednesday\MPLABXProjects\Digitale pingpong zweeftoren.X\mcc_generated_files/adc/src/adc.c
+[v i1_ADC_SelectChannel ADC_SelectChannel `(v  1 e 1 0 ]
+{
+[v i1ADC_SelectChannel@channel channel `E6663  1 p 1 wreg ]
+[v i1ADC_SelectChannel@channel channel `E6663  1 p 1 wreg ]
+"85
+[v i1ADC_SelectChannel@channel channel `E6663  1 p 1 1 ]
+"86
+} 0
+"100
+[v _ADC_GetConversionResult ADC_GetConversionResult `(us  1 e 2 0 ]
+{
+"104
+} 0

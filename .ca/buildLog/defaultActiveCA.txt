@@ -1,0 +1,306 @@
+make -f nbproject/Makefile-defaultActiveCA.mk SUBPROJECTS= .clean-conf
+make[1]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+rm -f  -r .ca/build/defaultActiveCA/production
+rm -f  -r .ca/dist/defaultActiveCA/production
+make[1]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+[32mCLEAN SUCCESSFUL (total time: 161ms)[0m
+make -f nbproject/Makefile-defaultActiveCA.mk SUBPROJECTS= .build-conf
+make  -f nbproject/Makefile-defaultActiveCA.mk .ca/dist/defaultActiveCA/production/Digitale_pingpong_zweeftoren.X.production.hex
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/config_bits.p1 mcc_generated_files/system/src/config_bits.c 
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/system.p1 mcc_generated_files/system/src/system.c 
+In file included from mcc_generated_files/system/src/system.c:36:
+In file included from mcc_generated_files/system/src/../system.h:50:
+In file included from mcc_generated_files/system/src/../../timer/tmr2.h:41:
+mcc_generated_files/system/src/../../timer/tmr2_deprecated.h:38:2: warning: "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from mcc_generated_files/system/src/system.c:36:
+In file included from mcc_generated_files/system/src/../system.h:51:
+In file included from mcc_generated_files/system/src/../../timer/tmr4.h:41:
+mcc_generated_files/system/src/../../timer/tmr4_deprecated.h:38:2: warning: "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from mcc_generated_files/system/src/system.c:36:
+In file included from mcc_generated_files/system/src/../system.h:52:
+In file included from mcc_generated_files/system/src/../../timer/tmr6.h:41:
+mcc_generated_files/system/src/../../timer/tmr6_deprecated.h:38:2: warning: "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+3 warnings generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/spi/src/mssp1.p1 mcc_generated_files/spi/src/mssp1.c 
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/pwm/src/pwm5.p1 mcc_generated_files/pwm/src/pwm5.c 
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/adc/src/adc.p1 mcc_generated_files/adc/src/adc.c 
+mcc_generated_files/adc/src/adc.c:85:22: warning: implicit conversion loses integer precision: 'adc_channel_t' to 'unsigned char' [-Wimplicit-int-conversion]
+   85 |     ADCON0bits.CHS = channel;    
+      |                    ~ ^~~~~~~
+mcc_generated_files/adc/src/adc.c:109:22: warning: implicit conversion loses integer precision: 'adc_channel_t' to 'unsigned char' [-Wimplicit-int-conversion]
+  109 |     ADCON0bits.CHS = channel;
+      |                    ~ ^~~~~~~
+2 warnings generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/timer/src/tmr2.p1 mcc_generated_files/timer/src/tmr2.c 
+In file included from mcc_generated_files/timer/src/tmr2.c:36:
+In file included from mcc_generated_files/timer/src/../tmr2.h:41:
+mcc_generated_files/timer/src/../tmr2_deprecated.h:38:2: warning: "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+1 warning generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/clock.p1 mcc_generated_files/system/src/clock.c 
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/timer/src/tmr6.p1 mcc_generated_files/timer/src/tmr6.c 
+In file included from mcc_generated_files/timer/src/tmr6.c:36:
+In file included from mcc_generated_files/timer/src/../tmr6.h:41:
+mcc_generated_files/timer/src/../tmr6_deprecated.h:38:2: warning: "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+1 warning generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/timer/src/tmr4.p1 mcc_generated_files/timer/src/tmr4.c 
+In file included from mcc_generated_files/timer/src/tmr4.c:36:
+In file included from mcc_generated_files/timer/src/../tmr4.h:41:
+mcc_generated_files/timer/src/../tmr4_deprecated.h:38:2: warning: "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+1 warning generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/pins.p1 mcc_generated_files/system/src/pins.c 
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/uart/src/eusart.p1 mcc_generated_files/uart/src/eusart.c 
+In file included from mcc_generated_files/uart/src/eusart.c:37:
+In file included from mcc_generated_files/uart/src/../eusart.h:46:
+In file included from mcc_generated_files/uart/src/../../system/system.h:50:
+In file included from mcc_generated_files/uart/src/../../system/../timer/tmr2.h:41:
+mcc_generated_files/uart/src/../../system/../timer/tmr2_deprecated.h:38:2: warning: "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from mcc_generated_files/uart/src/eusart.c:37:
+In file included from mcc_generated_files/uart/src/../eusart.h:46:
+In file included from mcc_generated_files/uart/src/../../system/system.h:51:
+In file included from mcc_generated_files/uart/src/../../system/../timer/tmr4.h:41:
+mcc_generated_files/uart/src/../../system/../timer/tmr4_deprecated.h:38:2: warning: "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from mcc_generated_files/uart/src/eusart.c:37:
+In file included from mcc_generated_files/uart/src/../eusart.h:46:
+In file included from mcc_generated_files/uart/src/../../system/system.h:52:
+In file included from mcc_generated_files/uart/src/../../system/../timer/tmr6.h:41:
+mcc_generated_files/uart/src/../../system/../timer/tmr6_deprecated.h:38:2: warning: "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+3 warnings generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/main.p1 main.c 
+In file included from main.c:35:
+In file included from ./mcc_generated_files/system/system.h:50:
+In file included from ./mcc_generated_files/system/../timer/tmr2.h:41:
+./mcc_generated_files/system/../timer/tmr2_deprecated.h:38:2: warning: "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from main.c:35:
+In file included from ./mcc_generated_files/system/system.h:51:
+In file included from ./mcc_generated_files/system/../timer/tmr4.h:41:
+./mcc_generated_files/system/../timer/tmr4_deprecated.h:38:2: warning: "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from main.c:35:
+In file included from ./mcc_generated_files/system/system.h:52:
+In file included from ./mcc_generated_files/system/../timer/tmr6.h:41:
+./mcc_generated_files/system/../timer/tmr6_deprecated.h:38:2: warning: "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+3 warnings generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/adcMeasurements.p1 adcMeasurements.c 
+adcMeasurements.c:11:13: warning: 4 enumeration values not handled in switch: 'channel_AVSS', 'channel_Temp', 'channel_DAC1'... [-Wswitch]
+   11 |     switch (new_channel) {
+      |             ^~~~~~~~~~~
+1 warning generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/UART.p1 UART.c 
+In file included from UART.c:4:
+In file included from ./mcc_generated_files/uart/eusart.h:46:
+In file included from ./mcc_generated_files/uart/../system/system.h:50:
+In file included from ./mcc_generated_files/uart/../system/../timer/tmr2.h:41:
+./mcc_generated_files/uart/../system/../timer/tmr2_deprecated.h:38:2: warning: "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from UART.c:4:
+In file included from ./mcc_generated_files/uart/eusart.h:46:
+In file included from ./mcc_generated_files/uart/../system/system.h:51:
+In file included from ./mcc_generated_files/uart/../system/../timer/tmr4.h:41:
+./mcc_generated_files/uart/../system/../timer/tmr4_deprecated.h:38:2: warning: "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from UART.c:4:
+In file included from ./mcc_generated_files/uart/eusart.h:46:
+In file included from ./mcc_generated_files/uart/../system/system.h:52:
+In file included from ./mcc_generated_files/uart/../system/../timer/tmr6.h:41:
+./mcc_generated_files/uart/../system/../timer/tmr6_deprecated.h:38:2: warning: "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+3 warnings generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/controller.p1 controller.c 
+controller.c:18:30: warning: implicit conversion changes signedness: 'unsigned int' to 'int16_t' (aka 'short') [-Wsign-conversion]
+   18 |     int16_t error = setpoint - hoogte_bal;
+      |             ~~~~~   ~~~~~~~~~^~~~~~~~~~~~
+controller.c:22:20: warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+   22 |     int16_t P = kp * error;
+      |             ~   ~~~^~~~~~~
+controller.c:23:20: warning: implicit conversion turns floating-point number into integer: 'float' to 'int16_t' (aka 'short') [-Wfloat-conversion]
+   23 |     int16_t I = ki * integraal;
+      |             ~   ~~~^~~~~~~~~~~
+controller.c:25:19: warning: implicit conversion changes signedness: 'int' to 'uint16_t' (aka 'unsigned short') [-Wsign-conversion]
+   25 |     dutycycle = P + I;
+      |               ~ ~~^~~
+4 warnings generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/interrupt.p1 mcc_generated_files/system/src/interrupt.c 
+In file included from mcc_generated_files/system/src/interrupt.c:35:
+In file included from mcc_generated_files/system/src/../../system/system.h:50:
+In file included from mcc_generated_files/system/src/../../system/../timer/tmr2.h:41:
+mcc_generated_files/system/src/../../system/../timer/tmr2_deprecated.h:38:2: warning: "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr2_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from mcc_generated_files/system/src/interrupt.c:35:
+In file included from mcc_generated_files/system/src/../../system/system.h:51:
+In file included from mcc_generated_files/system/src/../../system/../timer/tmr4.h:41:
+mcc_generated_files/system/src/../../system/../timer/tmr4_deprecated.h:38:2: warning: "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr4_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+In file included from mcc_generated_files/system/src/interrupt.c:35:
+In file included from mcc_generated_files/system/src/../../system/system.h:52:
+In file included from mcc_generated_files/system/src/../../system/../timer/tmr6.h:41:
+mcc_generated_files/system/src/../../system/../timer/tmr6_deprecated.h:38:2: warning: "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+3 warnings generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_defaultActiveCA=defaultActiveCA  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/defaultActiveCA/production/ledstrip.p1 ledstrip.c 
+In file included from ledstrip.c:2:
+In file included from ./mcc_generated_files/timer/tmr6.h:41:
+./mcc_generated_files/timer/tmr6_deprecated.h:38:2: warning: "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative." [-W#warnings]
+   38 | #warning "The tmr6_deprecated.h file contains the deprecated macros or functions. Replace the deprecated macro or functions with the recommended alternative."
+      |  ^
+ledstrip.c:35:12: warning: implicit conversion turns floating-point number into integer: 'float' to 'int' [-Wfloat-conversion]
+   35 |     return result;
+      |     ~~~~~~ ^~~~~~
+2 warnings generated.
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+make[2]: Entering directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+"C:\Program Files\Microchip\xc8\v3.00\bin\xc8-cc.exe"  -mcpu=16F18345 -Wl,-Map=.ca/dist/defaultActiveCA/production/Digitale_pingpong_zweeftoren.X.production.map  -DXPRJ_defaultActiveCA=defaultActiveCA  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto      -Wl,--memorysummary,.ca/dist/defaultActiveCA/production/memoryfile.xml -o .ca/dist/defaultActiveCA/production/Digitale_pingpong_zweeftoren.X.production.elf  .ca/build/defaultActiveCA/production/mcc_generated_files/adc/src/adc.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/pwm/src/pwm5.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/spi/src/mssp1.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/interrupt.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/clock.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/pins.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/system.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/system/src/config_bits.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/timer/src/tmr2.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/timer/src/tmr4.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/timer/src/tmr6.p1 .ca/build/defaultActiveCA/production/mcc_generated_files/uart/src/eusart.p1 .ca/build/defaultActiveCA/production/main.p1 .ca/build/defaultActiveCA/production/adcMeasurements.p1 .ca/build/defaultActiveCA/production/UART.p1 .ca/build/defaultActiveCA/production/controller.p1 .ca/build/defaultActiveCA/production/ledstrip.p1     
+controller.c:31:: warning: (765) degenerate unsigned comparison
+mcc_generated_files/adc/src/adc.c:82:: advisory: (1510) non-reentrant function "_ADC_SelectChannel" appears in multiple call graphs and has been duplicated by the compiler
+adcMeasurements.c:33:: advisory: (1510) non-reentrant function "_getHoogtesensor" appears in multiple call graphs and has been duplicated by the compiler
+C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fltol.c:43:: advisory: (1510) non-reentrant function "___fltol" appears in multiple call graphs and has been duplicated by the compiler
+C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c:10:: advisory: (1510) non-reentrant function "___fladd" appears in multiple call graphs and has been duplicated by the compiler
+C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c:8:: advisory: (1510) non-reentrant function "___flmul" appears in multiple call graphs and has been duplicated by the compiler
+C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c:4:: advisory: (1510) non-reentrant function "__Umul8_16" appears in multiple call graphs and has been duplicated by the compiler
+C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c:10:: advisory: (1510) non-reentrant function "___xxtofl" appears in multiple call graphs and has been duplicated by the compiler
+mcc_generated_files/adc/src/adc.c:88:: warning: (520) function "_ADC_StartConversion" is never called
+mcc_generated_files/adc/src/adc.c:94:: warning: (520) function "_ADC_IsConversionDone" is never called
+mcc_generated_files/adc/src/adc.c:106:: warning: (520) function "_ADC_GetConversion" is never called
+mcc_generated_files/adc/src/adc.c:129:: warning: (520) function "_ADC_TemperatureAcquisitionDelay" is never called
+mcc_generated_files/spi/src/mssp1.c:72:: warning: (520) function "_SPI1_Deinitialize" is never called
+mcc_generated_files/spi/src/mssp1.c:102:: warning: (520) function "_SPI1_Close" is never called
+mcc_generated_files/spi/src/mssp1.c:107:: warning: (520) function "_SPI1_BufferExchange" is never called
+mcc_generated_files/spi/src/mssp1.c:125:: warning: (520) function "_SPI1_BufferWrite" is never called
+mcc_generated_files/spi/src/mssp1.c:142:: warning: (520) function "_SPI1_BufferRead" is never called
+mcc_generated_files/spi/src/mssp1.c:171:: warning: (520) function "_SPI1_ByteWrite" is never called
+mcc_generated_files/spi/src/mssp1.c:176:: warning: (520) function "_SPI1_ByteRead" is never called
+mcc_generated_files/spi/src/mssp1.c:185:: warning: (520) function "_SPI1_IsRxReady" is never called
+mcc_generated_files/spi/src/mssp1.c:199:: warning: (520) function "_SPI1_IsTxReady" is never called
+mcc_generated_files/system/src/interrupt.c:95:: warning: (520) function "_INT_ISR" is never called
+mcc_generated_files/system/src/interrupt.c:104:: warning: (520) function "_INT_CallBack" is never called
+mcc_generated_files/system/src/pins.c:119:: warning: (520) function "_PIN_MANAGER_IOC" is never called
+mcc_generated_files/timer/src/tmr2.c:59:: warning: (520) function "_TMR2_Deinitialize" is never called
+mcc_generated_files/timer/src/tmr2.c:69:: warning: (520) function "_TMR2_Start" is never called
+mcc_generated_files/timer/src/tmr2.c:74:: warning: (520) function "_TMR2_Stop" is never called
+mcc_generated_files/timer/src/tmr2.c:79:: warning: (520) function "_TMR2_CounterGet" is never called
+mcc_generated_files/timer/src/tmr2.c:84:: warning: (520) function "_TMR2_CounterSet" is never called
+mcc_generated_files/timer/src/tmr2.c:89:: warning: (520) function "_TMR2_PeriodSet" is never called
+mcc_generated_files/timer/src/tmr2.c:94:: warning: (520) function "_TMR2_PeriodGet" is never called
+mcc_generated_files/timer/src/tmr2.c:99:: warning: (520) function "_TMR2_MaxCountGet" is never called
+mcc_generated_files/timer/src/tmr2.c:104:: warning: (520) function "_TMR2_TMRInterruptEnable" is never called
+mcc_generated_files/timer/src/tmr2.c:109:: warning: (520) function "_TMR2_TMRInterruptDisable" is never called
+mcc_generated_files/timer/src/tmr2.c:124:: warning: (520) function "_TMR2_PeriodMatchCallbackRegister" is never called
+mcc_generated_files/timer/src/tmr4.c:59:: warning: (520) function "_TMR4_Deinitialize" is never called
+mcc_generated_files/timer/src/tmr4.c:69:: warning: (520) function "_TMR4_Start" is never called
+mcc_generated_files/timer/src/tmr4.c:74:: warning: (520) function "_TMR4_Stop" is never called
+mcc_generated_files/timer/src/tmr4.c:79:: warning: (520) function "_TMR4_CounterGet" is never called
+mcc_generated_files/timer/src/tmr4.c:84:: warning: (520) function "_TMR4_CounterSet" is never called
+mcc_generated_files/timer/src/tmr4.c:89:: warning: (520) function "_TMR4_PeriodSet" is never called
+mcc_generated_files/timer/src/tmr4.c:94:: warning: (520) function "_TMR4_PeriodGet" is never called
+mcc_generated_files/timer/src/tmr4.c:99:: warning: (520) function "_TMR4_MaxCountGet" is never called
+mcc_generated_files/timer/src/tmr4.c:104:: warning: (520) function "_TMR4_TMRInterruptEnable" is never called
+mcc_generated_files/timer/src/tmr4.c:109:: warning: (520) function "_TMR4_TMRInterruptDisable" is never called
+mcc_generated_files/timer/src/tmr6.c:58:: warning: (520) function "_TMR6_Deinitialize" is never called
+mcc_generated_files/timer/src/tmr6.c:68:: warning: (520) function "_TMR6_Start" is never called
+mcc_generated_files/timer/src/tmr6.c:73:: warning: (520) function "_TMR6_Stop" is never called
+mcc_generated_files/timer/src/tmr6.c:78:: warning: (520) function "_TMR6_CounterGet" is never called
+mcc_generated_files/timer/src/tmr6.c:83:: warning: (520) function "_TMR6_CounterSet" is never called
+mcc_generated_files/timer/src/tmr6.c:88:: warning: (520) function "_TMR6_PeriodSet" is never called
+mcc_generated_files/timer/src/tmr6.c:93:: warning: (520) function "_TMR6_PeriodGet" is never called
+mcc_generated_files/timer/src/tmr6.c:98:: warning: (520) function "_TMR6_MaxCountGet" is never called
+mcc_generated_files/timer/src/tmr6.c:114:: warning: (520) function "_TMR6_PeriodMatchStatusGet" is never called
+mcc_generated_files/timer/src/tmr6.c:119:: warning: (520) function "_TMR6_PeriodMatchStatusClear" is never called
+mcc_generated_files/uart/src/eusart.c:167:: warning: (520) function "_EUSART_Deinitialize" is never called
+mcc_generated_files/uart/src/eusart.c:178:: warning: (520) function "_EUSART_Enable" is never called
+mcc_generated_files/uart/src/eusart.c:184:: warning: (520) function "_EUSART_Disable" is never called
+mcc_generated_files/uart/src/eusart.c:190:: warning: (520) function "_EUSART_TransmitEnable" is never called
+mcc_generated_files/uart/src/eusart.c:195:: warning: (520) function "_EUSART_TransmitDisable" is never called
+mcc_generated_files/uart/src/eusart.c:200:: warning: (520) function "_EUSART_ReceiveEnable" is never called
+mcc_generated_files/uart/src/eusart.c:205:: warning: (520) function "_EUSART_ReceiveDisable" is never called
+mcc_generated_files/uart/src/eusart.c:210:: warning: (520) function "_EUSART_SendBreakControlEnable" is never called
+mcc_generated_files/uart/src/eusart.c:215:: warning: (520) function "_EUSART_SendBreakControlDisable" is never called
+mcc_generated_files/uart/src/eusart.c:220:: warning: (520) function "_EUSART_AutoBaudSet" is never called
+mcc_generated_files/uart/src/eusart.c:232:: warning: (520) function "_EUSART_AutoBaudQuery" is never called
+mcc_generated_files/uart/src/eusart.c:237:: warning: (520) function "_EUSART_IsAutoBaudDetectOverflow" is never called
+mcc_generated_files/uart/src/eusart.c:242:: warning: (520) function "_EUSART_AutoBaudDetectOverflowReset" is never called
+mcc_generated_files/uart/src/eusart.c:247:: warning: (520) function "_EUSART_TransmitInterruptEnable" is never called
+mcc_generated_files/uart/src/eusart.c:253:: warning: (520) function "_EUSART_TransmitInterruptDisable" is never called
+mcc_generated_files/uart/src/eusart.c:258:: warning: (520) function "_EUSART_ReceiveInterruptEnable" is never called
+mcc_generated_files/uart/src/eusart.c:262:: warning: (520) function "_EUSART_ReceiveInterruptDisable" is never called
+mcc_generated_files/uart/src/eusart.c:277:: warning: (520) function "_EUSART_IsTxDone" is never called
+mcc_generated_files/uart/src/eusart.c:282:: warning: (520) function "_EUSART_ErrorGet" is never called
+mcc_generated_files/uart/src/eusart.c:400:: warning: (520) function "_getch" is never called
+mcc_generated_files/uart/src/eusart.c:446:: warning: (520) function "_EUSART_RxCompleteCallbackRegister" is never called
+mcc_generated_files/uart/src/eusart.c:454:: warning: (520) function "_EUSART_TxCompleteCallbackRegister" is never called
+controller.c:46:: warning: (520) function "_setDutycycle" is never called
+ledstrip.c:42:: warning: (520) function "_dutycycle_led_strip" is never called
+mcc_generated_files/uart/src/eusart.c:349:: advisory: (2098) indirect function call via a NULL pointer ignored
+mcc_generated_files/uart/src/eusart.c:349:: warning: (759) expression generates no code
+mcc_generated_files/uart/src/eusart.c:396:: advisory: (2098) indirect function call via a NULL pointer ignored
+mcc_generated_files/uart/src/eusart.c:396:: warning: (759) expression generates no code
+
+16F18345 Memory Summary:
+    Program space        used  1D50h (  7504) of  2000h words   ( 91.6%)
+    Data space           used   136h (   310) of   400h bytes   ( 30.3%)
+    EEPROM space         used     0h (     0) of   100h bytes   (  0.0%)
+    Configuration bits   used     4h (     4) of     4h words   (100.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+
+make[2]: Leaving directory 'C:/Users/Wednesday/MPLABXProjects/Digitale pingpong zweeftoren.X'
+[32mBUILD SUCCESSFUL (total time: 6s)[0m

@@ -1,0 +1,24 @@
+.ca/build/PRO_Comparison/production/UART.p1:  \
+UART.c  \
+mcc_generated_files/uart/eusart.h  \
+mcc_generated_files/uart/../system/system.h  \
+mcc_generated_files/uart/../system/config_bits.h  \
+mcc_generated_files/uart/../system/../system/clock.h  \
+mcc_generated_files/uart/../system/../system/pins.h  \
+mcc_generated_files/uart/../system/../adc/adc.h  \
+mcc_generated_files/uart/../system/../uart/eusart.h  \
+mcc_generated_files/uart/../system/../pwm/pwm5.h  \
+mcc_generated_files/uart/../system/../spi/mssp1.h  \
+mcc_generated_files/uart/../system/../spi/spi_interface.h  \
+mcc_generated_files/uart/../system/../system/interrupt.h  \
+mcc_generated_files/uart/../system/../timer/tmr2.h  \
+mcc_generated_files/uart/../system/../timer/tmr2_deprecated.h  \
+mcc_generated_files/uart/../system/../timer/tmr4.h  \
+mcc_generated_files/uart/../system/../timer/tmr4_deprecated.h  \
+mcc_generated_files/uart/../system/../timer/tmr6.h  \
+mcc_generated_files/uart/../system/../timer/tmr6_deprecated.h  \
+mcc_generated_files/uart/uart_drv_interface.h  \
+mcc_generated_files/uart/uart_types.h  \
+adcMeasurements.h  \
+mcc_generated_files/pwm/pwm5.h  \
+controller.h 

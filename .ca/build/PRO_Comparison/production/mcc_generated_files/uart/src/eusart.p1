@@ -1,0 +1,1649 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F7164 `(v ~T0 @X0 0 tf ]
+[v F7166 `(v ~T0 @X0 0 tf ]
+[v F7168 `(uc ~T0 @X0 0 tf ]
+[v F7170 `(v ~T0 @X0 0 tf1`uc ]
+[v F7173 `(a ~T0 @X0 0 tf ]
+[v F7175 `(a ~T0 @X0 0 tf ]
+[v F7177 `(a ~T0 @X0 0 tf ]
+[v F7179 `(v ~T0 @X0 0 tf ]
+[v F7181 `(v ~T0 @X0 0 tf ]
+[v F7183 `(v ~T0 @X0 0 tf1`a ]
+[v F7186 `(a ~T0 @X0 0 tf ]
+[v F7188 `(a ~T0 @X0 0 tf ]
+[v F7190 `(v ~T0 @X0 0 tf1`ul ]
+[v F7193 `(ul ~T0 @X0 0 tf ]
+[v F7195 `(v ~T0 @X0 0 tf1`ul ]
+[v F7198 `(ul ~T0 @X0 0 tf ]
+[v F7200 `(ui ~T0 @X0 0 tf ]
+[v F7203 `(v ~T0 @X0 0 tf ]
+[v F7202 `(v ~T0 @X0 0 tf1`*F7203 ]
+[v F7207 `(v ~T0 @X0 0 tf ]
+[v F7206 `(v ~T0 @X0 0 tf1`*F7207 ]
+[v F7211 `(v ~T0 @X0 0 tf ]
+[v F7210 `(v ~T0 @X0 0 tf1`*F7211 ]
+[v F7215 `(v ~T0 @X0 0 tf ]
+[v F7214 `(v ~T0 @X0 0 tf1`*F7215 ]
+[v F7219 `(v ~T0 @X0 0 tf ]
+[v F7218 `(v ~T0 @X0 0 tf1`*F7219 ]
+[v F7223 `(v ~T0 @X0 0 tf ]
+[v F7222 `(v ~T0 @X0 0 tf1`*F7223 ]
+[v F7227 `(v ~T0 @X0 0 tf ]
+[v F7226 `(v ~T0 @X0 0 tf1`*F7227 ]
+"58 mcc_generated_files/uart/src/../uart_drv_interface.h
+[s S965 `*F7164 1 `*F7166 1 `*F7168 1 `*F7170 1 `*F7173 1 `*F7175 1 `*F7177 1 `*F7179 1 `*F7181 1 `*F7183 1 `*F7186 1 `*F7188 1 `*F7190 1 `*F7193 1 `*F7195 1 `*F7198 1 `*F7200 1 `*F7202 1 `*F7206 1 `*F7210 1 `*F7214 1 `*F7218 1 `*F7222 1 `*F7226 1 ]
+[n S965 . Initialize Deinitialize Read Write IsRxReady IsTxReady IsTxDone TransmitEnable TransmitDisable AutoBaudSet AutoBaudQuery AutoBaudEventEnableGet BRGCountSet BRGCountGet BaudRateSet BaudRateGet ErrorGet TxCompleteCallbackRegister RxCompleteCallbackRegister TxCollisionCallbackRegister FramingErrorCallbackRegister OverrunErrorCallbackRegister ParityErrorCallbackRegister EventCallbackRegister ]
+"124 mcc_generated_files/uart/src/../eusart.h
+[v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
+"132
+[v _EUSART_Deinitialize `(v ~T0 @X0 0 ef ]
+"307
+[v _EUSART_Read `(uc ~T0 @X0 0 ef ]
+"317
+[v _EUSART_Write `(v ~T0 @X0 0 ef1`uc ]
+"271
+[v _EUSART_IsRxReady `(a ~T0 @X0 0 ef ]
+"280
+[v _EUSART_IsTxReady `(a ~T0 @X0 0 ef ]
+"289
+[v _EUSART_IsTxDone `(a ~T0 @X0 0 ef ]
+"157
+[v _EUSART_TransmitEnable `(v ~T0 @X0 0 ef ]
+"165
+[v _EUSART_TransmitDisable `(v ~T0 @X0 0 ef ]
+"238
+[v _EUSART_AutoBaudSet `(v ~T0 @X0 0 ef1`a ]
+"246
+[v _EUSART_AutoBaudQuery `(a ~T0 @X0 0 ef ]
+[v F7305 `(a ~T0 @X0 0 tf ]
+[v F7306 `(v ~T0 @X0 0 tf1`ul ]
+[v F7308 `(ul ~T0 @X0 0 tf ]
+[v F7309 `(v ~T0 @X0 0 tf1`ul ]
+[v F7311 `(ul ~T0 @X0 0 tf ]
+"297
+[v _EUSART_ErrorGet `(ui ~T0 @X0 0 ef ]
+[v F7277 `(v ~T0 @X0 0 tf ]
+"350
+[v _EUSART_TxCompleteCallbackRegister `(v ~T0 @X0 0 ef1`*F7277 ]
+[v F7284 `(v ~T0 @X0 0 tf ]
+"374
+[v _EUSART_RxCompleteCallbackRegister `(v ~T0 @X0 0 ef1`*F7284 ]
+[v F7320 `(v ~T0 @X0 0 tf ]
+[v F7319 `(v ~T0 @X0 0 tf1`*F7320 ]
+[v F7267 `(v ~T0 @X0 0 tf ]
+"325
+[v _EUSART_FramingErrorCallbackRegister `(v ~T0 @X0 0 ef1`*F7267 ]
+[v F7271 `(v ~T0 @X0 0 tf ]
+"333
+[v _EUSART_OverrunErrorCallbackRegister `(v ~T0 @X0 0 ef1`*F7271 ]
+[v F7329 `(v ~T0 @X0 0 tf ]
+[v F7328 `(v ~T0 @X0 0 tf1`*F7329 ]
+[v F7332 `(v ~T0 @X0 0 tf ]
+[v F7331 `(v ~T0 @X0 0 tf1`*F7332 ]
+"98
+[s S967 :1 `uc 1 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S967 . perr ferr oerr reserved ]
+"97
+[u S966 `S967 1 `ui 1 ]
+[n S966 . . status ]
+[v F7345 `(v ~T0 @X0 0 tf ]
+[v F7347 `(v ~T0 @X0 0 tf ]
+[v F7348 `(v ~T0 @X0 0 tf ]
+[v F7350 `(v ~T0 @X0 0 tf ]
+[v F7352 `(v ~T0 @X0 0 tf ]
+[v F7353 `(v ~T0 @X0 0 tf ]
+[v F7355 `(v ~T0 @X0 0 tf ]
+[v F7356 `(v ~T0 @X0 0 tf ]
+[v F7358 `(v ~T0 @X0 0 tf ]
+[v F7359 `(v ~T0 @X0 0 tf ]
+"1735 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
+[s S96 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S96 . TMR1IE TMR2IE BCL1IE SSP1IE TXIE RCIE ADIE TMR1GIE ]
+"1734
+[u S95 `S96 1 ]
+[n S95 . . ]
+"1746
+[v _PIE1bits `VS95 ~T0 @X0 0 e@145 ]
+"124 mcc_generated_files/uart/src/eusart.c
+[v _EUSART_ReceiveISR `(v ~T0 @X0 0 ef ]
+"123
+[v _EUSART_TransmitISR `(v ~T0 @X0 0 ef ]
+"3687 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
+[v _BAUD1CON `Vuc ~T0 @X0 0 e@415 ]
+"3327
+[v _RC1STA `Vuc ~T0 @X0 0 e@413 ]
+"3507
+[v _TX1STA `Vuc ~T0 @X0 0 e@414 ]
+"3219
+[v _SP1BRGL `Vuc ~T0 @X0 0 e@411 ]
+"3273
+[v _SP1BRGH `Vuc ~T0 @X0 0 e@412 ]
+"120 mcc_generated_files/uart/src/eusart.c
+[v _EUSART_DefaultFramingErrorCallback `(v ~T0 @X0 0 sf ]
+"121
+[v _EUSART_DefaultOverrunErrorCallback `(v ~T0 @X0 0 sf ]
+"3342 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
+[s S182 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S182 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"3341
+[u S181 `S182 1 ]
+[n S181 . . ]
+"3353
+[v _RC1STAbits `VS181 ~T0 @X0 0 e@413 ]
+"3522
+[s S188 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S188 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"3521
+[u S187 `S188 1 ]
+[n S187 . . ]
+"3533
+[v _TX1STAbits `VS187 ~T0 @X0 0 e@414 ]
+"3710
+[s S194 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S194 . ABDEN WUE . BRG16 SCKP . RCIDL ABDOVF ]
+"3709
+[u S193 `S194 1 ]
+[n S193 . . ]
+"3721
+[v _BAUD1CONbits `VS193 ~T0 @X0 0 e@415 ]
+[v F7399 `(v ~T0 @X0 0 tf ]
+[v F7400 `(v ~T0 @X0 0 tf ]
+"3099
+[v _RC1REG `Vuc ~T0 @X0 0 e@409 ]
+[v F7401 `(v ~T0 @X0 0 tf ]
+"3153
+[v _TX1REG `Vuc ~T0 @X0 0 e@410 ]
+[v F7407 `(v ~T0 @X0 0 tf ]
+[v F7414 `(v ~T0 @X0 0 tf ]
+[v F7416 `(v ~T0 @X0 0 tf ]
+[v F7417 `(v ~T0 @X0 0 tf ]
+[v F7420 `(v ~T0 @X0 0 tf ]
+[v F7422 `(v ~T0 @X0 0 tf ]
+[v F7423 `(v ~T0 @X0 0 tf ]
+[v F7426 `(v ~T0 @X0 0 tf ]
+[v F7428 `(v ~T0 @X0 0 tf ]
+[v F7429 `(v ~T0 @X0 0 tf ]
+[v F7432 `(v ~T0 @X0 0 tf ]
+[v F7434 `(v ~T0 @X0 0 tf ]
+[v F7435 `(v ~T0 @X0 0 tf ]
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
+[; <" INDF0 equ 00h ;# ">
+"74
+[; <" INDF1 equ 01h ;# ">
+"94
+[; <" PCL equ 02h ;# ">
+"114
+[; <" STATUS equ 03h ;# ">
+"177
+[; <" FSR0L equ 04h ;# ">
+"197
+[; <" FSR0H equ 05h ;# ">
+"221
+[; <" FSR1L equ 06h ;# ">
+"241
+[; <" FSR1H equ 07h ;# ">
+"261
+[; <" BSR equ 08h ;# ">
+"313
+[; <" WREG equ 09h ;# ">
+"333
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; <" INTCON equ 0Bh ;# ">
+"386
+[; <" PORTA equ 0Ch ;# ">
+"436
+[; <" PORTB equ 0Dh ;# ">
+"475
+[; <" PORTC equ 0Eh ;# ">
+"537
+[; <" PIR0 equ 010h ;# ">
+"570
+[; <" PIR1 equ 011h ;# ">
+"632
+[; <" PIR2 equ 012h ;# ">
+"694
+[; <" PIR3 equ 013h ;# ">
+"756
+[; <" PIR4 equ 014h ;# ">
+"818
+[; <" TMR0L equ 015h ;# ">
+"823
+[; <" TMR0 equ 015h ;# ">
+"956
+[; <" TMR0H equ 016h ;# ">
+"961
+[; <" PR0 equ 016h ;# ">
+"1110
+[; <" T0CON0 equ 017h ;# ">
+"1175
+[; <" T0CON1 equ 018h ;# ">
+"1252
+[; <" TMR1 equ 019h ;# ">
+"1259
+[; <" TMR1L equ 019h ;# ">
+"1279
+[; <" TMR1H equ 01Ah ;# ">
+"1299
+[; <" T1CON equ 01Bh ;# ">
+"1371
+[; <" T1GCON equ 01Ch ;# ">
+"1441
+[; <" TMR2 equ 01Dh ;# ">
+"1461
+[; <" PR2 equ 01Eh ;# ">
+"1481
+[; <" T2CON equ 01Fh ;# ">
+"1552
+[; <" TRISA equ 08Ch ;# ">
+"1597
+[; <" TRISB equ 08Dh ;# ">
+"1636
+[; <" TRISC equ 08Eh ;# ">
+"1698
+[; <" PIE0 equ 090h ;# ">
+"1731
+[; <" PIE1 equ 091h ;# ">
+"1793
+[; <" PIE2 equ 092h ;# ">
+"1855
+[; <" PIE3 equ 093h ;# ">
+"1917
+[; <" PIE4 equ 094h ;# ">
+"1979
+[; <" WDTCON equ 097h ;# ">
+"2038
+[; <" ADRES equ 09Bh ;# ">
+"2045
+[; <" ADRESL equ 09Bh ;# ">
+"2065
+[; <" ADRESH equ 09Ch ;# ">
+"2085
+[; <" ADCON0 equ 09Dh ;# ">
+"2171
+[; <" ADCON1 equ 09Eh ;# ">
+"2243
+[; <" ADACT equ 09Fh ;# ">
+"2295
+[; <" LATA equ 010Ch ;# ">
+"2340
+[; <" LATB equ 010Dh ;# ">
+"2379
+[; <" LATC equ 010Eh ;# ">
+"2441
+[; <" CM1CON0 equ 0111h ;# ">
+"2493
+[; <" CM1CON1 equ 0112h ;# ">
+"2569
+[; <" CM2CON0 equ 0113h ;# ">
+"2621
+[; <" CM2CON1 equ 0114h ;# ">
+"2697
+[; <" CMOUT equ 0115h ;# ">
+"2723
+[; <" BORCON equ 0116h ;# ">
+"2750
+[; <" FVRCON equ 0117h ;# ">
+"2826
+[; <" DACCON0 equ 0118h ;# ">
+"2882
+[; <" DACCON1 equ 0119h ;# ">
+"2934
+[; <" ANSELA equ 018Ch ;# ">
+"2979
+[; <" ANSELB equ 018Dh ;# ">
+"3018
+[; <" ANSELC equ 018Eh ;# ">
+"3080
+[; <" VREGCON equ 0197h ;# ">
+"3101
+[; <" RC1REG equ 0199h ;# ">
+"3106
+[; <" RCREG equ 0199h ;# ">
+"3110
+[; <" RCREG1 equ 0199h ;# ">
+"3155
+[; <" TX1REG equ 019Ah ;# ">
+"3160
+[; <" TXREG1 equ 019Ah ;# ">
+"3164
+[; <" TXREG equ 019Ah ;# ">
+"3209
+[; <" SP1BRG equ 019Bh ;# ">
+"3214
+[; <" SPBRG equ 019Bh ;# ">
+"3221
+[; <" SP1BRGL equ 019Bh ;# ">
+"3226
+[; <" SPBRG1 equ 019Bh ;# ">
+"3230
+[; <" SPBRGL equ 019Bh ;# ">
+"3275
+[; <" SP1BRGH equ 019Ch ;# ">
+"3280
+[; <" SPBRGH equ 019Ch ;# ">
+"3284
+[; <" SPBRGH1 equ 019Ch ;# ">
+"3329
+[; <" RC1STA equ 019Dh ;# ">
+"3334
+[; <" RCSTA1 equ 019Dh ;# ">
+"3338
+[; <" RCSTA equ 019Dh ;# ">
+"3509
+[; <" TX1STA equ 019Eh ;# ">
+"3514
+[; <" TXSTA1 equ 019Eh ;# ">
+"3518
+[; <" TXSTA equ 019Eh ;# ">
+"3689
+[; <" BAUD1CON equ 019Fh ;# ">
+"3694
+[; <" BAUDCON1 equ 019Fh ;# ">
+"3698
+[; <" BAUDCTL1 equ 019Fh ;# ">
+"3702
+[; <" BAUDCON equ 019Fh ;# ">
+"3706
+[; <" BAUDCTL equ 019Fh ;# ">
+"3935
+[; <" WPUA equ 020Ch ;# ">
+"3985
+[; <" WPUB equ 020Dh ;# ">
+"4024
+[; <" WPUC equ 020Eh ;# ">
+"4086
+[; <" SSP1BUF equ 0211h ;# ">
+"4091
+[; <" SSPBUF equ 0211h ;# ">
+"4340
+[; <" SSP1ADD equ 0212h ;# ">
+"4345
+[; <" SSPADD equ 0212h ;# ">
+"4594
+[; <" SSP1MSK equ 0213h ;# ">
+"4599
+[; <" SSPMSK equ 0213h ;# ">
+"4848
+[; <" SSP1STAT equ 0214h ;# ">
+"4853
+[; <" SSPSTAT equ 0214h ;# ">
+"4970
+[; <" SSP1CON1 equ 0215h ;# ">
+"4975
+[; <" SSPCON equ 0215h ;# ">
+"4979
+[; <" SSPCON1 equ 0215h ;# ">
+"4983
+[; <" SSP1CON equ 0215h ;# ">
+"5240
+[; <" SSP1CON2 equ 0216h ;# ">
+"5245
+[; <" SSPCON2 equ 0216h ;# ">
+"5362
+[; <" SSP1CON3 equ 0217h ;# ">
+"5367
+[; <" SSPCON3 equ 0217h ;# ">
+"5484
+[; <" SSP2BUF equ 0219h ;# ">
+"5612
+[; <" SSP2ADD equ 021Ah ;# ">
+"5740
+[; <" SSP2MSK equ 021Bh ;# ">
+"5868
+[; <" SSP2STAT equ 021Ch ;# ">
+"5930
+[; <" SSP2CON1 equ 021Dh ;# ">
+"5935
+[; <" SSP2CON equ 021Dh ;# ">
+"6068
+[; <" SSP2CON2 equ 021Eh ;# ">
+"6130
+[; <" SSP2CON3 equ 021Fh ;# ">
+"6192
+[; <" ODCONA equ 028Ch ;# ">
+"6237
+[; <" ODCONB equ 028Dh ;# ">
+"6276
+[; <" ODCONC equ 028Eh ;# ">
+"6338
+[; <" CCPR1 equ 0291h ;# ">
+"6345
+[; <" CCPR1L equ 0291h ;# ">
+"6365
+[; <" CCPR1H equ 0292h ;# ">
+"6385
+[; <" CCP1CON equ 0293h ;# ">
+"6450
+[; <" CCP1CAP equ 0294h ;# ">
+"6496
+[; <" CCPR2 equ 0295h ;# ">
+"6503
+[; <" CCPR2L equ 0295h ;# ">
+"6523
+[; <" CCPR2H equ 0296h ;# ">
+"6543
+[; <" CCP2CON equ 0297h ;# ">
+"6608
+[; <" CCP2CAP equ 0298h ;# ">
+"6654
+[; <" CCPTMRS equ 029Fh ;# ">
+"6742
+[; <" SLRCONA equ 030Ch ;# ">
+"6787
+[; <" SLRCONB equ 030Dh ;# ">
+"6826
+[; <" SLRCONC equ 030Eh ;# ">
+"6888
+[; <" CCPR3 equ 0311h ;# ">
+"6895
+[; <" CCPR3L equ 0311h ;# ">
+"6915
+[; <" CCPR3H equ 0312h ;# ">
+"6935
+[; <" CCP3CON equ 0313h ;# ">
+"7000
+[; <" CCP3CAP equ 0314h ;# ">
+"7046
+[; <" CCPR4 equ 0315h ;# ">
+"7053
+[; <" CCPR4L equ 0315h ;# ">
+"7073
+[; <" CCPR4H equ 0316h ;# ">
+"7093
+[; <" CCP4CON equ 0317h ;# ">
+"7158
+[; <" CCP4CAP equ 0318h ;# ">
+"7204
+[; <" INLVLA equ 038Ch ;# ">
+"7254
+[; <" INLVLB equ 038Dh ;# ">
+"7293
+[; <" INLVLC equ 038Eh ;# ">
+"7355
+[; <" IOCAP equ 0391h ;# ">
+"7405
+[; <" IOCAN equ 0392h ;# ">
+"7455
+[; <" IOCAF equ 0393h ;# ">
+"7505
+[; <" IOCBP equ 0394h ;# ">
+"7544
+[; <" IOCBN equ 0395h ;# ">
+"7583
+[; <" IOCBF equ 0396h ;# ">
+"7622
+[; <" IOCCP equ 0397h ;# ">
+"7684
+[; <" IOCCN equ 0398h ;# ">
+"7746
+[; <" IOCCF equ 0399h ;# ">
+"7808
+[; <" CLKRCON equ 039Ah ;# ">
+"7873
+[; <" MDCON equ 039Ch ;# ">
+"7913
+[; <" MDSRC equ 039Dh ;# ">
+"7959
+[; <" MDCARH equ 039Eh ;# ">
+"8018
+[; <" MDCARL equ 039Fh ;# ">
+"8077
+[; <" TMR3 equ 0411h ;# ">
+"8084
+[; <" TMR3L equ 0411h ;# ">
+"8104
+[; <" TMR3H equ 0412h ;# ">
+"8124
+[; <" T3CON equ 0413h ;# ">
+"8196
+[; <" T3GCON equ 0414h ;# ">
+"8266
+[; <" TMR4 equ 0415h ;# ">
+"8286
+[; <" PR4 equ 0416h ;# ">
+"8306
+[; <" T4CON equ 0417h ;# ">
+"8377
+[; <" TMR5 equ 0418h ;# ">
+"8384
+[; <" TMR5L equ 0418h ;# ">
+"8404
+[; <" TMR5H equ 0419h ;# ">
+"8424
+[; <" T5CON equ 041Ah ;# ">
+"8496
+[; <" T5GCON equ 041Bh ;# ">
+"8566
+[; <" TMR6 equ 041Ch ;# ">
+"8586
+[; <" PR6 equ 041Dh ;# ">
+"8606
+[; <" T6CON equ 041Eh ;# ">
+"8677
+[; <" CCDCON equ 041Fh ;# ">
+"8720
+[; <" NCO1ACC equ 0498h ;# ">
+"8727
+[; <" NCO1ACCL equ 0498h ;# ">
+"8747
+[; <" NCO1ACCH equ 0499h ;# ">
+"8767
+[; <" NCO1ACCU equ 049Ah ;# ">
+"8789
+[; <" NCO1INC equ 049Bh ;# ">
+"8796
+[; <" NCO1INCL equ 049Bh ;# ">
+"8816
+[; <" NCO1INCH equ 049Ch ;# ">
+"8836
+[; <" NCO1INCU equ 049Dh ;# ">
+"8856
+[; <" NCO1CON equ 049Eh ;# ">
+"8896
+[; <" NCO1CLK equ 049Fh ;# ">
+"8923
+[; <" PWM5DCL equ 0617h ;# ">
+"8959
+[; <" PWM5DCH equ 0618h ;# ">
+"9029
+[; <" PWM5CON equ 0619h ;# ">
+"9034
+[; <" PWM5CON0 equ 0619h ;# ">
+"9095
+[; <" PWM6DCL equ 061Ah ;# ">
+"9131
+[; <" PWM6DCH equ 061Bh ;# ">
+"9201
+[; <" PWM6CON equ 061Ch ;# ">
+"9206
+[; <" PWM6CON0 equ 061Ch ;# ">
+"9267
+[; <" PWMTMRS equ 061Fh ;# ">
+"9319
+[; <" CWG1CLKCON equ 0691h ;# ">
+"9347
+[; <" CWG1DAT equ 0692h ;# ">
+"9393
+[; <" CWG1DBR equ 0693h ;# ">
+"9497
+[; <" CWG1DBF equ 0694h ;# ">
+"9601
+[; <" CWG1CON0 equ 0695h ;# ">
+"9702
+[; <" CWG1CON1 equ 0696h ;# ">
+"9780
+[; <" CWG1AS0 equ 0697h ;# ">
+"9900
+[; <" CWG1AS1 equ 0698h ;# ">
+"9944
+[; <" CWG1STR equ 0699h ;# ">
+"10056
+[; <" CWG2CLKCON equ 0711h ;# ">
+"10084
+[; <" CWG2DAT equ 0712h ;# ">
+"10130
+[; <" CWG2DBR equ 0713h ;# ">
+"10234
+[; <" CWG2DBF equ 0714h ;# ">
+"10338
+[; <" CWG2CON0 equ 0715h ;# ">
+"10439
+[; <" CWG2CON1 equ 0716h ;# ">
+"10517
+[; <" CWG2AS0 equ 0717h ;# ">
+"10637
+[; <" CWG2AS1 equ 0718h ;# ">
+"10681
+[; <" CWG2STR equ 0719h ;# ">
+"10793
+[; <" NVMADR equ 0891h ;# ">
+"10798
+[; <" EEADR equ 0891h ;# ">
+"10802
+[; <" PMADR equ 0891h ;# ">
+"10809
+[; <" NVMADRL equ 0891h ;# ">
+"10814
+[; <" EEADRL equ 0891h ;# ">
+"10818
+[; <" PMADRL equ 0891h ;# ">
+"11061
+[; <" NVMADRH equ 0892h ;# ">
+"11066
+[; <" EEADRH equ 0892h ;# ">
+"11070
+[; <" PMADRH equ 0892h ;# ">
+"11295
+[; <" NVMDAT equ 0893h ;# ">
+"11300
+[; <" EEDAT equ 0893h ;# ">
+"11304
+[; <" PMDAT equ 0893h ;# ">
+"11311
+[; <" NVMDATL equ 0893h ;# ">
+"11316
+[; <" EEDATL equ 0893h ;# ">
+"11320
+[; <" PMDATL equ 0893h ;# ">
+"11563
+[; <" NVMDATH equ 0894h ;# ">
+"11568
+[; <" EEDATH equ 0894h ;# ">
+"11572
+[; <" PMDATH equ 0894h ;# ">
+"11779
+[; <" NVMCON1 equ 0895h ;# ">
+"11784
+[; <" EECON1 equ 0895h ;# ">
+"11788
+[; <" PMCON1 equ 0895h ;# ">
+"11968
+[; <" NVMCON2 equ 0896h ;# ">
+"11973
+[; <" EECON2 equ 0896h ;# ">
+"11977
+[; <" PMCON2 equ 0896h ;# ">
+"12070
+[; <" PCON0 equ 089Bh ;# ">
+"12127
+[; <" PMD0 equ 0911h ;# ">
+"12172
+[; <" PMD1 equ 0912h ;# ">
+"12234
+[; <" PMD2 equ 0913h ;# ">
+"12274
+[; <" PMD3 equ 0914h ;# ">
+"12336
+[; <" PMD4 equ 0915h ;# ">
+"12370
+[; <" PMD5 equ 0916h ;# ">
+"12414
+[; <" CPUDOZE equ 0918h ;# ">
+"12479
+[; <" OSCCON1 equ 0919h ;# ">
+"12549
+[; <" OSCCON2 equ 091Ah ;# ">
+"12619
+[; <" OSCCON3 equ 091Bh ;# ">
+"12664
+[; <" OSCSTAT1 equ 091Ch ;# ">
+"12716
+[; <" OSCEN equ 091Dh ;# ">
+"12762
+[; <" OSCTUNE equ 091Eh ;# ">
+"12820
+[; <" OSCFRQ equ 091Fh ;# ">
+"12866
+[; <" PPSLOCK equ 0E0Fh ;# ">
+"12886
+[; <" INTPPS equ 0E10h ;# ">
+"12938
+[; <" T0CKIPPS equ 0E11h ;# ">
+"12990
+[; <" T1CKIPPS equ 0E12h ;# ">
+"13042
+[; <" T1GPPS equ 0E13h ;# ">
+"13094
+[; <" CCP1PPS equ 0E14h ;# ">
+"13146
+[; <" CCP2PPS equ 0E15h ;# ">
+"13198
+[; <" CCP3PPS equ 0E16h ;# ">
+"13250
+[; <" CCP4PPS equ 0E17h ;# ">
+"13302
+[; <" CWG1PPS equ 0E18h ;# ">
+"13354
+[; <" CWG2PPS equ 0E19h ;# ">
+"13406
+[; <" MDCIN1PPS equ 0E1Ah ;# ">
+"13458
+[; <" MDCIN2PPS equ 0E1Bh ;# ">
+"13510
+[; <" MDMINPPS equ 0E1Ch ;# ">
+"13562
+[; <" SSP2CLKPPS equ 0E1Dh ;# ">
+"13614
+[; <" SSP2DATPPS equ 0E1Eh ;# ">
+"13666
+[; <" SSP2SSPPS equ 0E1Fh ;# ">
+"13718
+[; <" SSP1CLKPPS equ 0E20h ;# ">
+"13770
+[; <" SSP1DATPPS equ 0E21h ;# ">
+"13822
+[; <" SSP1SSPPS equ 0E22h ;# ">
+"13874
+[; <" RXPPS equ 0E24h ;# ">
+"13926
+[; <" TXPPS equ 0E25h ;# ">
+"13978
+[; <" CLCIN0PPS equ 0E28h ;# ">
+"14030
+[; <" CLCIN1PPS equ 0E29h ;# ">
+"14082
+[; <" CLCIN2PPS equ 0E2Ah ;# ">
+"14134
+[; <" CLCIN3PPS equ 0E2Bh ;# ">
+"14186
+[; <" T3CKIPPS equ 0E2Ch ;# ">
+"14206
+[; <" T3GPPS equ 0E2Dh ;# ">
+"14226
+[; <" T5CKIPPS equ 0E2Eh ;# ">
+"14246
+[; <" T5GPPS equ 0E2Fh ;# ">
+"14266
+[; <" RA0PPS equ 0E90h ;# ">
+"14318
+[; <" RA1PPS equ 0E91h ;# ">
+"14370
+[; <" RA2PPS equ 0E92h ;# ">
+"14422
+[; <" RA4PPS equ 0E94h ;# ">
+"14474
+[; <" RA5PPS equ 0E95h ;# ">
+"14526
+[; <" RB4PPS equ 0E9Ch ;# ">
+"14578
+[; <" RB5PPS equ 0E9Dh ;# ">
+"14630
+[; <" RB6PPS equ 0E9Eh ;# ">
+"14682
+[; <" RB7PPS equ 0E9Fh ;# ">
+"14734
+[; <" RC0PPS equ 0EA0h ;# ">
+"14786
+[; <" RC1PPS equ 0EA1h ;# ">
+"14838
+[; <" RC2PPS equ 0EA2h ;# ">
+"14890
+[; <" RC3PPS equ 0EA3h ;# ">
+"14942
+[; <" RC4PPS equ 0EA4h ;# ">
+"14994
+[; <" RC5PPS equ 0EA5h ;# ">
+"15046
+[; <" RC6PPS equ 0EA6h ;# ">
+"15098
+[; <" RC7PPS equ 0EA7h ;# ">
+"15150
+[; <" CLCDATA equ 0F0Fh ;# ">
+"15188
+[; <" CLC1CON equ 0F10h ;# ">
+"15306
+[; <" CLC1POL equ 0F11h ;# ">
+"15384
+[; <" CLC1SEL0 equ 0F12h ;# ">
+"15488
+[; <" CLC1SEL1 equ 0F13h ;# ">
+"15592
+[; <" CLC1SEL2 equ 0F14h ;# ">
+"15696
+[; <" CLC1SEL3 equ 0F15h ;# ">
+"15800
+[; <" CLC1GLS0 equ 0F16h ;# ">
+"15912
+[; <" CLC1GLS1 equ 0F17h ;# ">
+"16024
+[; <" CLC1GLS2 equ 0F18h ;# ">
+"16136
+[; <" CLC1GLS3 equ 0F19h ;# ">
+"16248
+[; <" CLC2CON equ 0F1Ah ;# ">
+"16366
+[; <" CLC2POL equ 0F1Bh ;# ">
+"16444
+[; <" CLC2SEL0 equ 0F1Ch ;# ">
+"16548
+[; <" CLC2SEL1 equ 0F1Dh ;# ">
+"16652
+[; <" CLC2SEL2 equ 0F1Eh ;# ">
+"16756
+[; <" CLC2SEL3 equ 0F1Fh ;# ">
+"16860
+[; <" CLC2GLS0 equ 0F20h ;# ">
+"16972
+[; <" CLC2GLS1 equ 0F21h ;# ">
+"17084
+[; <" CLC2GLS2 equ 0F22h ;# ">
+"17196
+[; <" CLC2GLS3 equ 0F23h ;# ">
+"17308
+[; <" CLC3CON equ 0F24h ;# ">
+"17426
+[; <" CLC3POL equ 0F25h ;# ">
+"17504
+[; <" CLC3SEL0 equ 0F26h ;# ">
+"17608
+[; <" CLC3SEL1 equ 0F27h ;# ">
+"17712
+[; <" CLC3SEL2 equ 0F28h ;# ">
+"17816
+[; <" CLC3SEL3 equ 0F29h ;# ">
+"17920
+[; <" CLC3GLS0 equ 0F2Ah ;# ">
+"18032
+[; <" CLC3GLS1 equ 0F2Bh ;# ">
+"18144
+[; <" CLC3GLS2 equ 0F2Ch ;# ">
+"18256
+[; <" CLC3GLS3 equ 0F2Dh ;# ">
+"18368
+[; <" CLC4CON equ 0F2Eh ;# ">
+"18486
+[; <" CLC4POL equ 0F2Fh ;# ">
+"18564
+[; <" CLC4SEL0 equ 0F30h ;# ">
+"18668
+[; <" CLC4SEL1 equ 0F31h ;# ">
+"18772
+[; <" CLC4SEL2 equ 0F32h ;# ">
+"18876
+[; <" CLC4SEL3 equ 0F33h ;# ">
+"18980
+[; <" CLC4GLS0 equ 0F34h ;# ">
+"19092
+[; <" CLC4GLS1 equ 0F35h ;# ">
+"19204
+[; <" CLC4GLS2 equ 0F36h ;# ">
+"19316
+[; <" CLC4GLS3 equ 0F37h ;# ">
+"19428
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"19460
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"19480
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"19500
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"19520
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"19540
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"19560
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"19580
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"19600
+[; <" STKPTR equ 0FEDh ;# ">
+"19620
+[; <" TOSL equ 0FEEh ;# ">
+"19640
+[; <" TOSH equ 0FEFh ;# ">
+"53 mcc_generated_files/uart/src/eusart.c
+[v _UART1 `CS965 ~T0 @X0 1 e ]
+[i _UART1
+:U ..
+:U ..
+&U _EUSART_Initialize
+&U _EUSART_Deinitialize
+&U _EUSART_Read
+&U _EUSART_Write
+&U _EUSART_IsRxReady
+&U _EUSART_IsTxReady
+&U _EUSART_IsTxDone
+&U _EUSART_TransmitEnable
+&U _EUSART_TransmitDisable
+&U _EUSART_AutoBaudSet
+&U _EUSART_AutoBaudQuery
+-> -> -> 0 `i `*v `*F7305
+-> -> -> 0 `i `*v `*F7306
+-> -> -> 0 `i `*v `*F7308
+-> -> -> 0 `i `*v `*F7309
+-> -> -> 0 `i `*v `*F7311
+&U _EUSART_ErrorGet
+&U _EUSART_TxCompleteCallbackRegister
+&U _EUSART_RxCompleteCallbackRegister
+-> -> -> 0 `i `*v `*F7319
+&U _EUSART_FramingErrorCallbackRegister
+&U _EUSART_OverrunErrorCallbackRegister
+-> -> -> 0 `i `*v `*F7328
+-> -> -> 0 `i `*v `*F7331
+..
+..
+]
+"83
+[v _eusartTxHead `Vuc ~T0 @X0 1 s ]
+[i _eusartTxHead
+-> -> 0 `i `uc
+]
+"84
+[v _eusartTxTail `Vuc ~T0 @X0 1 s ]
+[i _eusartTxTail
+-> -> 0 `i `uc
+]
+"85
+[v _eusartTxBuffer `Vuc ~T0 @X0 -> 8 `i s ]
+"86
+[v _eusartTxBufferRemaining `Vuc ~T0 @X0 1 s ]
+"88
+[v _eusartRxHead `Vuc ~T0 @X0 1 s ]
+[i _eusartRxHead
+-> -> 0 `i `uc
+]
+"89
+[v _eusartRxTail `Vuc ~T0 @X0 1 s ]
+[i _eusartRxTail
+-> -> 0 `i `uc
+]
+"90
+[v _eusartRxBuffer `Vuc ~T0 @X0 -> 8 `i s ]
+"96
+[v _eusartRxStatusBuffer `VS966 ~T0 @X0 -> 8 `i s ]
+"97
+[v _eusartRxCount `Vuc ~T0 @X0 1 s ]
+"104
+[v _eusartRxLastError `VS966 ~T0 @X0 1 s ]
+"110
+[v _EUSART_TxInterruptHandler `*F7345 ~T0 @X0 1 e ]
+"112
+[v _EUSART_TxCompleteInterruptHandler `*F7347 ~T0 @X0 1 s ]
+[i _EUSART_TxCompleteInterruptHandler
+-> -> -> 0 `i `*v `*F7348
+]
+"114
+[v _EUSART_RxInterruptHandler `*F7350 ~T0 @X0 1 e ]
+"115
+[v _EUSART_RxCompleteInterruptHandler `*F7352 ~T0 @X0 1 s ]
+[i _EUSART_RxCompleteInterruptHandler
+-> -> -> 0 `i `*v `*F7353
+]
+"117
+[v _EUSART_FramingErrorHandler `*F7355 ~T0 @X0 1 s ]
+[i _EUSART_FramingErrorHandler
+-> -> -> 0 `i `*v `*F7356
+]
+"118
+[v _EUSART_OverrunErrorHandler `*F7358 ~T0 @X0 1 s ]
+[i _EUSART_OverrunErrorHandler
+-> -> -> 0 `i `*v `*F7359
+]
+"131
+[v _EUSART_Initialize `(v ~T0 @X0 1 ef ]
+"132
+{
+[e :U _EUSART_Initialize ]
+[f ]
+"133
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+"134
+[e = _EUSART_RxInterruptHandler &U _EUSART_ReceiveISR ]
+"136
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"137
+[e = _EUSART_TxInterruptHandler &U _EUSART_TransmitISR ]
+"142
+[e = _BAUD1CON -> -> 72 `i `uc ]
+"144
+[e = _RC1STA -> -> 144 `i `uc ]
+"146
+[e = _TX1STA -> -> 38 `i `uc ]
+"148
+[e = _SP1BRGL -> -> 64 `i `uc ]
+"150
+[e = _SP1BRGH -> -> 3 `i `uc ]
+"152
+[e ( _EUSART_FramingErrorCallbackRegister (1 &U _EUSART_DefaultFramingErrorCallback ]
+"153
+[e ( _EUSART_OverrunErrorCallbackRegister (1 &U _EUSART_DefaultOverrunErrorCallback ]
+"154
+[e = . _eusartRxLastError 1 -> -> 0 `i `ui ]
+"156
+[e = _eusartTxHead -> -> 0 `i `uc ]
+"157
+[e = _eusartTxTail -> -> 0 `i `uc ]
+"158
+[e = _eusartTxBufferRemaining -> -> # _eusartTxBuffer `ui `uc ]
+"160
+[e = _eusartRxHead -> -> 0 `i `uc ]
+"161
+[e = _eusartRxTail -> -> 0 `i `uc ]
+"162
+[e = _eusartRxCount -> -> 0 `i `uc ]
+"164
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"165
+[e :UE 968 ]
+}
+"167
+[v _EUSART_Deinitialize `(v ~T0 @X0 1 ef ]
+"168
+{
+[e :U _EUSART_Deinitialize ]
+[f ]
+"169
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+"170
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"171
+[e = _BAUD1CON -> -> 0 `i `uc ]
+"172
+[e = _RC1STA -> -> 0 `i `uc ]
+"173
+[e = _TX1STA -> -> 0 `i `uc ]
+"174
+[e = _SP1BRGL -> -> 0 `i `uc ]
+"175
+[e = _SP1BRGH -> -> 0 `i `uc ]
+"176
+[e :UE 969 ]
+}
+"178
+[v _EUSART_Enable `(v ~T0 @X0 1 ef ]
+"179
+{
+[e :U _EUSART_Enable ]
+[f ]
+"180
+[e = . . _RC1STAbits 0 7 -> -> 1 `i `uc ]
+"182
+[e :UE 970 ]
+}
+"184
+[v _EUSART_Disable `(v ~T0 @X0 1 ef ]
+"185
+{
+[e :U _EUSART_Disable ]
+[f ]
+"186
+[e = . . _RC1STAbits 0 7 -> -> 0 `i `uc ]
+"187
+[e :UE 971 ]
+}
+"190
+[v _EUSART_TransmitEnable `(v ~T0 @X0 1 ef ]
+"191
+{
+[e :U _EUSART_TransmitEnable ]
+[f ]
+"192
+[e = . . _TX1STAbits 0 5 -> -> 1 `i `uc ]
+"193
+[e :UE 972 ]
+}
+"195
+[v _EUSART_TransmitDisable `(v ~T0 @X0 1 ef ]
+"196
+{
+[e :U _EUSART_TransmitDisable ]
+[f ]
+"197
+[e = . . _TX1STAbits 0 5 -> -> 0 `i `uc ]
+"198
+[e :UE 973 ]
+}
+"200
+[v _EUSART_ReceiveEnable `(v ~T0 @X0 1 ef ]
+"201
+{
+[e :U _EUSART_ReceiveEnable ]
+[f ]
+"202
+[e = . . _RC1STAbits 0 4 -> -> 1 `i `uc ]
+"203
+[e :UE 974 ]
+}
+"205
+[v _EUSART_ReceiveDisable `(v ~T0 @X0 1 ef ]
+"206
+{
+[e :U _EUSART_ReceiveDisable ]
+[f ]
+"207
+[e = . . _RC1STAbits 0 4 -> -> 0 `i `uc ]
+"208
+[e :UE 975 ]
+}
+"210
+[v _EUSART_SendBreakControlEnable `(v ~T0 @X0 1 ef ]
+"211
+{
+[e :U _EUSART_SendBreakControlEnable ]
+[f ]
+"212
+[e = . . _TX1STAbits 0 3 -> -> 1 `i `uc ]
+"213
+[e :UE 976 ]
+}
+"215
+[v _EUSART_SendBreakControlDisable `(v ~T0 @X0 1 ef ]
+"216
+{
+[e :U _EUSART_SendBreakControlDisable ]
+[f ]
+"217
+[e = . . _TX1STAbits 0 3 -> -> 0 `i `uc ]
+"218
+[e :UE 977 ]
+}
+"220
+[v _EUSART_AutoBaudSet `(v ~T0 @X0 1 ef1`a ]
+"221
+{
+[e :U _EUSART_AutoBaudSet ]
+"220
+[v _enable `a ~T0 @X0 1 r1 ]
+"221
+[f ]
+"222
+[e $ ! != -> _enable `i -> 0 `i 979  ]
+"223
+{
+"224
+[e = . . _BAUD1CONbits 0 0 -> -> 1 `i `uc ]
+"225
+}
+[e $U 980  ]
+"226
+[e :U 979 ]
+"227
+{
+"228
+[e = . . _BAUD1CONbits 0 0 -> -> 0 `i `uc ]
+"229
+}
+[e :U 980 ]
+"230
+[e :UE 978 ]
+}
+"232
+[v _EUSART_AutoBaudQuery `(a ~T0 @X0 1 ef ]
+"233
+{
+[e :U _EUSART_AutoBaudQuery ]
+[f ]
+"234
+[e ) -> -> ! != -> . . _BAUD1CONbits 0 0 `i -> 0 `i `i `a ]
+[e $UE 981  ]
+"235
+[e :UE 981 ]
+}
+"237
+[v _EUSART_IsAutoBaudDetectOverflow `(a ~T0 @X0 1 ef ]
+"238
+{
+[e :U _EUSART_IsAutoBaudDetectOverflow ]
+[f ]
+"239
+[e ) -> . . _BAUD1CONbits 0 7 `a ]
+[e $UE 982  ]
+"240
+[e :UE 982 ]
+}
+"242
+[v _EUSART_AutoBaudDetectOverflowReset `(v ~T0 @X0 1 ef ]
+"243
+{
+[e :U _EUSART_AutoBaudDetectOverflowReset ]
+[f ]
+"244
+[e = . . _BAUD1CONbits 0 7 -> -> 0 `i `uc ]
+"245
+[e :UE 983 ]
+}
+"247
+[v _EUSART_TransmitInterruptEnable `(v ~T0 @X0 1 ef ]
+"248
+{
+[e :U _EUSART_TransmitInterruptEnable ]
+[f ]
+"249
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"251
+[e :UE 984 ]
+}
+"253
+[v _EUSART_TransmitInterruptDisable `(v ~T0 @X0 1 ef ]
+"254
+{
+[e :U _EUSART_TransmitInterruptDisable ]
+[f ]
+"255
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"256
+[e :UE 985 ]
+}
+"258
+[v _EUSART_ReceiveInterruptEnable `(v ~T0 @X0 1 ef ]
+"259
+{
+[e :U _EUSART_ReceiveInterruptEnable ]
+[f ]
+"260
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"261
+[e :UE 986 ]
+}
+"262
+[v _EUSART_ReceiveInterruptDisable `(v ~T0 @X0 1 ef ]
+"263
+{
+[e :U _EUSART_ReceiveInterruptDisable ]
+[f ]
+"264
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+"265
+[e :UE 987 ]
+}
+"267
+[v _EUSART_IsRxReady `(a ~T0 @X0 1 ef ]
+"268
+{
+[e :U _EUSART_IsRxReady ]
+[f ]
+"269
+[e ) -> ? != -> _eusartRxCount `i -> 0 `i : -> 1 `i -> 0 `i `a ]
+[e $UE 988  ]
+"270
+[e :UE 988 ]
+}
+"272
+[v _EUSART_IsTxReady `(a ~T0 @X0 1 ef ]
+"273
+{
+[e :U _EUSART_IsTxReady ]
+[f ]
+"274
+[e ) -> ? != -> _eusartTxBufferRemaining `i -> 0 `i : -> 1 `i -> 0 `i `a ]
+[e $UE 989  ]
+"275
+[e :UE 989 ]
+}
+"277
+[v _EUSART_IsTxDone `(a ~T0 @X0 1 ef ]
+"278
+{
+[e :U _EUSART_IsTxDone ]
+[f ]
+"279
+[e ) -> . . _TX1STAbits 0 1 `a ]
+[e $UE 990  ]
+"280
+[e :UE 990 ]
+}
+"282
+[v _EUSART_ErrorGet `(ui ~T0 @X0 1 ef ]
+"283
+{
+[e :U _EUSART_ErrorGet ]
+[f ]
+"284
+[e = . _eusartRxLastError 1 . *U + &U _eusartRxStatusBuffer * -> & -> _eusartRxTail `ui - -> 8 `ui -> 1 `ui `ux -> -> # *U &U _eusartRxStatusBuffer `ui `ux 1 ]
+"285
+[e ) . _eusartRxLastError 1 ]
+[e $UE 991  ]
+"286
+[e :UE 991 ]
+}
+"288
+[v _EUSART_Read `(uc ~T0 @X0 1 ef ]
+"289
+{
+[e :U _EUSART_Read ]
+[f ]
+"290
+[v _readValue `uc ~T0 @X0 1 a ]
+[e = _readValue -> -> 0 `i `uc ]
+"291
+[v _tempRxTail `uc ~T0 @X0 1 a ]
+"293
+[e = _readValue *U + &U _eusartRxBuffer * -> _eusartRxTail `ux -> -> # *U &U _eusartRxBuffer `ui `ux ]
+"295
+[e = _tempRxTail -> & + -> _eusartRxTail `ui -> 1 `ui - -> 8 `ui -> 1 `ui `uc ]
+"297
+[e = _eusartRxTail _tempRxTail ]
+"299
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+"300
+[e $ ! != -> 0 `ui -> _eusartRxCount `ui 993  ]
+"301
+{
+"302
+[e -- _eusartRxCount -> -> 1 `i `Vuc ]
+"303
+}
+[e :U 993 ]
+"304
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"305
+[e ) _readValue ]
+[e $UE 992  ]
+"306
+[e :UE 992 ]
+}
+"308
+[v _EUSART_ReceiveISR `(v ~T0 @X0 1 ef ]
+"309
+{
+[e :U _EUSART_ReceiveISR ]
+[f ]
+"310
+[v _regValue `uc ~T0 @X0 1 a ]
+"311
+[v _tempRxHead `uc ~T0 @X0 1 a ]
+"314
+[e = . *U + &U _eusartRxStatusBuffer * -> _eusartRxHead `ux -> -> # *U &U _eusartRxStatusBuffer `ui `ux 1 -> -> 0 `i `ui ]
+"316
+[e $ ! == -> 1 `i -> . . _RC1STAbits 0 1 `i 995  ]
+"317
+{
+"318
+[e = . . *U + &U _eusartRxStatusBuffer * -> _eusartRxHead `ux -> -> # *U &U _eusartRxStatusBuffer `ui `ux 0 2 -> -> 1 `i `uc ]
+"319
+[e $ ! != -> -> -> 0 `i `*v `*F7399 _EUSART_OverrunErrorHandler 996  ]
+"320
+{
+"321
+[e ( *U _EUSART_OverrunErrorHandler ..  ]
+"322
+}
+[e :U 996 ]
+"323
+}
+[e :U 995 ]
+"324
+[e $ ! == -> 1 `i -> . . _RC1STAbits 0 2 `i 997  ]
+"325
+{
+"326
+[e = . . *U + &U _eusartRxStatusBuffer * -> _eusartRxHead `ux -> -> # *U &U _eusartRxStatusBuffer `ui `ux 0 1 -> -> 1 `i `uc ]
+"327
+[e $ ! != -> -> -> 0 `i `*v `*F7400 _EUSART_FramingErrorHandler 998  ]
+"328
+{
+"329
+[e ( *U _EUSART_FramingErrorHandler ..  ]
+"330
+}
+[e :U 998 ]
+"331
+}
+[e :U 997 ]
+"333
+[e = _regValue _RC1REG ]
+"335
+[e = _tempRxHead -> & + -> _eusartRxHead `ui -> 1 `ui - -> 8 `ui -> 1 `ui `uc ]
+"336
+[e $ ! == -> _tempRxHead `i -> _eusartRxTail `i 999  ]
+"337
+{
+"339
+}
+[e $U 1000  ]
+"340
+[e :U 999 ]
+"341
+{
+"342
+[e = *U + &U _eusartRxBuffer * -> _eusartRxHead `ux -> -> # *U &U _eusartRxBuffer `ui `ux _regValue ]
+"343
+[e = _eusartRxHead _tempRxHead ]
+"344
+[e ++ _eusartRxCount -> -> 1 `i `Vuc ]
+"345
+}
+[e :U 1000 ]
+"347
+[e $ ! != -> -> -> 0 `i `*v `*F7401 _EUSART_RxCompleteInterruptHandler 1001  ]
+"348
+{
+"349
+[e ( *U _EUSART_RxCompleteInterruptHandler ..  ]
+"350
+}
+[e :U 1001 ]
+"351
+[e :UE 994 ]
+}
+"353
+[v _EUSART_Write `(v ~T0 @X0 1 ef1`uc ]
+"354
+{
+[e :U _EUSART_Write ]
+"353
+[v _txData `uc ~T0 @X0 1 r1 ]
+"354
+[f ]
+"355
+[v _tempTxHead `uc ~T0 @X0 1 a ]
+"357
+[e $ ! == -> 0 `i -> . . _PIE1bits 0 4 `i 1003  ]
+"358
+{
+"359
+[e = _TX1REG _txData ]
+"360
+}
+[e $U 1004  ]
+"361
+[e :U 1003 ]
+[e $ ! < -> 0 `ui -> _eusartTxBufferRemaining `ui 1005  ]
+"362
+{
+"363
+[e = *U + &U _eusartTxBuffer * -> _eusartTxHead `ux -> -> # *U &U _eusartTxBuffer `ui `ux _txData ]
+"364
+[e = _tempTxHead -> & + -> _eusartTxHead `ui -> 1 `ui - -> 8 `ui -> 1 `ui `uc ]
+"366
+[e = _eusartTxHead _tempTxHead ]
+"367
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"368
+[e -- _eusartTxBufferRemaining -> -> 1 `i `Vuc ]
+"369
+}
+[e $U 1006  ]
+"370
+[e :U 1005 ]
+"371
+{
+"373
+}
+[e :U 1006 ]
+[e :U 1004 ]
+"374
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"375
+[e :UE 1002 ]
+}
+"377
+[v _EUSART_TransmitISR `(v ~T0 @X0 1 ef ]
+"378
+{
+[e :U _EUSART_TransmitISR ]
+[f ]
+"379
+[v _tempTxTail `uc ~T0 @X0 1 a ]
+"381
+[e $ ! > -> # _eusartTxBuffer `ui -> _eusartTxBufferRemaining `ui 1008  ]
+"382
+{
+"383
+[e = _TX1REG *U + &U _eusartTxBuffer * -> _eusartTxTail `ux -> -> # *U &U _eusartTxBuffer `ui `ux ]
+"384
+[e = _tempTxTail -> & + -> _eusartTxTail `ui -> 1 `ui - -> 8 `ui -> 1 `ui `uc ]
+"386
+[e = _eusartTxTail _tempTxTail ]
+"387
+[e ++ _eusartTxBufferRemaining -> -> 1 `i `Vuc ]
+"388
+}
+[e $U 1009  ]
+"389
+[e :U 1008 ]
+"390
+{
+"391
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"392
+}
+[e :U 1009 ]
+"394
+[e $ ! != -> -> -> 0 `i `*v `*F7407 _EUSART_TxCompleteInterruptHandler 1010  ]
+"395
+{
+"396
+[e ( *U _EUSART_TxCompleteInterruptHandler ..  ]
+"397
+}
+[e :U 1010 ]
+"398
+[e :UE 1007 ]
+}
+"400
+[v _getch `(i ~T0 @X0 1 ef ]
+"401
+{
+[e :U _getch ]
+[f ]
+"402
+[e $U 1012  ]
+[e :U 1013 ]
+"403
+{
+"405
+}
+[e :U 1012 ]
+"402
+[e $ ! != -> ( _EUSART_IsRxReady ..  `i -> 0 `i 1013  ]
+[e :U 1014 ]
+"406
+[e ) -> ( _EUSART_Read ..  `i ]
+[e $UE 1011  ]
+"407
+[e :UE 1011 ]
+}
+"409
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
+"410
+{
+[e :U _putch ]
+"409
+[v _txData `uc ~T0 @X0 1 r1 ]
+"410
+[f ]
+"411
+[e $U 1016  ]
+[e :U 1017 ]
+"412
+{
+"414
+}
+[e :U 1016 ]
+"411
+[e $ ! != -> ( _EUSART_IsTxReady ..  `i -> 0 `i 1017  ]
+[e :U 1018 ]
+"415
+[e ) ( _EUSART_Write (1 -> _txData `uc ]
+[e $UE 1015  ]
+"416
+[e :UE 1015 ]
+}
+"418
+[v _EUSART_DefaultFramingErrorCallback `(v ~T0 @X0 1 sf ]
+"419
+{
+[e :U _EUSART_DefaultFramingErrorCallback ]
+[f ]
+"421
+[e :UE 1019 ]
+}
+"423
+[v _EUSART_DefaultOverrunErrorCallback `(v ~T0 @X0 1 sf ]
+"424
+{
+[e :U _EUSART_DefaultOverrunErrorCallback ]
+[f ]
+"426
+[e = . . _RC1STAbits 0 4 -> -> 0 `i `uc ]
+"427
+[e = . . _RC1STAbits 0 4 -> -> 1 `i `uc ]
+"428
+[e :UE 1020 ]
+}
+"430
+[v _EUSART_FramingErrorCallbackRegister `(v ~T0 @X0 1 ef1`*F7414 ]
+"431
+{
+[e :U _EUSART_FramingErrorCallbackRegister ]
+"430
+[v _callbackHandler `*F7416 ~T0 @X0 1 r1 ]
+"431
+[f ]
+"432
+[e $ ! != -> -> -> 0 `i `*v `*F7417 _callbackHandler 1022  ]
+"433
+{
+"434
+[e = _EUSART_FramingErrorHandler _callbackHandler ]
+"435
+}
+[e :U 1022 ]
+"436
+[e :UE 1021 ]
+}
+"438
+[v _EUSART_OverrunErrorCallbackRegister `(v ~T0 @X0 1 ef1`*F7420 ]
+"439
+{
+[e :U _EUSART_OverrunErrorCallbackRegister ]
+"438
+[v _callbackHandler `*F7422 ~T0 @X0 1 r1 ]
+"439
+[f ]
+"440
+[e $ ! != -> -> -> 0 `i `*v `*F7423 _callbackHandler 1024  ]
+"441
+{
+"442
+[e = _EUSART_OverrunErrorHandler _callbackHandler ]
+"443
+}
+[e :U 1024 ]
+"444
+[e :UE 1023 ]
+}
+"446
+[v _EUSART_RxCompleteCallbackRegister `(v ~T0 @X0 1 ef1`*F7426 ]
+"447
+{
+[e :U _EUSART_RxCompleteCallbackRegister ]
+"446
+[v _callbackHandler `*F7428 ~T0 @X0 1 r1 ]
+"447
+[f ]
+"448
+[e $ ! != -> -> -> 0 `i `*v `*F7429 _callbackHandler 1026  ]
+"449
+{
+"450
+[e = _EUSART_RxCompleteInterruptHandler _callbackHandler ]
+"451
+}
+[e :U 1026 ]
+"452
+[e :UE 1025 ]
+}
+"454
+[v _EUSART_TxCompleteCallbackRegister `(v ~T0 @X0 1 ef1`*F7432 ]
+"455
+{
+[e :U _EUSART_TxCompleteCallbackRegister ]
+"454
+[v _callbackHandler `*F7434 ~T0 @X0 1 r1 ]
+"455
+[f ]
+"456
+[e $ ! != -> -> -> 0 `i `*v `*F7435 _callbackHandler 1028  ]
+"457
+{
+"458
+[e = _EUSART_TxCompleteInterruptHandler _callbackHandler ]
+"459
+}
+[e :U 1028 ]
+"460
+[e :UE 1027 ]
+}

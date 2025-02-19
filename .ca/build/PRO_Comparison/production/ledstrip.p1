@@ -1,0 +1,297 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"187 ./mcc_generated_files/spi/mssp1.h
+[v _SPI1_ByteExchange `(uc ~T0 @X0 0 ef1`uc ]
+"17 ./controller.h
+[v _getDutycycle `(us ~T0 @X0 0 ef ]
+"20 ./adcMeasurements.h
+[v _getHoogtesensor `(us ~T0 @X0 0 ef ]
+"16 ./controller.h
+[v _getSetpoint `(us ~T0 @X0 0 ef ]
+"144 ./mcc_generated_files/spi/mssp1.h
+[v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
+"117 ledstrip.c
+[c E82 0 1 .. ]
+[n E82 . HOST_CONFIG MSSP1_DEFAULT  ]
+[v F119 `(v ~T0 @X0 0 tf ]
+"236 ./mcc_generated_files/timer/tmr6.h
+[v _TMR6_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F119 ]
+"6 ledstrip.c
+[v _sendLedstripStartFrame `(v ~T0 @X0 1 ef ]
+{
+[e :U _sendLedstripStartFrame ]
+[f ]
+"8
+[e ( _SPI1_ByteExchange (1 -> -> 0 `i `uc ]
+"9
+[e ( _SPI1_ByteExchange (1 -> -> 0 `i `uc ]
+"10
+[e ( _SPI1_ByteExchange (1 -> -> 0 `i `uc ]
+"11
+[e ( _SPI1_ByteExchange (1 -> -> 0 `i `uc ]
+"12
+[e :UE 2 ]
+}
+"14
+[v _sendLedstripEndFrame `(v ~T0 @X0 1 ef ]
+{
+[e :U _sendLedstripEndFrame ]
+[f ]
+"16
+[e ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
+"17
+[e ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
+"18
+[e ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
+"19
+[e ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
+"20
+[e :UE 3 ]
+}
+"22
+[v _sendLedstripFrame `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
+{
+[e :U _sendLedstripFrame ]
+[v _red `uc ~T0 @X0 1 r1 ]
+[v _green `uc ~T0 @X0 1 r2 ]
+[v _blue `uc ~T0 @X0 1 r3 ]
+[v _intensity `uc ~T0 @X0 1 r4 ]
+[f ]
+"23
+[e ( _SPI1_ByteExchange (1 -> | -> 224 `i -> _intensity `i `uc ]
+"25
+[e ( _SPI1_ByteExchange (1 _blue ]
+"26
+[e ( _SPI1_ByteExchange (1 _green ]
+"27
+[e ( _SPI1_ByteExchange (1 _red ]
+"28
+[e :UE 4 ]
+}
+"33
+[v _getLedNumber `(i ~T0 @X0 1 ef1`us ]
+{
+[e :U _getLedNumber ]
+[v _height `us ~T0 @X0 1 r1 ]
+[f ]
+"34
+[v _result `f ~T0 @X0 1 a ]
+[e = _result -> - * .0.068104825 -> -> _height `ui `d .5.4876957494 `f ]
+"35
+[e ) -> _result `i ]
+[e $UE 5  ]
+"39
+[e :UE 5 ]
+}
+"42
+[v _dutycycle_led_strip `(v ~T0 @X0 1 ef ]
+{
+[e :U _dutycycle_led_strip ]
+[f ]
+"43
+[v _target `uc ~T0 @X0 1 a ]
+[e = _target -> / * -> -> 59 `i `ui -> ( _getDutycycle ..  `ui -> -> 1023 `i `ui `uc ]
+"46
+[e ( _sendLedstripStartFrame ..  ]
+"47
+{
+[v _led `uc ~T0 @X0 1 a ]
+[e = _led -> -> 0 `i `uc ]
+[e $ < -> _led `i -> 59 `i 7  ]
+[e $U 8  ]
+[e :U 7 ]
+{
+"48
+[e $ ! <= -> _led `i -> _target `i 10  ]
+{
+"49
+[e ( _sendLedstripFrame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"50
+}
+[e $U 11  ]
+[e :U 10 ]
+{
+"51
+[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"52
+}
+[e :U 11 ]
+"53
+}
+[e ++ _led -> -> 1 `i `uc ]
+[e $ < -> _led `i -> 59 `i 7  ]
+[e :U 8 ]
+}
+"55
+[e ( _sendLedstripEndFrame ..  ]
+"56
+[e :UE 6 ]
+}
+"58
+[v _is_on_target `a ~T0 @X0 1 s ]
+[i _is_on_target
+-> -> 0 `i `a
+]
+"60
+[v _position_led_strip `(v ~T0 @X0 1 ef ]
+{
+[e :U _position_led_strip ]
+[f ]
+"61
+[v _led_on `i ~T0 @X0 1 a ]
+[e = _led_on ( _getLedNumber (1 ( _getHoogtesensor ..  ]
+"62
+[e $ ! < _led_on -> 0 `i 13  ]
+{
+"63
+[e = _led_on -> 0 `i ]
+"64
+}
+[e $U 14  ]
+[e :U 13 ]
+[e $ ! > _led_on -> 59 `i 15  ]
+{
+"65
+[e = _led_on -> 59 `i ]
+"66
+}
+[e :U 15 ]
+[e :U 14 ]
+"68
+[v _target `i ~T0 @X0 1 a ]
+[e = _target ( _getLedNumber (1 ( _getSetpoint ..  ]
+"69
+[e $ ! < _target -> 0 `i 16  ]
+{
+"70
+[e = _target -> 0 `i ]
+"71
+}
+[e :U 16 ]
+"74
+[e ( _sendLedstripStartFrame ..  ]
+"75
+{
+[v _led `uc ~T0 @X0 1 a ]
+[e = _led -> -> 0 `i `uc ]
+[e $ < -> _led `i -> 59 `i 17  ]
+[e $U 18  ]
+[e :U 17 ]
+{
+"78
+[e $ ! == _led_on _target 20  ]
+{
+"79
+[e = _is_on_target -> -> 1 `i `a ]
+"80
+}
+[e :U 20 ]
+"81
+[e $ ! != -> _is_on_target `i -> 0 `i 21  ]
+{
+"82
+[e $ ! && >= _led_on - _target -> 1 `i <= _led_on + _target -> 1 `i 22  ]
+{
+"83
+[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 255 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"84
+}
+[e $U 23  ]
+"85
+[e :U 22 ]
+{
+"86
+[e $ ! == -> _led `i _led_on 24  ]
+{
+"87
+[e ( _sendLedstripFrame (4 , , , -> -> 68 `i `uc -> -> 68 `i `uc -> -> 68 `i `uc -> -> 5 `i `uc ]
+"88
+}
+[e $U 25  ]
+[e :U 24 ]
+[e $ ! == -> _led `i _target 26  ]
+{
+"89
+[e ( _sendLedstripFrame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"90
+}
+[e $U 27  ]
+[e :U 26 ]
+{
+"91
+[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"92
+}
+[e :U 27 ]
+[e :U 25 ]
+"93
+[e = _is_on_target -> -> 0 `i `a ]
+"94
+}
+[e :U 23 ]
+"96
+}
+[e $U 28  ]
+[e :U 21 ]
+[e $ ! == -> _led `i _led_on 29  ]
+{
+"97
+[e ( _sendLedstripFrame (4 , , , -> -> 68 `i `uc -> -> 68 `i `uc -> -> 68 `i `uc -> -> 5 `i `uc ]
+"98
+[e = _is_on_target -> -> 0 `i `a ]
+"99
+}
+[e $U 30  ]
+[e :U 29 ]
+[e $ ! == -> _led `i _target 31  ]
+{
+"100
+[e ( _sendLedstripFrame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"101
+[e = _is_on_target -> -> 0 `i `a ]
+"102
+}
+[e $U 32  ]
+[e :U 31 ]
+{
+"103
+[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"104
+[e = _is_on_target -> -> 0 `i `a ]
+"105
+}
+[e :U 32 ]
+[e :U 30 ]
+[e :U 28 ]
+"106
+}
+[e ++ _led -> -> 1 `i `uc ]
+[e $ < -> _led `i -> 59 `i 17  ]
+[e :U 18 ]
+}
+"108
+[e ( _sendLedstripEndFrame ..  ]
+"109
+[e :UE 12 ]
+}
+"112
+[v _updateLedstripAnimation `(v ~T0 @X0 1 ef ]
+{
+[e :U _updateLedstripAnimation ]
+[f ]
+"113
+[e ( _position_led_strip ..  ]
+"114
+[e :UE 33 ]
+}
+"116
+[v _initLedstrip `(v ~T0 @X0 1 ef ]
+{
+[e :U _initLedstrip ]
+[f ]
+"117
+[e ( _SPI1_Open (1 -> . `E82 0 `uc ]
+"118
+[e ( _TMR6_PeriodMatchCallbackRegister (1 &U _updateLedstripAnimation ]
+"119
+[e :UE 34 ]
+}
