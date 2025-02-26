@@ -71,14 +71,14 @@ int main(void)
     initAdcMultiplexer();
     tmr_controller_OverflowCallbackRegister(controller);
     // initLedstrip();
-    I2C_Master_Init();
+    //I2C_Master_Init();
     
     while(1)
     {
-        uartHandler();
+        //uartHandler();
         
-        /*LED_D4_SetLow();
-        LED_D5_SetLow();
+        LED_D4_Toggle();
+        /*LED_D5_SetLow();
         LED_D6_SetLow();
 
         uint16_t potwaarde = getPotentiometer(); //lees de waarde van de potentiometer in
@@ -93,9 +93,11 @@ int main(void)
             LED_D6_SetHigh();
         }*/
         
-        __delay_ms(100); //korte delay voor zichtbaar effect
+        __delay_ms(1000); //korte delay voor zichtbaar effect
         
-        printOut("HHH\r\n");
+        printOut("H");
+        
+        
         // staat tijdelijk af
         // printLogs();
         
