@@ -43,7 +43,6 @@
 #include "controller.h"
 #include "mcc_generated_files/timer/tmr6.h"
 #include "ledstrip.h"
-#include "I2Creader.h"
 
 /*
     Main application
@@ -70,38 +69,18 @@ int main(void)
 
     initAdcMultiplexer();
     tmr_controller_OverflowCallbackRegister(controller);
-    // initLedstrip();
-    //I2C_Master_Init();
+    initLedstrip();
     
     while(1)
     {
-        //uartHandler();
-        
-        LED_D4_Toggle();
-        /*LED_D5_SetLow();
-        LED_D6_SetLow();
-
-        uint16_t potwaarde = getPotentiometer(); //lees de waarde van de potentiometer in
-
-        if (potwaarde > 256) { //bepaal een goede grenswaarde
-            LED_D4_SetHigh();
-        }
-        if (potwaarde > 512) { //bepaal een goede grenswaarde
-            LED_D5_SetHigh();
-        }
-        if (potwaarde > 768) { //bepaal een goede grenswaarde
-            LED_D6_SetHigh();
-        }*/
+        uartHandler();
         
         __delay_ms(1000); //korte delay voor zichtbaar effect
         
-        printOut("H");
         
         
-        // staat tijdelijk af
-        // printLogs();
+        printLogs();
         
-        // turned off until I²C works. make sure to set pins B4 to SDO1 and B6 to SCK1
-        // tmr_ledstrip_Tasks();
+        tmr_ledstrip_Tasks();
     }    
 }

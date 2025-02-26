@@ -10,12 +10,6 @@
         <logicalFolder name="adc" displayName="adc" projectFiles="true">
           <itemPath>mcc_generated_files/adc/adc.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
-          <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_host/mssp2.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
           <itemPath>mcc_generated_files/pwm/pwm5.h</itemPath>
         </logicalFolder>
@@ -49,7 +43,6 @@
       <itemPath>UART.h</itemPath>
       <itemPath>controller.h</itemPath>
       <itemPath>ledstrip.h</itemPath>
-      <itemPath>I2Creader.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -70,11 +63,6 @@
         <logicalFolder name="adc" displayName="adc" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/adc/src/adc.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/i2c_host/src/mssp2.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
@@ -114,7 +102,6 @@
       <itemPath>UART.c</itemPath>
       <itemPath>controller.c</itemPath>
       <itemPath>ledstrip.c</itemPath>
-      <itemPath>I2Creader.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

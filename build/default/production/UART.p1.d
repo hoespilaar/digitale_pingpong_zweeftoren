@@ -7,10 +7,6 @@ mcc_generated_files/uart/../system/../system/clock.h  \
 mcc_generated_files/uart/../system/../system/pins.h  \
 mcc_generated_files/uart/../system/../adc/adc.h  \
 mcc_generated_files/uart/../system/../uart/eusart.h  \
-mcc_generated_files/uart/../system/../i2c_host/mssp2.h  \
-mcc_generated_files/uart/../system/../i2c_host/i2c_host_event_types.h  \
-mcc_generated_files/uart/../system/../i2c_host/i2c_host_types.h  \
-mcc_generated_files/uart/../system/../i2c_host/i2c_host_interface.h  \
 mcc_generated_files/uart/../system/../pwm/pwm5.h  \
 mcc_generated_files/uart/../system/../spi/mssp1.h  \
 mcc_generated_files/uart/../system/../spi/spi_interface.h  \

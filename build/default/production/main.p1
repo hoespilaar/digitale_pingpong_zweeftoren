@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"62 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 62: void SYSTEM_Initialize(void);
+"61 ./mcc_generated_files/system/system.h
+[; ;./mcc_generated_files/system/system.h: 61: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 357:     struct {
@@ -17,31 +17,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17 ./adcMeasurements.h
 [; ;./adcMeasurements.h: 17: void initAdcMultiplexer(void);
 [v _initAdcMultiplexer `(v ~T0 @X0 0 ef ]
-[v F7369 `(v ~T0 @X0 0 tf ]
+[v F7269 `(v ~T0 @X0 0 tf ]
 "260 ./mcc_generated_files/system/../timer/tmr4.h
 [; ;./mcc_generated_files/system/../timer/tmr4.h: 260: void TMR4_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR4_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F7369 ]
+[v _TMR4_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F7269 ]
 "15 ./controller.h
 [; ;./controller.h: 15: void controller(void);
 [v _controller `(v ~T0 @X0 0 ef ]
-"2299 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2299:     struct {
-[s S119 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S119 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
-"2298
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2298: typedef union {
-[u S118 `S119 1 ]
-[n S118 . . ]
-"2308
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2308: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS118 ~T0 @X0 0 e@268 ]
+"15 ./ledstrip.h
+[; ;./ledstrip.h: 15: void initLedstrip(void);
+[v _initLedstrip `(v ~T0 @X0 0 ef ]
+"16 ./UART.h
+[; ;./UART.h: 16: void uartHandler(void);
+[v _uartHandler `(v ~T0 @X0 0 ef ]
 [v F203 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF203 ~T0 @X0 0 e ]
 [p i __delay ]
-"20 ./UART.h
-[; ;./UART.h: 20: void printOut(char*);
-[v _printOut `(v ~T0 @X0 0 ef1`*uc ]
+"15 ./UART.h
+[; ;./UART.h: 15: void printLogs(void);
+[v _printLogs `(v ~T0 @X0 0 ef ]
+"260 ./mcc_generated_files/system/../timer/tmr6.h
+[; ;./mcc_generated_files/system/../timer/tmr6.h: 260: void TMR6_Tasks(void);
+[v _TMR6_Tasks `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1102,56 +1100,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 19640: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"52 main.c
-[; ;main.c: 52: int main(void)
+"51 main.c
+[; ;main.c: 51: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"53
-[; ;main.c: 53: {
+"52
+[; ;main.c: 52: {
 {
 [e :U _main ]
 [f ]
-"54
-[; ;main.c: 54:     SYSTEM_Initialize();
+"53
+[; ;main.c: 53:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"60
-[; ;main.c: 60:     (INTCONbits.GIE = 1);
+"59
+[; ;main.c: 59:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"66
-[; ;main.c: 66:     (INTCONbits.PEIE = 1);
+"65
+[; ;main.c: 65:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"71
-[; ;main.c: 71:     initAdcMultiplexer();
+"70
+[; ;main.c: 70:     initAdcMultiplexer();
 [e ( _initAdcMultiplexer ..  ]
-"72
-[; ;main.c: 72:     TMR4_PeriodMatchCallbackRegister(controller);
+"71
+[; ;main.c: 71:     TMR4_PeriodMatchCallbackRegister(controller);
 [e ( _TMR4_PeriodMatchCallbackRegister (1 &U _controller ]
+"72
+[; ;main.c: 72:     initLedstrip();
+[e ( _initLedstrip ..  ]
+"74
+[; ;main.c: 74:     while(1)
+[e :U 970 ]
+"75
+[; ;main.c: 75:     {
+{
 "76
-[; ;main.c: 76:     while(1)
-[e :U 973 ]
-"77
-[; ;main.c: 77:     {
-{
-"80
-[; ;main.c: 80:         do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
-[e :U 977 ]
-{
-[e = . . _LATAbits 0 5 -> ~ -> . . _LATAbits 0 5 `i `uc ]
-}
-[e :U 976 ]
-"96
-[; ;main.c: 96:         _delay((unsigned long)((1000)*(32000000U/4000.0)));
+[; ;main.c: 76:         uartHandler();
+[e ( _uartHandler ..  ]
+"78
+[; ;main.c: 78:         _delay((unsigned long)((1000)*(32000000U/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
-"98
-[; ;main.c: 98:         printOut("H");
-[e ( _printOut (1 :s 1C ]
-"106
-[; ;main.c: 106:     }
+"81
+[; ;main.c: 81:         printLogs();
+[e ( _printLogs ..  ]
+"83
+[; ;main.c: 83:         TMR6_Tasks();
+[e ( _TMR6_Tasks ..  ]
+"84
+[; ;main.c: 84:     }
 }
-[e :U 972 ]
-[e $U 973  ]
-[e :U 974 ]
-"107
-[; ;main.c: 107: }
-[e :UE 971 ]
+[e :U 969 ]
+[e $U 970  ]
+[e :U 971 ]
+"85
+[; ;main.c: 85: }
+[e :UE 968 ]
 }
-[a 1C 72 0 ]

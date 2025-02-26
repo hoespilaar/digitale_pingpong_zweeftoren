@@ -20,9 +20,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "124 mcc_generated_files/system/src/../../uart/eusart.h
 [; ;mcc_generated_files/system/src/../../uart/eusart.h: 124: void EUSART_Initialize(void);
 [v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
-"77 mcc_generated_files/system/src/../../i2c_host/mssp2.h
-[; ;mcc_generated_files/system/src/../../i2c_host/mssp2.h: 77: void I2C2_Initialize(void);
-[v _I2C2_Initialize `(v ~T0 @X0 0 ef ]
 "57 mcc_generated_files/system/src/../../pwm/pwm5.h
 [; ;mcc_generated_files/system/src/../../pwm/pwm5.h: 57:  void pwm_fan_Initialize(void);
 [v _pwm_fan_Initialize `(v ~T0 @X0 0 ef ]
@@ -1121,18 +1118,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/system.c: 47:     EUSART_Initialize();
 [e ( _EUSART_Initialize ..  ]
 "48
-[; ;mcc_generated_files/system/src/system.c: 48:     I2C2_Initialize();
-[e ( _I2C2_Initialize ..  ]
-"49
-[; ;mcc_generated_files/system/src/system.c: 49:     pwm_fan_Initialize();
+[; ;mcc_generated_files/system/src/system.c: 48:     pwm_fan_Initialize();
 [e ( _pwm_fan_Initialize ..  ]
-"50
-[; ;mcc_generated_files/system/src/system.c: 50:     SPI1_Initialize();
+"49
+[; ;mcc_generated_files/system/src/system.c: 49:     SPI1_Initialize();
 [e ( _SPI1_Initialize ..  ]
-"51
-[; ;mcc_generated_files/system/src/system.c: 51:     INTERRUPT_Initialize();
+"50
+[; ;mcc_generated_files/system/src/system.c: 50:     INTERRUPT_Initialize();
 [e ( _INTERRUPT_Initialize ..  ]
-"52
-[; ;mcc_generated_files/system/src/system.c: 52: }
-[e :UE 971 ]
+"51
+[; ;mcc_generated_files/system/src/system.c: 51: }
+[e :UE 968 ]
 }

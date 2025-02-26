@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Digitale pingpong zweeftoren.X
+PROJECTNAME=digitale_pingpong_zweeftoren
 
 # Active Configuration
 DEFAULTCONF=default

@@ -73,14 +73,6 @@ void __interrupt() INTERRUPT_InterruptManager (void)
         {
             TMR4_ISR();
         } 
-        else if(PIE2bits.BCL2IE == 1 && PIR2bits.BCL2IF == 1)
-        {
-            I2C2_ERROR_ISR();
-        } 
-        else if(PIE2bits.SSP2IE == 1 && PIR2bits.SSP2IF == 1)
-        {
-            I2C2_ISR();
-        } 
         else if(PIE1bits.TMR2IE == 1 && PIR1bits.TMR2IF == 1)
         {
             TMR2_ISR();

@@ -11463,126 +11463,6 @@ void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
 # 45 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../eusart.h" 1
 # 46 "mcc_generated_files/uart/src/../../system/system.h" 2
-# 1 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h" 1
-# 45 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-# 1 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_event_types.h" 1
-# 39 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_event_types.h"
-# 1 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_types.h" 1
-# 39 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_types.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
-# 40 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_types.h" 2
-
-
-
-
-
-
-typedef enum
-{
-    I2C_ERROR_NONE,
-    I2C_ERROR_ADDR_NACK,
-    I2C_ERROR_DATA_NACK,
-    I2C_ERROR_BUS_COLLISION,
-} i2c_host_error_t;
-# 64 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_types.h"
-typedef struct i2c_transfer_setup
-{
-  uint32_t clkSpeed;
-} i2c_host_transfer_setup_t;
-# 40 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_event_types.h" 2
-# 49 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_event_types.h"
-typedef enum
-{
-    I2C_STATE_IDLE = 0,
-    I2C_STATE_SEND_RD_ADDR,
-    I2C_STATE_SEND_WR_ADDR,
-    I2C_STATE_TX,
-    I2C_STATE_RX,
-    I2C_STATE_NACK,
-    I2C_STATE_ERROR,
-    I2C_STATE_STOP,
-    I2C_STATE_RESET
-} i2c_host_event_states_t;
-
-
-
-
-
-
-typedef struct
-{
-    _Bool busy;
-    uint16_t address;
-    uint8_t *writePtr;
-    size_t writeLength;
-    uint8_t *readPtr;
-    size_t readLength;
-    _Bool switchToRead;
-    i2c_host_error_t errorState;
-    i2c_host_event_states_t state;
-} i2c_host_event_status_t;
-
-typedef i2c_host_event_states_t (*i2c2eventHandler)(void);
-
-extern volatile i2c_host_event_status_t i2c2Status;
-extern const i2c2eventHandler i2c2_eventTable[(9)];
-# 46 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h" 2
-# 1 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_interface.h" 1
-# 52 "mcc_generated_files/uart/src/../../system/../i2c_host/i2c_host_interface.h"
-typedef struct
-{
-    void (*Initialize)(void);
-    void (*Deinitialize)(void);
-    _Bool (*Write)(uint16_t address, uint8_t *data, size_t dataLength);
-    _Bool (*Read)(uint16_t address, uint8_t *data, size_t dataLength);
-    _Bool (*WriteRead)(uint16_t address, uint8_t *writeData, size_t writeLength, uint8_t *readData, size_t readLength);
-    _Bool (*TransferSetup)(struct i2c_transfer_setup* setup, uint32_t srcClkFreq);
-    i2c_host_error_t (*ErrorGet)(void);
-    _Bool (*IsBusy)(void);
-    void (*CallbackRegister)(void (*callback)(void));
-    void (*Tasks)(void);
-}i2c_host_interface_t;
-# 47 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h" 2
-# 68 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-extern const i2c_host_interface_t I2C2_Host;
-# 77 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-void I2C2_Initialize(void);
-# 86 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-void I2C2_Deinitialize(void);
-# 117 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-_Bool I2C2_Write(uint16_t address, uint8_t *data, size_t dataLength);
-# 148 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-_Bool I2C2_Read(uint16_t address, uint8_t *data, size_t dataLength);
-# 183 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-_Bool I2C2_WriteRead(uint16_t address, uint8_t *writeData, size_t writeLength, uint8_t *readData, size_t readLength);
-# 194 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-i2c_host_error_t I2C2_ErrorGet(void);
-# 205 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-_Bool I2C2_IsBusy(void);
-# 232 "mcc_generated_files/uart/src/../../system/../i2c_host/mssp2.h"
-void I2C2_CallbackRegister(void (*callbackHandler)(void));
-
-
-
-
-
-
-
-void I2C2_ISR(void);
-
-
-
-
-
-
-
-void I2C2_ERROR_ISR(void);
-# 47 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../pwm/pwm5.h" 1
 # 57 "mcc_generated_files/uart/src/../../system/../pwm/pwm5.h"
  void pwm_fan_Initialize(void);
@@ -11594,11 +11474,24 @@ void I2C2_ERROR_ISR(void);
 
 
  void pwm_fan_LoadDutyValue(uint16_t dutyValue);
-# 48 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 47 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../spi/mssp1.h" 1
 # 38 "mcc_generated_files/uart/src/../../system/../spi/mssp1.h"
 # 1 "mcc_generated_files/uart/src/../../system/../spi/spi_interface.h" 1
-# 46 "mcc_generated_files/uart/src/../../system/../spi/spi_interface.h"
+# 39 "mcc_generated_files/uart/src/../../system/../spi/spi_interface.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
+# 40 "mcc_generated_files/uart/src/../../system/../spi/spi_interface.h" 2
+
+
+
+
+
+
 struct SPI_INTERFACE
 {
     void (*Initialize)(void);
@@ -11683,7 +11576,7 @@ uint8_t SPI1_ByteRead(void);
 _Bool SPI1_IsRxReady(void);
 # 223 "mcc_generated_files/uart/src/../../system/../spi/mssp1.h"
 _Bool SPI1_IsTxReady(void);
-# 49 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 48 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../system/interrupt.h" 1
 # 85 "mcc_generated_files/uart/src/../../system/../system/interrupt.h"
 void INTERRUPT_Initialize (void);
@@ -11697,7 +11590,7 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 175 "mcc_generated_files/uart/src/../../system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
-# 50 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 49 "mcc_generated_files/uart/src/../../system/system.h" 2
 
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr2.h" 1
 # 41 "mcc_generated_files/uart/src/../../system/../timer/tmr2.h"
@@ -11765,7 +11658,7 @@ void TMR2_ISR(void);
 
 
 void TMR2_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-# 52 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 51 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr4.h" 1
 # 41 "mcc_generated_files/uart/src/../../system/../timer/tmr4.h"
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr4_deprecated.h" 1
@@ -11832,7 +11725,7 @@ void TMR4_ISR(void);
 
 
 void TMR4_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-# 53 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 52 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr6.h" 1
 # 41 "mcc_generated_files/uart/src/../../system/../timer/tmr6.h"
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr6_deprecated.h" 1
@@ -11893,7 +11786,7 @@ void TMR6_PeriodMatchStatusClear(void);
 
 
 void TMR6_Tasks(void);
-# 54 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 53 "mcc_generated_files/uart/src/../../system/system.h" 2
 
 
 

@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=Digitale_pingpong_zweeftoren.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/Digitale_pingpong_zweeftoren.X.production.hex
+CND_ARTIFACT_NAME_default=digitale_pingpong_zweeftoren.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/digitale_pingpong_zweeftoren.production.hex

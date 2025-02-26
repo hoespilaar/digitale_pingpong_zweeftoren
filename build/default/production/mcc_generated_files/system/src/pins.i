@@ -11214,14 +11214,14 @@ void PIN_MANAGER_Initialize(void)
 
 
     LATA = 0x0;
-    LATB = 0x50;
+    LATB = 0x0;
     LATC = 0x0;
 
 
 
 
     TRISA = 0x19;
-    TRISB = 0xD0;
+    TRISB = 0x80;
     TRISC = 0xDF;
 
 
@@ -11263,13 +11263,12 @@ void PIN_MANAGER_Initialize(void)
 
     SSP1DATPPS = 0x0;
     RXPPS = 0xF;
+    RB4PPS = 25;
     RC5PPS = 2;
     RB5PPS = 20;
-    SSP2CLKPPS = 0xE;
-    RB6PPS = 26;
-    SSP2DATPPS = 0xC;
-    RB4PPS = 27;
-# 107 "mcc_generated_files/system/src/pins.c"
+    SSP1CLKPPS = 0xE;
+    RB6PPS = 24;
+# 106 "mcc_generated_files/system/src/pins.c"
     IOCAP = 0x0;
     IOCAN = 0x0;
     IOCAF = 0x0;
