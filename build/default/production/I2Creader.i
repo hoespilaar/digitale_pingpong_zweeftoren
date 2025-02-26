@@ -242,14 +242,15 @@ void I2C2_ERROR_ISR(void);
 
 
 
+
 void I2C_Master_Init(void)
 {
     I2C2_Initialize();
 }
 
-static uint8_t data;
+static uint32_t data;
 
 int Read_Gyroscope(void) {
     uint16_t address = 0b11010111;
-    I2C2_Read(uint16_t address, uint8_t data, size_t dataLength);
+
 }

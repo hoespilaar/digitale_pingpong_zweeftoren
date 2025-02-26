@@ -24,12 +24,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15 ./controller.h
 [; ;./controller.h: 15: void controller(void);
 [v _controller `(v ~T0 @X0 0 ef ]
-"15 ./I2Creader.h
-[; ;./I2Creader.h: 15: void I2C_Master_Init(void);
-[v _I2C_Master_Init `(v ~T0 @X0 0 ef ]
-"16 ./UART.h
-[; ;./UART.h: 16: void uartHandler(void);
-[v _uartHandler `(v ~T0 @X0 0 ef ]
+"2299 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2299:     struct {
+[s S119 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S119 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
+"2298
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2298: typedef union {
+[u S118 `S119 1 ]
+[n S118 . . ]
+"2308
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 2308: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
+[v _LATAbits `VS118 ~T0 @X0 0 e@268 ]
 [v F203 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF203 ~T0 @X0 0 e ]
@@ -1120,32 +1125,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "72
 [; ;main.c: 72:     TMR4_PeriodMatchCallbackRegister(controller);
 [e ( _TMR4_PeriodMatchCallbackRegister (1 &U _controller ]
-"74
-[; ;main.c: 74:     I2C_Master_Init();
-[e ( _I2C_Master_Init ..  ]
 "76
 [; ;main.c: 76:     while(1)
 [e :U 973 ]
 "77
 [; ;main.c: 77:     {
 {
-"78
-[; ;main.c: 78:         uartHandler();
-[e ( _uartHandler ..  ]
+"80
+[; ;main.c: 80:         do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
+[e :U 977 ]
+{
+[e = . . _LATAbits 0 5 -> ~ -> . . _LATAbits 0 5 `i `uc ]
+}
+[e :U 976 ]
 "96
-[; ;main.c: 96:         _delay((unsigned long)((100)*(32000000U/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 96:         _delay((unsigned long)((1000)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
 "98
-[; ;main.c: 98:         printOut("HHH\r\n");
+[; ;main.c: 98:         printOut("H");
 [e ( _printOut (1 :s 1C ]
-"104
-[; ;main.c: 104:     }
+"106
+[; ;main.c: 106:     }
 }
 [e :U 972 ]
 [e $U 973  ]
 [e :U 974 ]
-"105
-[; ;main.c: 105: }
+"107
+[; ;main.c: 107: }
 [e :UE 971 ]
 }
-[a 1C 72 72 72 13 10 0 ]
+[a 1C 72 0 ]

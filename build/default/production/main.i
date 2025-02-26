@@ -12228,15 +12228,19 @@ int main(void)
     initAdcMultiplexer();
     TMR4_PeriodMatchCallbackRegister(controller);
 
-    I2C_Master_Init();
+
 
     while(1)
     {
-        uartHandler();
-# 96 "main.c"
-        _delay((unsigned long)((100)*(32000000U/4000.0)));
 
-        printOut("HHH\r\n");
+
+        do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0);
+# 96 "main.c"
+        _delay((unsigned long)((1000)*(32000000U/4000.0)));
+
+        printOut("H");
+
+
 
 
 
