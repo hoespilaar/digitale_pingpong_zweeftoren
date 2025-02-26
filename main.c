@@ -77,8 +77,7 @@ int main(void)
         
         __delay_ms(1000); //korte delay voor zichtbaar effect
         
-        
-        
+        // print
         printLogs();
         
         tmr_ledstrip_Tasks();
