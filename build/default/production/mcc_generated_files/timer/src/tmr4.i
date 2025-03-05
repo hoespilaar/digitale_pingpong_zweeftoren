@@ -11273,13 +11273,13 @@ static void TMR4_DefaultPeriodMatchCallback(void);
 void TMR4_Initialize(void)
 {
 
-    PR4 = 0xFF;
+    PR4 = 0xF9;
     TMR4 = 0x0;
     TMR4_PeriodMatchCallback = TMR4_DefaultPeriodMatchCallback;
 
     PIR2bits.TMR4IF = 0;
     PIE2bits.TMR4IE = 1;
-    T4CON = (1 << 0x0)
+    T4CON = (3 << 0x0)
         | (1 << 0x2)
         | (14 << 0x3);
 }

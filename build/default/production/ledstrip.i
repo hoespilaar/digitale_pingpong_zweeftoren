@@ -298,12 +298,14 @@ uint16_t getSetpoint(void);
 uint16_t getDutycycle(void);
 float getKp(void);
 float getKi(void);
+float getKd(void);
 
 
 void setSetpoint(uint16_t);
 void setDutycycle(uint16_t);
 void setKp(float);
 void setKi(float);
+void setKd(float);
 # 5 "ledstrip.c" 2
 
 void sendLedstripStartFrame(void) {
@@ -381,22 +383,8 @@ void position_led_strip(){
         if (led_on == target) {
             is_on_target = 1;
         }
-        if (is_on_target){
-            if (led_on >= target - 1 && led_on <= target + 1) {
-                sendLedstripFrame(0x00, 0xFF, 0x00, 0x05);
-            }
-            else {
-                if (led == led_on) {
-                    sendLedstripFrame(0x44, 0x44, 0x44, 0x05);
-        } else if (led == target) {
-                    sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
-        } else {
-                    sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
-        }
-                is_on_target = 0;
-        }
-
-        }else if (led == led_on) {
+# 96 "ledstrip.c"
+                  if (led == led_on) {
             sendLedstripFrame(0x44, 0x44, 0x44, 0x05);
             is_on_target = 0;
         } else if (led == target) {

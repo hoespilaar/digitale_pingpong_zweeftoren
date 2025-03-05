@@ -17,12 +17,14 @@ uint16_t getSetpoint(void);
 uint16_t getDutycycle(void);
 float getKp(void);
 float getKi(void);
+float getKd(void);
 
 //setters
 void setSetpoint(uint16_t);
 void setDutycycle(uint16_t);
 void setKp(float);
 void setKi(float);
+void setKd(float);
 
 
 #ifdef	__cplusplus

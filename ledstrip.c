@@ -78,22 +78,22 @@ void position_led_strip(){
         if (led_on == target) {
             is_on_target = true;  
         } 
-        if (is_on_target){
+        /*if (is_on_target){
             if (led_on >= target - 1 && led_on <= target + 1) {
                 sendLedstripFrame(0x00, 0xFF, 0x00, 0x05);
-            }
-            else {
+            } else {
                 if (led == led_on) {
                     sendLedstripFrame(0x44, 0x44, 0x44, 0x05);
-        }       else if (led == target) {
+                } else if (led == target) {
                     sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
-        }       else {
+                } else {
                     sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
-        }
+                }
+                
                 is_on_target = false;
-        }
+            }
         
-        }else if (led == led_on) {
+        } else */ if (led == led_on) {
             sendLedstripFrame(0x44, 0x44, 0x44, 0x05);
             is_on_target = false;
         } else if (led == target) {

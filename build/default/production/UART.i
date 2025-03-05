@@ -12085,12 +12085,14 @@ uint16_t getSetpoint(void);
 uint16_t getDutycycle(void);
 float getKp(void);
 float getKi(void);
+float getKd(void);
 
 
 void setSetpoint(uint16_t);
 void setDutycycle(uint16_t);
 void setKp(float);
 void setKi(float);
+void setKd(float);
 # 8 "UART.c" 2
 _Bool mustPrintLogs = 1;
 
@@ -12170,6 +12172,7 @@ void printLogs(void) {
 
         printf(", kp: "); printFloat(getKp());
         printf(", ki: "); printFloat(getKi());
+        printf(", kd: "); printFloat(getKd());
         printf(", pomp: %u", getPomphoogte());
         printf("\r\n");
             }
@@ -12200,6 +12203,11 @@ void uartHandler(void) {
         case 'i':
             setKi(str2float(str + 1));
             printf("changed ki\r\n");
+            break;
+        case 'D':
+        case 'd':
+            setKd(str2float(str + 1));
+            printf("changed kd\r\n");
             break;
         case 'L':
         case 'l':

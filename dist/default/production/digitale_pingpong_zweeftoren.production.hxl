@@ -1,24 +1,24 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\WEDNES~1\AppData\Local\Temp\xcAs4nk.\driver_tmp_3.o
+ C:\Users\WEDNES~1\AppData\Local\Temp\xcBsbms.1\driver_tmp_3.o
  -Odist/default/production\digitale_pingpong_zweeftoren.production.hex
  -logfile=dist/default/production\digitale_pingpong_zweeftoren.production.hxl
  -addressing=2
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3235h		(C:\Users\WEDNES~1\AppData\Local\Temp\xcAs4nk.\driver_tmp_3.o)
-  3492h - 3FFFh		(C:\Users\WEDNES~1\AppData\Local\Temp\xcAs4nk.\driver_tmp_3.o)
-  1000Eh - 10015h		(C:\Users\WEDNES~1\AppData\Local\Temp\xcAs4nk.\driver_tmp_3.o)
+  0h - 325Dh		(C:\Users\WEDNES~1\AppData\Local\Temp\xcBsbms.1\driver_tmp_3.o)
+  3402h - 3FFFh		(C:\Users\WEDNES~1\AppData\Local\Temp\xcBsbms.1\driver_tmp_3.o)
+  1000Eh - 10015h		(C:\Users\WEDNES~1\AppData\Local\Temp\xcBsbms.1\driver_tmp_3.o)
  Unused ranges:
-  3236h - 3491h
+  325Eh - 3401h
   4000h - 1000Dh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\WEDNES~1\AppData\Local\Temp\xcAs4nk.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\WEDNES~1\AppData\Local\Temp\xcBsbms.1\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -825,9 +825,20 @@
 00003200 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003210 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003220 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003230 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+00003230 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003240 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003250 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
-00003490 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003400 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003410 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003420 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003430 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003440 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003450 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003460 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003470 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003480 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003490 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000034A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000034B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000034C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

@@ -83,6 +83,7 @@ void printLogs(void) {
         //volgeraakt, kan je de printFloat uitschakelen
         printf(", kp: "); printFloat(getKp());
         printf(", ki: "); printFloat(getKi());
+        printf(", kd: "); printFloat(getKd());
         printf(", pomp: %u", getPomphoogte());
         printf("\r\n");
             }
@@ -113,6 +114,11 @@ void uartHandler(void) {
         case 'i':
             setKi(str2float(str + 1));
             printf("changed ki\r\n");
+            break;
+        case 'D': //Verander integrerende versterking
+        case 'd':
+            setKd(str2float(str + 1));
+            printf("changed kd\r\n");
             break;
         case 'L': //Toggle logs
         case 'l':
