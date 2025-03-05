@@ -45,13 +45,13 @@ static void TMR4_DefaultPeriodMatchCallback(void);
 void TMR4_Initialize(void)
 {
     // Set TMR4 to the options selected in the User Interface
-    PR4 = 0xFF;            // Period 0.008; Frequency 33333.333333333336Hz; Count 255
+    PR4 = 0xFF;            // Period 0.002; Frequency 133333.33333333334Hz; Count 255
     TMR4 = 0x0;
     TMR4_PeriodMatchCallback = TMR4_DefaultPeriodMatchCallback;
     
     PIR2bits.TMR4IF = 0;   
     PIE2bits.TMR4IE = 1;
-    T4CON = (2 << _T4CON_T4CKPS_POSN)   // T4CKPS 1:16
+    T4CON = (1 << _T4CON_T4CKPS_POSN)   // T4CKPS 1:4
         | (1 << _T4CON_TMR4ON_POSN)   // TMR4ON on
         | (14 << _T4CON_T4OUTPS_POSN);  // T4OUTPS 1:15
 }

@@ -23,7 +23,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19
 [; ;./controller.h: 19: float getKi(void);
 [v _getKi `(f ~T0 @X0 0 ef ]
-"22
+"21 ./adcMeasurements.h
+[; ;./adcMeasurements.h: 21: uint16_t getPomphoogte(void);
+[v _getPomphoogte `(us ~T0 @X0 0 ef ]
+"22 ./controller.h
 [; ;./controller.h: 22: void setSetpoint(uint16_t);
 [v _setSetpoint `(v ~T0 @X0 0 ef1`us ]
 "23 C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/stdlib.h
@@ -1094,270 +1097,273 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19640
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 19640: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"9 UART.c
-[; ;UART.c: 9: _Bool mustPrintLogs = 1;
+"8 UART.c
+[; ;UART.c: 8: _Bool mustPrintLogs = 1;
 [v _mustPrintLogs `a ~T0 @X0 1 e ]
 [i _mustPrintLogs
 -> -> 1 `i `a
 ]
-"12
-[; ;UART.c: 12: char line[20];
+"11
+[; ;UART.c: 11: char line[20];
 [v _line `uc ~T0 @X0 -> 20 `i e ]
-"14
-[; ;UART.c: 14: void printFloat(float number) {
+"13
+[; ;UART.c: 13: void printFloat(float number) {
 [v _printFloat `(v ~T0 @X0 1 ef1`f ]
 {
 [e :U _printFloat ]
 [v _number `f ~T0 @X0 1 r1 ]
 [f ]
-"15
-[; ;UART.c: 15:     int8_t integer_part = (int8_t) number;
+"14
+[; ;UART.c: 14:     int8_t integer_part = (int8_t) number;
 [v _integer_part `c ~T0 @X0 1 a ]
 [e = _integer_part -> _number `c ]
-"16
-[; ;UART.c: 16:     uint16_t fractional_part = (uint16_t) ((number - integer_part) * 1000);
+"15
+[; ;UART.c: 15:     uint16_t fractional_part = (uint16_t) ((number - integer_part) * 1000);
 [v _fractional_part `us ~T0 @X0 1 a ]
 [e = _fractional_part -> * - _number -> -> _integer_part `i `f -> -> 1000 `i `f `us ]
-"17
-[; ;UART.c: 17:     printf("%i.%03u", integer_part, fractional_part);
+"16
+[; ;UART.c: 16:     printf("%i.%03u", integer_part, fractional_part);
 [e ( _printf , , (. :s 1C -> _integer_part `i -> _fractional_part `ui ]
-"22
-[; ;UART.c: 22: }
+"21
+[; ;UART.c: 21: }
 [e :UE 968 ]
 }
-"25
-[; ;UART.c: 25: float str2float(char *str) {
+"24
+[; ;UART.c: 24: float str2float(char *str) {
 [v _str2float `(f ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _str2float ]
 [v _str `*uc ~T0 @X0 1 r1 ]
 [f ]
-"26
-[; ;UART.c: 26:     float number = 0;
+"25
+[; ;UART.c: 25:     float number = 0;
 [v _number `f ~T0 @X0 1 a ]
 [e = _number -> -> 0 `i `f ]
-"27
-[; ;UART.c: 27:     _Bool decimal_separator = 0;
+"26
+[; ;UART.c: 26:     _Bool decimal_separator = 0;
 [v _decimal_separator `a ~T0 @X0 1 a ]
 [e = _decimal_separator -> -> 0 `i `a ]
-"28
-[; ;UART.c: 28:     uint8_t multiplier;
+"27
+[; ;UART.c: 27:     uint8_t multiplier;
 [v _multiplier `uc ~T0 @X0 1 a ]
-"29
-[; ;UART.c: 29:     while (1) {
+"28
+[; ;UART.c: 28:     while (1) {
 [e :U 971 ]
 {
-"30
-[; ;UART.c: 30:         char digit = *str++;
+"29
+[; ;UART.c: 29:         char digit = *str++;
 [v _digit `uc ~T0 @X0 1 a ]
 [e = _digit *U ++ _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
-"31
-[; ;UART.c: 31:         if ('0' <= digit && digit <= '9') {
+"30
+[; ;UART.c: 30:         if ('0' <= digit && digit <= '9') {
 [e $ ! && <= -> 48 `ui -> _digit `ui <= -> _digit `ui -> 57 `ui 973  ]
 {
-"32
-[; ;UART.c: 32:             number *= 10;
+"31
+[; ;UART.c: 31:             number *= 10;
 [e =* _number -> -> 10 `i `f ]
-"33
-[; ;UART.c: 33:             number += digit - '0';
+"32
+[; ;UART.c: 32:             number += digit - '0';
 [e =+ _number -> - -> _digit `ui -> 48 `ui `f ]
-"34
-[; ;UART.c: 34:             multiplier++;
+"33
+[; ;UART.c: 33:             multiplier++;
 [e ++ _multiplier -> -> 1 `i `uc ]
-"35
-[; ;UART.c: 35:         } else if (digit == ',' || digit == '.') {
+"34
+[; ;UART.c: 34:         } else if (digit == ',' || digit == '.') {
 }
 [e $U 974  ]
 [e :U 973 ]
 [e $ ! || == -> _digit `ui -> 44 `ui == -> _digit `ui -> 46 `ui 975  ]
 {
-"36
-[; ;UART.c: 36:             decimal_separator = 1;
+"35
+[; ;UART.c: 35:             decimal_separator = 1;
 [e = _decimal_separator -> -> 1 `i `a ]
-"37
-[; ;UART.c: 37:             multiplier = 0;
+"36
+[; ;UART.c: 36:             multiplier = 0;
 [e = _multiplier -> -> 0 `i `uc ]
-"38
-[; ;UART.c: 38:         } else {
+"37
+[; ;UART.c: 37:         } else {
 }
 [e $U 976  ]
 [e :U 975 ]
 {
-"39
-[; ;UART.c: 39:             break;
+"38
+[; ;UART.c: 38:             break;
 [e $U 972  ]
-"40
-[; ;UART.c: 40:         }
+"39
+[; ;UART.c: 39:         }
 }
 [e :U 976 ]
 [e :U 974 ]
-"41
-[; ;UART.c: 41:     }
+"40
+[; ;UART.c: 40:     }
 }
 [e :U 970 ]
 [e $U 971  ]
 [e :U 972 ]
-"43
-[; ;UART.c: 43:     for (uint8_t i = 0; decimal_separator && i < multiplier; i++) {
+"42
+[; ;UART.c: 42:     for (uint8_t i = 0; decimal_separator && i < multiplier; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $U 980  ]
 [e :U 977 ]
 {
-"44
-[; ;UART.c: 44:         number /= 10;
+"43
+[; ;UART.c: 43:         number /= 10;
 [e =/ _number -> -> 10 `i `f ]
-"45
-[; ;UART.c: 45:     }
+"44
+[; ;UART.c: 44:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 980 ]
 [e $ && != -> _decimal_separator `i -> 0 `i < -> _i `i -> _multiplier `i 977  ]
 [e :U 978 ]
 }
-"46
-[; ;UART.c: 46:     return number;
+"45
+[; ;UART.c: 45:     return number;
 [e ) _number ]
 [e $UE 969  ]
-"47
-[; ;UART.c: 47: }
+"46
+[; ;UART.c: 46: }
 [e :UE 969 ]
 }
-"50
-[; ;UART.c: 50: char* readLine(void) {
+"49
+[; ;UART.c: 49: char* readLine(void) {
 [v _readLine `(*uc ~T0 @X0 1 ef ]
 {
 [e :U _readLine ]
 [f ]
-"51
-[; ;UART.c: 51:     static uint8_t index = 0;
-[v F7322 `uc ~T0 @X0 1 s index ]
-[i F7322
+"50
+[; ;UART.c: 50:     static uint8_t index = 0;
+[v F7327 `uc ~T0 @X0 1 s index ]
+[i F7327
 -> -> 0 `i `uc
 ]
-"52
-[; ;UART.c: 52:     while (1) {
+"51
+[; ;UART.c: 51:     while (1) {
 [e :U 983 ]
 {
-"53
-[; ;UART.c: 53:         if (!EUSART_IsRxReady()) {
+"52
+[; ;UART.c: 52:         if (!EUSART_IsRxReady()) {
 [e $ ! ! != -> ( _EUSART_IsRxReady ..  `i -> 0 `i 985  ]
 {
+"53
+[; ;UART.c: 53:             line[index] = 0;
+[e = *U + &U _line * -> F7327 `ux -> -> # *U &U _line `ui `ux -> -> 0 `i `uc ]
 "54
-[; ;UART.c: 54:             line[index] = 0;
-[e = *U + &U _line * -> F7322 `ux -> -> # *U &U _line `ui `ux -> -> 0 `i `uc ]
-"55
-[; ;UART.c: 55:             return line + index;
-[e ) + &U _line * -> -> F7322 `i `x -> -> # *U &U _line `i `x ]
+[; ;UART.c: 54:             return line + index;
+[e ) + &U _line * -> -> F7327 `i `x -> -> # *U &U _line `i `x ]
 [e $UE 981  ]
-"56
-[; ;UART.c: 56:         }
+"55
+[; ;UART.c: 55:         }
 }
 [e :U 985 ]
-"57
-[; ;UART.c: 57:         if (index >= 20 - 1) {
-[e $ ! >= -> F7322 `i - -> 20 `i -> 1 `i 986  ]
+"56
+[; ;UART.c: 56:         if (index >= 20 - 1) {
+[e $ ! >= -> F7327 `i - -> 20 `i -> 1 `i 986  ]
 {
-"58
-[; ;UART.c: 58:             while (EUSART_IsRxReady()) {
+"57
+[; ;UART.c: 57:             while (EUSART_IsRxReady()) {
 [e $U 987  ]
 [e :U 988 ]
 {
-"59
-[; ;UART.c: 59:                 EUSART_Read();
+"58
+[; ;UART.c: 58:                 EUSART_Read();
 [e ( _EUSART_Read ..  ]
-"60
-[; ;UART.c: 60:             }
+"59
+[; ;UART.c: 59:             }
 }
 [e :U 987 ]
-"58
-[; ;UART.c: 58:             while (EUSART_IsRxReady()) {
+"57
+[; ;UART.c: 57:             while (EUSART_IsRxReady()) {
 [e $ != -> ( _EUSART_IsRxReady ..  `i -> 0 `i 988  ]
 [e :U 989 ]
-"61
-[; ;UART.c: 61:             printf("input buffer overflow\r\n");
+"60
+[; ;UART.c: 60:             printf("input buffer overflow\r\n");
 [e ( _printf :s 2C ]
+"61
+[; ;UART.c: 61:             index = 0;
+[e = F7327 -> -> 0 `i `uc ]
 "62
-[; ;UART.c: 62:             index = 0;
-[e = F7322 -> -> 0 `i `uc ]
+[; ;UART.c: 62:             line[index] = 0;
+[e = *U + &U _line * -> F7327 `ux -> -> # *U &U _line `ui `ux -> -> 0 `i `uc ]
 "63
-[; ;UART.c: 63:             line[index] = 0;
-[e = *U + &U _line * -> F7322 `ux -> -> # *U &U _line `ui `ux -> -> 0 `i `uc ]
-"64
-[; ;UART.c: 64:             return line;
+[; ;UART.c: 63:             return line;
 [e ) &U _line ]
 [e $UE 981  ]
-"65
-[; ;UART.c: 65:         }
+"64
+[; ;UART.c: 64:         }
 }
 [e :U 986 ]
+"66
+[; ;UART.c: 66:         line[index] = EUSART_Read();
+[e = *U + &U _line * -> F7327 `ux -> -> # *U &U _line `ui `ux -> ( _EUSART_Read ..  `uc ]
 "67
-[; ;UART.c: 67:         line[index] = EUSART_Read();
-[e = *U + &U _line * -> F7322 `ux -> -> # *U &U _line `ui `ux -> ( _EUSART_Read ..  `uc ]
-"68
-[; ;UART.c: 68:         if (line[index] == '\n') {
-[e $ ! == -> *U + &U _line * -> F7322 `ux -> -> # *U &U _line `ui `ux `ui -> 10 `ui 990  ]
+[; ;UART.c: 67:         if (line[index] == '\n') {
+[e $ ! == -> *U + &U _line * -> F7327 `ux -> -> # *U &U _line `ui `ux `ui -> 10 `ui 990  ]
 {
+"68
+[; ;UART.c: 68:             line[index + 1] = 0;
+[e = *U + &U _line * -> -> + -> F7327 `i -> 1 `i `ui `ux -> -> # *U &U _line `ui `ux -> -> 0 `i `uc ]
 "69
-[; ;UART.c: 69:             line[index + 1] = 0;
-[e = *U + &U _line * -> -> + -> F7322 `i -> 1 `i `ui `ux -> -> # *U &U _line `ui `ux -> -> 0 `i `uc ]
+[; ;UART.c: 69:             index = 0;
+[e = F7327 -> -> 0 `i `uc ]
 "70
-[; ;UART.c: 70:             index = 0;
-[e = F7322 -> -> 0 `i `uc ]
-"71
-[; ;UART.c: 71:             return line;
+[; ;UART.c: 70:             return line;
 [e ) &U _line ]
 [e $UE 981  ]
-"72
-[; ;UART.c: 72:         }
+"71
+[; ;UART.c: 71:         }
 }
 [e :U 990 ]
+"72
+[; ;UART.c: 72:         index++;
+[e ++ F7327 -> -> 1 `i `uc ]
 "73
-[; ;UART.c: 73:         index++;
-[e ++ F7322 -> -> 1 `i `uc ]
-"74
-[; ;UART.c: 74:     }
+[; ;UART.c: 73:     }
 }
 [e :U 982 ]
 [e $U 983  ]
 [e :U 984 ]
-"75
-[; ;UART.c: 75: }
+"74
+[; ;UART.c: 74: }
 [e :UE 981 ]
 }
-"77
-[; ;UART.c: 77: void printLogs(void) {
+"76
+[; ;UART.c: 76: void printLogs(void) {
 [v _printLogs `(v ~T0 @X0 1 ef ]
 {
 [e :U _printLogs ]
 [f ]
-"79
-[; ;UART.c: 79:     if (mustPrintLogs) {
+"78
+[; ;UART.c: 78:     if (mustPrintLogs) {
 [e $ ! != -> _mustPrintLogs `i -> 0 `i 992  ]
 {
-"80
-[; ;UART.c: 80:         printf("hoogte: %u", getHoogtesensor());
+"79
+[; ;UART.c: 79:         printf("hoogte: %u", getHoogtesensor());
 [e ( _printf , (. :s 3C -> ( _getHoogtesensor ..  `ui ]
-"81
-[; ;UART.c: 81:         printf(", setpoint: %u", getSetpoint());
+"80
+[; ;UART.c: 80:         printf(", setpoint: %u", getSetpoint());
 [e ( _printf , (. :s 4C -> ( _getSetpoint ..  `ui ]
-"82
-[; ;UART.c: 82:         printf(", duty cycle: %u", getDutycycle());
+"81
+[; ;UART.c: 81:         printf(", duty cycle: %u", getDutycycle());
 [e ( _printf , (. :s 5C -> ( _getDutycycle ..  `ui ]
-"85
-[; ;UART.c: 85:         printf(", kp: "); printFloat(getKp());
+"84
+[; ;UART.c: 84:         printf(", kp: "); printFloat(getKp());
 [e ( _printf :s 6C ]
 [e ( _printFloat (1 ( _getKp ..  ]
-"86
-[; ;UART.c: 86:         printf(", ki: "); printFloat(getKi());
+"85
+[; ;UART.c: 85:         printf(", ki: "); printFloat(getKi());
 [e ( _printf :s 7C ]
 [e ( _printFloat (1 ( _getKi ..  ]
+"86
+[; ;UART.c: 86:         printf(", pomp: %u", getPomphoogte());
+[e ( _printf , (. :s 8C -> ( _getPomphoogte ..  `ui ]
 "87
 [; ;UART.c: 87:         printf("\r\n");
-[e ( _printf :s 8C ]
+[e ( _printf :s 9C ]
 "88
-[; ;UART.c: 88:     }
+[; ;UART.c: 88:             }
 }
 [e :U 992 ]
 "89
@@ -1409,7 +1415,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setSetpoint (1 -> ( _atoi (1 -> + _str * -> -> 1 `i `x -> -> # *U _str `i `x `*Cuc `us ]
 "104
 [; ;UART.c: 104:             printf("changed setpoint to %u\r\n", (uint16_t) atoi(str + 1));
-[e ( _printf , (. :s 9C -> -> ( _atoi (1 -> + _str * -> -> 1 `i `x -> -> # *U _str `i `x `*Cuc `us `ui ]
+[e ( _printf , (. :s 10C -> -> ( _atoi (1 -> + _str * -> -> 1 `i `x -> -> # *U _str `i `x `*Cuc `us `ui ]
 "105
 [; ;UART.c: 105:             break;
 [e $U 995  ]
@@ -1424,7 +1430,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setKp (1 ( _str2float (1 + _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
 "110
 [; ;UART.c: 110:             printf("changed kp\r\n");
-[e ( _printf :s 10C ]
+[e ( _printf :s 11C ]
 "111
 [; ;UART.c: 111:             break;
 [e $U 995  ]
@@ -1439,7 +1445,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setKi (1 ( _str2float (1 + _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
 "115
 [; ;UART.c: 115:             printf("changed ki\r\n");
-[e ( _printf :s 11C ]
+[e ( _printf :s 12C ]
 "116
 [; ;UART.c: 116:             break;
 [e $U 995  ]
@@ -1454,7 +1460,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _mustPrintLogs -> -> ! != -> _mustPrintLogs `i -> 0 `i `i `a ]
 "120
 [; ;UART.c: 120:             printf("logs toggled\r\n");
-[e ( _printf :s 12C ]
+[e ( _printf :s 13C ]
 "121
 [; ;UART.c: 121:             break;
 [e $U 995  ]
@@ -1463,7 +1469,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1006 ]
 "125
 [; ;UART.c: 125:             printf("Unkown command\r\n");
-[e ( _printf :s 13C ]
+[e ( _printf :s 14C ]
 "126
 [; ;UART.c: 126:     };
 }
@@ -1487,14 +1493,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p f _printf 9471620 ]
 [a 1C 37 105 46 37 48 51 117 0 ]
 [a 4C 44 32 115 101 116 112 111 105 110 116 58 32 37 117 0 ]
+[a 8C 44 32 112 111 109 112 58 32 37 117 0 ]
 [a 3C 104 111 111 103 116 101 58 32 37 117 0 ]
 [a 5C 44 32 100 117 116 121 32 99 121 99 108 101 58 32 37 117 0 ]
 [a 6C 44 32 107 112 58 32 0 ]
 [a 7C 44 32 107 105 58 32 0 ]
 [a 2C 105 110 112 117 116 32 98 117 102 102 101 114 32 111 118 101 114 102 108 111 119 13 10 0 ]
-[a 9C 99 104 97 110 103 101 100 32 115 101 116 112 111 105 110 116 32 116 111 32 37 117 13 10 0 ]
-[a 10C 99 104 97 110 103 101 100 32 107 112 13 10 0 ]
-[a 11C 99 104 97 110 103 101 100 32 107 105 13 10 0 ]
-[a 13C 85 110 107 111 119 110 32 99 111 109 109 97 110 100 13 10 0 ]
-[a 12C 108 111 103 115 32 116 111 103 103 108 101 100 13 10 0 ]
-[a 8C 13 10 0 ]
+[a 10C 99 104 97 110 103 101 100 32 115 101 116 112 111 105 110 116 32 116 111 32 37 117 13 10 0 ]
+[a 11C 99 104 97 110 103 101 100 32 107 112 13 10 0 ]
+[a 12C 99 104 97 110 103 101 100 32 107 105 13 10 0 ]
+[a 14C 85 110 107 111 119 110 32 99 111 109 109 97 110 100 13 10 0 ]
+[a 13C 108 111 103 115 32 116 111 103 103 108 101 100 13 10 0 ]
+[a 9C 13 10 0 ]

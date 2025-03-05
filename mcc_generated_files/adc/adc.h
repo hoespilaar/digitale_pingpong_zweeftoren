@@ -69,7 +69,8 @@ typedef enum
     channel_DAC1 =  0x3e,
     channel_FVR =  0x3f,
     potentiometer =  0x10,
-    hoogtesensor =  0x12
+    hoogtesensor =  0x12,
+    pomphoogte =  0x13
 } adc_channel_t;
 
 /**

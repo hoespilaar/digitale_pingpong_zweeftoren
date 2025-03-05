@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"61 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 61: void SYSTEM_Initialize(void);
+"62 ./mcc_generated_files/system/system.h
+[; ;./mcc_generated_files/system/system.h: 62: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 357:     struct {
@@ -17,10 +17,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17 ./adcMeasurements.h
 [; ;./adcMeasurements.h: 17: void initAdcMultiplexer(void);
 [v _initAdcMultiplexer `(v ~T0 @X0 0 ef ]
-[v F7269 `(v ~T0 @X0 0 tf ]
+[v F7273 `(v ~T0 @X0 0 tf ]
 "260 ./mcc_generated_files/system/../timer/tmr4.h
 [; ;./mcc_generated_files/system/../timer/tmr4.h: 260: void TMR4_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-[v _TMR4_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F7269 ]
+[v _TMR4_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F7273 ]
 "15 ./controller.h
 [; ;./controller.h: 15: void controller(void);
 [v _controller `(v ~T0 @X0 0 ef ]
@@ -30,6 +30,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16 ./UART.h
 [; ;./UART.h: 16: void uartHandler(void);
 [v _uartHandler `(v ~T0 @X0 0 ef ]
+"21 ./adcMeasurements.h
+[; ;./adcMeasurements.h: 21: uint16_t getPomphoogte(void);
+[v _getPomphoogte `(us ~T0 @X0 0 ef ]
+"65 ./mcc_generated_files/system/../pwm/pwm6.h
+[; ;./mcc_generated_files/system/../pwm/pwm6.h: 65:  void PWM_buzzer_LoadDutyValue(uint16_t dutyValue);
+[v _PWM_buzzer_LoadDutyValue `(v ~T0 @X0 0 ef1`us ]
 [v F203 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF203 ~T0 @X0 0 e ]
@@ -37,6 +43,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15 ./UART.h
 [; ;./UART.h: 15: void printLogs(void);
 [v _printLogs `(v ~T0 @X0 0 ef ]
+"22 ./controller.h
+[; ;./controller.h: 22: void setSetpoint(uint16_t);
+[v _setSetpoint `(v ~T0 @X0 0 ef1`us ]
+"121 C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/stdio.h
+[; ;C:\Program Files\Microchip\xc8\v3.00\pic\include\c99/stdio.h: 121: int sprintf(char *restrict, const char *restrict, ...);
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"20 ./UART.h
+[; ;./UART.h: 20: void printOut(char*);
+[v _printOut `(v ~T0 @X0 0 ef1`*uc ]
 "260 ./mcc_generated_files/system/../timer/tmr6.h
 [; ;./mcc_generated_files/system/../timer/tmr6.h: 260: void TMR6_Tasks(void);
 [v _TMR6_Tasks `(v ~T0 @X0 0 ef ]
@@ -1099,58 +1114,130 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19640
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 19640: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-[v $root$_main `(v ~T0 @X0 0 e ]
 "51 main.c
-[; ;main.c: 51: int main(void)
-[v _main `(i ~T0 @X0 1 ef ]
+[; ;main.c: 51: _Bool buzzing = 0;
+[v _buzzing `a ~T0 @X0 1 e ]
+[i _buzzing
+-> -> 0 `i `a
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
 "52
-[; ;main.c: 52: {
+[; ;main.c: 52: int main(void)
+[v _main `(i ~T0 @X0 1 ef ]
+"53
+[; ;main.c: 53: {
 {
 [e :U _main ]
 [f ]
-"53
-[; ;main.c: 53:     SYSTEM_Initialize();
+"54
+[; ;main.c: 54:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"59
-[; ;main.c: 59:     (INTCONbits.GIE = 1);
+"60
+[; ;main.c: 60:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"65
-[; ;main.c: 65:     (INTCONbits.PEIE = 1);
+"66
+[; ;main.c: 66:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"70
-[; ;main.c: 70:     initAdcMultiplexer();
-[e ( _initAdcMultiplexer ..  ]
 "71
-[; ;main.c: 71:     TMR4_PeriodMatchCallbackRegister(controller);
-[e ( _TMR4_PeriodMatchCallbackRegister (1 &U _controller ]
+[; ;main.c: 71:     initAdcMultiplexer();
+[e ( _initAdcMultiplexer ..  ]
 "72
-[; ;main.c: 72:     initLedstrip();
+[; ;main.c: 72:     TMR4_PeriodMatchCallbackRegister(controller);
+[e ( _TMR4_PeriodMatchCallbackRegister (1 &U _controller ]
+"73
+[; ;main.c: 73:     initLedstrip();
 [e ( _initLedstrip ..  ]
-"74
-[; ;main.c: 74:     while(1)
-[e :U 970 ]
 "75
-[; ;main.c: 75:     {
-{
-"76
-[; ;main.c: 76:         uartHandler();
-[e ( _uartHandler ..  ]
+[; ;main.c: 75:     uint8_t counter = 0;
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+"77
+[; ;main.c: 77:     while(1)
+[e :U 970 ]
 "78
-[; ;main.c: 78:         _delay((unsigned long)((1000)*(32000000U/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+[; ;main.c: 78:     {
+{
+"79
+[; ;main.c: 79:         uartHandler();
+[e ( _uartHandler ..  ]
 "81
-[; ;main.c: 81:         printLogs();
-[e ( _printLogs ..  ]
+[; ;main.c: 81:         if (buzzing == 0){
+[e $ ! == -> _buzzing `i -> 0 `i 972  ]
+{
 "83
-[; ;main.c: 83:         TMR6_Tasks();
-[e ( _TMR6_Tasks ..  ]
+[; ;main.c: 83:            if (getPomphoogte() >= 450) {
+[e $ ! >= -> ( _getPomphoogte ..  `ui -> -> 450 `i `ui 973  ]
+{
 "84
-[; ;main.c: 84:     }
+[; ;main.c: 84:             PWM_buzzer_LoadDutyValue(50);
+[e ( _PWM_buzzer_LoadDutyValue (1 -> -> 50 `i `us ]
+"85
+[; ;main.c: 85:             buzzing = 1;
+[e = _buzzing -> -> 1 `i `a ]
+"86
+[; ;main.c: 86:             counter += 1;
+[e =+ _counter -> -> 1 `i `uc ]
+"87
+[; ;main.c: 87:             _delay((unsigned long)((20)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"88
+[; ;main.c: 88:             }
+}
+[e :U 973 ]
+"90
+[; ;main.c: 90:            PWM_buzzer_LoadDutyValue(0);
+[e ( _PWM_buzzer_LoadDutyValue (1 -> -> 0 `i `us ]
+"91
+[; ;main.c: 91:         } else {
+}
+[e $U 974  ]
+[e :U 972 ]
+{
+"92
+[; ;main.c: 92:             if (getPomphoogte() <= 350) {
+[e $ ! <= -> ( _getPomphoogte ..  `ui -> -> 350 `i `ui 975  ]
+{
+"93
+[; ;main.c: 93:                 buzzing = 0;
+[e = _buzzing -> -> 0 `i `a ]
+"94
+[; ;main.c: 94:             }
+}
+[e :U 975 ]
+"95
+[; ;main.c: 95:         }
+}
+[e :U 974 ]
+"97
+[; ;main.c: 97:         _delay((unsigned long)((1)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"100
+[; ;main.c: 100:         printLogs();
+[e ( _printLogs ..  ]
+"102
+[; ;main.c: 102:         setSetpoint(45 + counter * 50);
+[e ( _setSetpoint (1 -> + -> 45 `i * -> _counter `i -> 50 `i `us ]
+"103
+[; ;main.c: 103:         char str[20];
+[v _str `uc ~T0 @X0 -> 20 `i a ]
+"104
+[; ;main.c: 104:         sprintf(str, "counter: %u\n\r", counter);
+[e ( _sprintf (1 , (. , &U _str :s 1C -> _counter `i ]
+"105
+[; ;main.c: 105:         printOut(str);
+[e ( _printOut (1 &U _str ]
+"107
+[; ;main.c: 107:         TMR6_Tasks();
+[e ( _TMR6_Tasks ..  ]
+"108
+[; ;main.c: 108:     }
 }
 [e :U 969 ]
 [e $U 970  ]
 [e :U 971 ]
-"85
-[; ;main.c: 85: }
+"109
+[; ;main.c: 109: }
 [e :UE 968 ]
 }
+[p f _sprintf 8389632 ]
+[a 1C 99 111 117 110 116 101 114 58 32 37 117 10 13 0 ]

@@ -239,6 +239,25 @@
 #define hoogtesensor_SetOpenDrain()       do { ODCONCbits.ODCC2 = 1; } while(0)
 #define hoogtesensor_SetAnalogMode()      do { ANSELCbits.ANSC2 = 1; } while(0)
 #define hoogtesensor_SetDigitalMode()     do { ANSELCbits.ANSC2 = 0; } while(0)
+// get/set IO_RC3 aliases
+#define pomphoogte_TRIS                 TRISCbits.TRISC3
+#define pomphoogte_LAT                  LATCbits.LATC3
+#define pomphoogte_PORT                 PORTCbits.RC3
+#define pomphoogte_WPU                  WPUCbits.WPUC3
+#define pomphoogte_OD                   ODCONCbits.ODCC3
+#define pomphoogte_ANS                  ANSELCbits.ANSC3
+#define pomphoogte_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
+#define pomphoogte_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
+#define pomphoogte_Toggle()             do { LATCbits.LATC3 = ~LATCbits.LATC3; } while(0)
+#define pomphoogte_GetValue()           PORTCbits.RC3
+#define pomphoogte_SetDigitalInput()    do { TRISCbits.TRISC3 = 1; } while(0)
+#define pomphoogte_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
+#define pomphoogte_SetPullup()          do { WPUCbits.WPUC3 = 1; } while(0)
+#define pomphoogte_ResetPullup()        do { WPUCbits.WPUC3 = 0; } while(0)
+#define pomphoogte_SetPushPull()        do { ODCONCbits.ODCC3 = 0; } while(0)
+#define pomphoogte_SetOpenDrain()       do { ODCONCbits.ODCC3 = 1; } while(0)
+#define pomphoogte_SetAnalogMode()      do { ANSELCbits.ANSC3 = 1; } while(0)
+#define pomphoogte_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
 // get/set IO_RC5 aliases
 #define pwm_ventilator_TRIS                 TRISCbits.TRISC5
 #define pwm_ventilator_LAT                  LATCbits.LATC5
@@ -258,6 +277,44 @@
 #define pwm_ventilator_SetOpenDrain()       do { ODCONCbits.ODCC5 = 1; } while(0)
 #define pwm_ventilator_SetAnalogMode()      do { ANSELCbits.ANSC5 = 1; } while(0)
 #define pwm_ventilator_SetDigitalMode()     do { ANSELCbits.ANSC5 = 0; } while(0)
+// get/set IO_RC6 aliases
+#define pompled_TRIS                 TRISCbits.TRISC6
+#define pompled_LAT                  LATCbits.LATC6
+#define pompled_PORT                 PORTCbits.RC6
+#define pompled_WPU                  WPUCbits.WPUC6
+#define pompled_OD                   ODCONCbits.ODCC6
+#define pompled_ANS                  ANSELCbits.ANSC6
+#define pompled_SetHigh()            do { LATCbits.LATC6 = 1; } while(0)
+#define pompled_SetLow()             do { LATCbits.LATC6 = 0; } while(0)
+#define pompled_Toggle()             do { LATCbits.LATC6 = ~LATCbits.LATC6; } while(0)
+#define pompled_GetValue()           PORTCbits.RC6
+#define pompled_SetDigitalInput()    do { TRISCbits.TRISC6 = 1; } while(0)
+#define pompled_SetDigitalOutput()   do { TRISCbits.TRISC6 = 0; } while(0)
+#define pompled_SetPullup()          do { WPUCbits.WPUC6 = 1; } while(0)
+#define pompled_ResetPullup()        do { WPUCbits.WPUC6 = 0; } while(0)
+#define pompled_SetPushPull()        do { ODCONCbits.ODCC6 = 0; } while(0)
+#define pompled_SetOpenDrain()       do { ODCONCbits.ODCC6 = 1; } while(0)
+#define pompled_SetAnalogMode()      do { ANSELCbits.ANSC6 = 1; } while(0)
+#define pompled_SetDigitalMode()     do { ANSELCbits.ANSC6 = 0; } while(0)
+// get/set IO_RC7 aliases
+#define buzzer_TRIS                 TRISCbits.TRISC7
+#define buzzer_LAT                  LATCbits.LATC7
+#define buzzer_PORT                 PORTCbits.RC7
+#define buzzer_WPU                  WPUCbits.WPUC7
+#define buzzer_OD                   ODCONCbits.ODCC7
+#define buzzer_ANS                  ANSELCbits.ANSC7
+#define buzzer_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define buzzer_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define buzzer_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
+#define buzzer_GetValue()           PORTCbits.RC7
+#define buzzer_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
+#define buzzer_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
+#define buzzer_SetPullup()          do { WPUCbits.WPUC7 = 1; } while(0)
+#define buzzer_ResetPullup()        do { WPUCbits.WPUC7 = 0; } while(0)
+#define buzzer_SetPushPull()        do { ODCONCbits.ODCC7 = 0; } while(0)
+#define buzzer_SetOpenDrain()       do { ODCONCbits.ODCC7 = 1; } while(0)
+#define buzzer_SetAnalogMode()      do { ANSELCbits.ANSC7 = 1; } while(0)
+#define buzzer_SetDigitalMode()     do { ANSELCbits.ANSC7 = 0; } while(0)
 /**
  * @ingroup  pinsdriver
  * @brief GPIO and peripheral I/O initialization

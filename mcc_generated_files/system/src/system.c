@@ -45,6 +45,7 @@ void SYSTEM_Initialize(void)
     TMR6_Initialize();
     ADC_Initialize();
     EUSART_Initialize();
+    PWM_buzzer_Initialize();
     pwm_fan_Initialize();
     SPI1_Initialize();
     INTERRUPT_Initialize();

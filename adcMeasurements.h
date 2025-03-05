@@ -18,6 +18,7 @@ void initAdcMultiplexer(void);
 
 uint16_t getPotentiometer(void);
 uint16_t getHoogtesensor(void);
+uint16_t getPomphoogte(void);
 
 
 #ifdef	__cplusplus

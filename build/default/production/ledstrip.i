@@ -289,6 +289,7 @@ void initAdcMultiplexer(void);
 
 uint16_t getPotentiometer(void);
 uint16_t getHoogtesensor(void);
+uint16_t getPomphoogte(void);
 # 4 "ledstrip.c" 2
 # 1 "./controller.h" 1
 # 15 "./controller.h"

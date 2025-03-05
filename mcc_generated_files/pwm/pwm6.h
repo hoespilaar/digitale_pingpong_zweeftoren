@@ -1,13 +1,13 @@
 /**
- * PWM5 Generated Driver API Header File
+ * PWM6 Generated Driver API Header File
  *
- * @file pwm5.h
+ * @file pwm6.h
  *
- * @defgroup pwm5 PWM5
+ * @defgroup pwm6 PWM6
  *
- * @brief This file contains the API prototypes for the PWM5 driver.
+ * @brief This file contains the API prototypes for the PWM6 driver.
  *
- * @version PWM5 Driver Version 2.0.4
+ * @version PWM6 Driver Version 2.0.4
 */
 
 /*
@@ -31,8 +31,8 @@
     THIS SOFTWARE.
 */
 
-#ifndef PWM5_H
- #define PWM5_H
+#ifndef PWM6_H
+ #define PWM6_H
  
  /**
   * Section: Included Files
@@ -45,23 +45,23 @@
   * Section: Macro Declarations
  */
 
- #define PWM5_INITIALIZE_DUTY_VALUE    499
+ #define PWM6_INITIALIZE_DUTY_VALUE    499
 
 
 /**
- * @ingroup pwm5
- * @brief Initializes the PWM5 interface.
+ * @ingroup pwm6
+ * @brief Initializes the PWM6 interface.
  * @param None.
  * @return None.
  */
- void pwm_fan_Initialize(void);
+ void PWM_buzzer_Initialize(void);
 
  /**
- * @ingroup pwm5
+ * @ingroup pwm6
  * @brief Loads the 16-bit duty cycle value.
- * @param uint16_t dutyValue - PWM5 duty cycle value to be loaded.
+ * @param uint16_t dutyValue - PWM6 duty cycle value to be loaded.
  * @return None.
  */
- void pwm_fan_LoadDutyValue(uint16_t dutyValue);
+ void PWM_buzzer_LoadDutyValue(uint16_t dutyValue);
  
- #endif	//PWM5_H
+ #endif	//PWM6_H

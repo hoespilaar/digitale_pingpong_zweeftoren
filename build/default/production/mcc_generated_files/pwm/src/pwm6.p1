@@ -1,18 +1,28 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"10 adcMeasurements.c
-[; ;adcMeasurements.c: 10:     static adc_channel_t new_channel = potentiometer;
-[c E6663 60 61 62 63 16 18 19 .. ]
-[n E6663 . channel_AVSS channel_Temp channel_DAC1 channel_FVR potentiometer hoogtesensor pomphoogte  ]
-"120 ./mcc_generated_files/adc/adc.h
-[; ;./mcc_generated_files/adc/adc.h: 120: adc_result_t ADC_GetConversionResult(void);
-[v _ADC_GetConversionResult `(us ~T0 @X0 0 ef ]
-"95
-[; ;./mcc_generated_files/adc/adc.h: 95: void ADC_SelectChannel(adc_channel_t channel);
-[v _ADC_SelectChannel `(v ~T0 @X0 0 ef1`E6663 ]
-[v F6683 `(v ~T0 @X0 0 tf ]
-"154
-[; ;./mcc_generated_files/adc/adc.h: 154: void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _ADC_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F6683 ]
+"9199 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 9199: extern volatile unsigned char PWM6CON __attribute__((address(0x61C)));
+[v _PWM6CON `Vuc ~T0 @X0 0 e@1564 ]
+"9129
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 9129: extern volatile unsigned char PWM6DCH __attribute__((address(0x61B)));
+[v _PWM6DCH `Vuc ~T0 @X0 0 e@1563 ]
+"9093
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 9093: extern volatile unsigned char PWM6DCL __attribute__((address(0x61A)));
+[v _PWM6DCL `Vuc ~T0 @X0 0 e@1562 ]
+"9271
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 9271:     struct {
+[s S455 :2 `uc 1 :2 `uc 1 ]
+[n S455 . P5TSEL P6TSEL ]
+"9275
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 9275:     struct {
+[s S456 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S456 . P5TSEL0 P5TSEL1 P6TSEL0 P6TSEL1 ]
+"9270
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 9270: typedef union {
+[u S454 `S455 1 `S456 1 ]
+[n S454 . . . ]
+"9282
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 9282: extern volatile PWMTMRSbits_t PWMTMRSbits __attribute__((address(0x61F)));
+[v _PWMTMRSbits `VS454 ~T0 @X0 0 e@1567 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1072,135 +1082,50 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19640
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc/pic16f18345.h: 19640: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"3 adcMeasurements.c
-[; ;adcMeasurements.c: 3: volatile uint16_t ADC_potentiometer, ADC_hoogtesensor, ADC_pomphoogte;
-[v _ADC_potentiometer `Vus ~T0 @X0 1 e ]
-[v _ADC_hoogtesensor `Vus ~T0 @X0 1 e ]
-[v _ADC_pomphoogte `Vus ~T0 @X0 1 e ]
-"5
-[; ;adcMeasurements.c: 5: void adcConversionDoneHandler(void) {
-[v _adcConversionDoneHandler `(v ~T0 @X0 1 ef ]
+"45 mcc_generated_files/pwm/src/pwm6.c
+[; ;mcc_generated_files/pwm/src/pwm6.c: 45:  void PWM_buzzer_Initialize(void)
+[v _PWM_buzzer_Initialize `(v ~T0 @X0 1 ef ]
+"46
+[; ;mcc_generated_files/pwm/src/pwm6.c: 46:  {
 {
-[e :U _adcConversionDoneHandler ]
+[e :U _PWM_buzzer_Initialize ]
 [f ]
-"10
-[; ;adcMeasurements.c: 10:     static adc_channel_t new_channel = potentiometer;
-[v F6690 `E6663 ~T0 @X0 1 s new_channel ]
-[i F6690
-. `E6663 4
-]
-"11
-[; ;adcMeasurements.c: 11:     switch (new_channel) {
-[e $U 964  ]
-{
-"12
-[; ;adcMeasurements.c: 12:         case potentiometer:
-[e :U 965 ]
-"13
-[; ;adcMeasurements.c: 13:             ADC_potentiometer = ADC_GetConversionResult();
-[e = _ADC_potentiometer ( _ADC_GetConversionResult ..  ]
-"14
-[; ;adcMeasurements.c: 14:             new_channel = hoogtesensor;
-[e = F6690 . `E6663 5 ]
-"15
-[; ;adcMeasurements.c: 15:             break;
-[e $U 963  ]
-"16
-[; ;adcMeasurements.c: 16:         case hoogtesensor:
-[e :U 966 ]
-"17
-[; ;adcMeasurements.c: 17:             ADC_hoogtesensor = ADC_GetConversionResult();
-[e = _ADC_hoogtesensor ( _ADC_GetConversionResult ..  ]
-"18
-[; ;adcMeasurements.c: 18:             new_channel = pomphoogte;
-[e = F6690 . `E6663 6 ]
-"19
-[; ;adcMeasurements.c: 19:             break;
-[e $U 963  ]
-"20
-[; ;adcMeasurements.c: 20:         case pomphoogte:
-[e :U 967 ]
-"21
-[; ;adcMeasurements.c: 21:             ADC_pomphoogte = ADC_GetConversionResult();
-[e = _ADC_pomphoogte ( _ADC_GetConversionResult ..  ]
-"22
-[; ;adcMeasurements.c: 22:             new_channel = potentiometer;
-[e = F6690 . `E6663 4 ]
-"23
-[; ;adcMeasurements.c: 23:             break;
-[e $U 963  ]
-"24
-[; ;adcMeasurements.c: 24:     }
+"50
+[; ;mcc_generated_files/pwm/src/pwm6.c: 50:     PWM6CON = 0x80;
+[e = _PWM6CON -> -> 128 `i `uc ]
+"53
+[; ;mcc_generated_files/pwm/src/pwm6.c: 53:     PWM6DCH = 0x7C;
+[e = _PWM6DCH -> -> 124 `i `uc ]
+"56
+[; ;mcc_generated_files/pwm/src/pwm6.c: 56:     PWM6DCL = 0xC0;
+[e = _PWM6DCL -> -> 192 `i `uc ]
+"60
+[; ;mcc_generated_files/pwm/src/pwm6.c: 60:     PWMTMRSbits.P6TSEL = 0x1;
+[e = . . _PWMTMRSbits 0 1 -> -> 1 `i `uc ]
+"61
+[; ;mcc_generated_files/pwm/src/pwm6.c: 61:  }
+[e :UE 961 ]
 }
-[e $U 963  ]
-[e :U 964 ]
-[e [\ -> F6690 `ui , $ -> . `E6663 4 `ui 965
- , $ -> . `E6663 5 `ui 966
- , $ -> . `E6663 6 `ui 967
- 963 ]
-[e :U 963 ]
-"25
-[; ;adcMeasurements.c: 25:     ADC_SelectChannel(new_channel);
-[e ( _ADC_SelectChannel (1 F6690 ]
-"26
-[; ;adcMeasurements.c: 26: }
+"63
+[; ;mcc_generated_files/pwm/src/pwm6.c: 63:  void PWM_buzzer_LoadDutyValue(uint16_t dutyValue)
+[v _PWM_buzzer_LoadDutyValue `(v ~T0 @X0 1 ef1`us ]
+"64
+[; ;mcc_generated_files/pwm/src/pwm6.c: 64:  {
+{
+[e :U _PWM_buzzer_LoadDutyValue ]
+"63
+[; ;mcc_generated_files/pwm/src/pwm6.c: 63:  void PWM_buzzer_LoadDutyValue(uint16_t dutyValue)
+[v _dutyValue `us ~T0 @X0 1 r1 ]
+"64
+[; ;mcc_generated_files/pwm/src/pwm6.c: 64:  {
+[f ]
+"66
+[; ;mcc_generated_files/pwm/src/pwm6.c: 66:      PWM6DCH = (uint8_t) ((dutyValue & 0x03FCu) >> 2);
+[e = _PWM6DCH -> >> & -> _dutyValue `ui -> 1020 `ui -> 2 `i `uc ]
+"69
+[; ;mcc_generated_files/pwm/src/pwm6.c: 69:      PWM6DCL = (uint8_t) ((dutyValue & 0x0003u) << 6);
+[e = _PWM6DCL -> << & -> _dutyValue `ui -> 3 `ui -> 6 `i `uc ]
+"70
+[; ;mcc_generated_files/pwm/src/pwm6.c: 70:  }
 [e :UE 962 ]
-}
-"28
-[; ;adcMeasurements.c: 28: void initAdcMultiplexer(void) {
-[v _initAdcMultiplexer `(v ~T0 @X0 1 ef ]
-{
-[e :U _initAdcMultiplexer ]
-[f ]
-"29
-[; ;adcMeasurements.c: 29:     ADC_SelectChannel(potentiometer);
-[e ( _ADC_SelectChannel (1 . `E6663 4 ]
-"30
-[; ;adcMeasurements.c: 30:     ADC_SetInterruptHandler(adcConversionDoneHandler);
-[e ( _ADC_SetInterruptHandler (1 &U _adcConversionDoneHandler ]
-"31
-[; ;adcMeasurements.c: 31: }
-[e :UE 968 ]
-}
-"33
-[; ;adcMeasurements.c: 33: uint16_t getPotentiometer(void) {
-[v _getPotentiometer `(us ~T0 @X0 1 ef ]
-{
-[e :U _getPotentiometer ]
-[f ]
-"34
-[; ;adcMeasurements.c: 34:     return ADC_potentiometer;
-[e ) _ADC_potentiometer ]
-[e $UE 969  ]
-"35
-[; ;adcMeasurements.c: 35: }
-[e :UE 969 ]
-}
-"37
-[; ;adcMeasurements.c: 37: uint16_t getHoogtesensor(void) {
-[v _getHoogtesensor `(us ~T0 @X0 1 ef ]
-{
-[e :U _getHoogtesensor ]
-[f ]
-"38
-[; ;adcMeasurements.c: 38:     return ADC_hoogtesensor;
-[e ) _ADC_hoogtesensor ]
-[e $UE 970  ]
-"39
-[; ;adcMeasurements.c: 39: }
-[e :UE 970 ]
-}
-"41
-[; ;adcMeasurements.c: 41: uint16_t getPomphoogte(void) {
-[v _getPomphoogte `(us ~T0 @X0 1 ef ]
-{
-[e :U _getPomphoogte ]
-[f ]
-"42
-[; ;adcMeasurements.c: 42:     return ADC_pomphoogte;
-[e ) _ADC_pomphoogte ]
-[e $UE 971  ]
-"43
-[; ;adcMeasurements.c: 43: }
-[e :UE 971 ]
 }

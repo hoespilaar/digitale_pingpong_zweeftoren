@@ -2,13 +2,13 @@
 #include "mcc_generated_files/pwm/pwm5.h"
 
 static uint16_t hoogte_bal;
-static uint16_t setpoint = 450;
+static uint16_t setpoint = 50;
 static uint16_t dutycycle; //PWM5 heeft 10 bits resolutie -> neem uint16_t als type
 
 static float integraal = 0;
 
-static float kp = 0.9;
-static float ki = 5;
+static float kp = 1;
+static float ki = 1;
 
 void controller(void) {
     hoogte_bal = getHoogtesensor(); //resultaat van ADC

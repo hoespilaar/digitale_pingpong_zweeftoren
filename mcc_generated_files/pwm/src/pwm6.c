@@ -1,16 +1,16 @@
 /**
- * PWM5 Generated Driver API Header File
- *
- * @file pwm5.h
- *
- * @defgroup pwm5 PWM5
- *
- * @brief This file contains the API prototypes for the PWM5 driver.
- *
- * @version PWM5 Driver Version 2.0.4
+  * PWM6 Generated Driver File
+  *
+  * @file pwm6.c
+  *
+  * @ingroup pwm6
+  *
+  * @brief This file contains the API implementations for the PWM6 module.
+  *
+  * @version PWM6 Driver Version 2.0.4
 */
 
-/*
+ /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
@@ -30,38 +30,41 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-
-#ifndef PWM5_H
- #define PWM5_H
  
  /**
   * Section: Included Files
   */
 
  #include <xc.h>
- #include <stdint.h>
+ #include "../pwm6.h"
 
  /**
-  * Section: Macro Declarations
- */
+  * Section: PWM Module APIs
+  */
 
- #define PWM5_INITIALIZE_DUTY_VALUE    499
+ void PWM_buzzer_Initialize(void)
+ {
+    // Set the PWM6 to the options selected in the User Interface
+    
+    // PWMPOL active_hi; PWMEN enabled; 
+    PWM6CON = 0x80;
+    
+    // PWMDCH 124; 
+    PWM6DCH = 0x7C;
+
+    // PWMDCL 3; 
+    PWM6DCL = 0xC0;
+    
 
 
-/**
- * @ingroup pwm5
- * @brief Initializes the PWM5 interface.
- * @param None.
- * @return None.
- */
- void pwm_fan_Initialize(void);
+    PWMTMRSbits.P6TSEL = 0x1;
+ }
 
- /**
- * @ingroup pwm5
- * @brief Loads the 16-bit duty cycle value.
- * @param uint16_t dutyValue - PWM5 duty cycle value to be loaded.
- * @return None.
- */
- void pwm_fan_LoadDutyValue(uint16_t dutyValue);
- 
- #endif	//PWM5_H
+ void PWM_buzzer_LoadDutyValue(uint16_t dutyValue)
+ {
+     // Writing to 8 MSBs of PWM duty cycle in PWMDCH register
+     PWM6DCH = (uint8_t) ((dutyValue & 0x03FCu) >> 2);
+     
+     // Writing to 2 LSBs of PWM duty cycle in PWMDCL register
+     PWM6DCL = (uint8_t) ((dutyValue & 0x0003u) << 6);
+ }

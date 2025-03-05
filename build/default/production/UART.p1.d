@@ -7,6 +7,7 @@ mcc_generated_files/uart/../system/../system/clock.h  \
 mcc_generated_files/uart/../system/../system/pins.h  \
 mcc_generated_files/uart/../system/../adc/adc.h  \
 mcc_generated_files/uart/../system/../uart/eusart.h  \
+mcc_generated_files/uart/../system/../pwm/pwm6.h  \
 mcc_generated_files/uart/../system/../pwm/pwm5.h  \
 mcc_generated_files/uart/../system/../spi/mssp1.h  \
 mcc_generated_files/uart/../system/../spi/spi_interface.h  \

@@ -5,7 +5,6 @@
 #include "adcMeasurements.h"
 #include "mcc_generated_files/pwm/pwm5.h"
 #include "controller.h"
-
 bool mustPrintLogs = true;
 
 #define EUART_READ_LINE_BUFFER_LENGTH 20
@@ -84,8 +83,9 @@ void printLogs(void) {
         //volgeraakt, kan je de printFloat uitschakelen
         printf(", kp: "); printFloat(getKp());
         printf(", ki: "); printFloat(getKi());
+        printf(", pomp: %u", getPomphoogte());
         printf("\r\n");
-    }
+            }
 }
 
 void printOut(char* str) {

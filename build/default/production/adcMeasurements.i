@@ -11230,11 +11230,12 @@ typedef enum
     channel_DAC1 = 0x3e,
     channel_FVR = 0x3f,
     potentiometer = 0x10,
-    hoogtesensor = 0x12
+    hoogtesensor = 0x12,
+    pomphoogte = 0x13
 } adc_channel_t;
-# 85 "./mcc_generated_files/adc/adc.h"
+# 86 "./mcc_generated_files/adc/adc.h"
 void ADC_Initialize(void);
-# 94 "./mcc_generated_files/adc/adc.h"
+# 95 "./mcc_generated_files/adc/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
 
 
@@ -11244,7 +11245,7 @@ void ADC_SelectChannel(adc_channel_t channel);
 
 
 void ADC_StartConversion(void);
-# 111 "./mcc_generated_files/adc/adc.h"
+# 112 "./mcc_generated_files/adc/adc.h"
 _Bool ADC_IsConversionDone(void);
 
 
@@ -11254,9 +11255,9 @@ _Bool ADC_IsConversionDone(void);
 
 
 adc_result_t ADC_GetConversionResult(void);
-# 128 "./mcc_generated_files/adc/adc.h"
+# 129 "./mcc_generated_files/adc/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 137 "./mcc_generated_files/adc/adc.h"
+# 138 "./mcc_generated_files/adc/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 
 
@@ -11276,7 +11277,7 @@ void ADC_ISR(void);
 void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
 # 2 "adcMeasurements.c" 2
 
-volatile uint16_t ADC_potentiometer, ADC_hoogtesensor;
+volatile uint16_t ADC_potentiometer, ADC_hoogtesensor, ADC_pomphoogte;
 
 void adcConversionDoneHandler(void) {
 
@@ -11291,6 +11292,10 @@ void adcConversionDoneHandler(void) {
             break;
         case hoogtesensor:
             ADC_hoogtesensor = ADC_GetConversionResult();
+            new_channel = pomphoogte;
+            break;
+        case pomphoogte:
+            ADC_pomphoogte = ADC_GetConversionResult();
             new_channel = potentiometer;
             break;
     }
@@ -11308,4 +11313,8 @@ uint16_t getPotentiometer(void) {
 
 uint16_t getHoogtesensor(void) {
     return ADC_hoogtesensor;
+}
+
+uint16_t getPomphoogte(void) {
+    return ADC_pomphoogte;
 }

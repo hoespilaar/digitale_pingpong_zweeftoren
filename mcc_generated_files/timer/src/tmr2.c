@@ -45,13 +45,13 @@ static void TMR2_DefaultPeriodMatchCallback(void);
 void TMR2_Initialize(void)
 {
     // Set TMR2 to the options selected in the User Interface
-    PR2 = 0xFF;            // Period 0.001; Frequency 500000Hz; Count 255
+    PR2 = 0xF9;            // Period 0.002; Frequency 125000Hz; Count 249
     TMR2 = 0x0;
     TMR2_PeriodMatchCallback = TMR2_DefaultPeriodMatchCallback;
     
     PIR1bits.TMR2IF = 0;   
     PIE1bits.TMR2IE = 1;
-    T2CON = (1 << _T2CON_T2CKPS_POSN)   // T2CKPS 1:4
+    T2CON = (2 << _T2CON_T2CKPS_POSN)   // T2CKPS 1:16
         | (1 << _T2CON_TMR2ON_POSN)   // TMR2ON on
         | (3 << _T2CON_T2OUTPS_POSN);  // T2OUTPS 1:4
 }

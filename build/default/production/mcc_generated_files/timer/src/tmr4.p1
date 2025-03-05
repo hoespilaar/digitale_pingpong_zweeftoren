@@ -1138,8 +1138,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/timer/src/tmr4.c: 53:     PIE2bits.TMR4IE = 1;
 [e = . . _PIE2bits 0 1 -> -> 1 `i `uc ]
 "54
-[; ;mcc_generated_files/timer/src/tmr4.c: 54:     T4CON = (2 << 0x0)
-[e = _T4CON -> | | << -> 2 `i -> 0 `i << -> 1 `i -> 2 `i << -> 14 `i -> 3 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr4.c: 54:     T4CON = (1 << 0x0)
+[e = _T4CON -> | | << -> 1 `i -> 0 `i << -> 1 `i -> 2 `i << -> 14 `i -> 3 `i `uc ]
 "57
 [; ;mcc_generated_files/timer/src/tmr4.c: 57: }
 [e :UE 961 ]

@@ -1093,39 +1093,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50
 [; ;mcc_generated_files/pwm/src/pwm5.c: 50:     PWM5CON = 0x80;
 [e = _PWM5CON -> -> 128 `i `uc ]
-"53
-[; ;mcc_generated_files/pwm/src/pwm5.c: 53:     PWM5DCH = 0x7F;
-[e = _PWM5DCH -> -> 127 `i `uc ]
-"56
-[; ;mcc_generated_files/pwm/src/pwm5.c: 56:     PWM5DCL = 0xC0;
+"54
+[; ;mcc_generated_files/pwm/src/pwm5.c: 54:     PWM5DCH = 0x7C;
+[e = _PWM5DCH -> -> 124 `i `uc ]
+"57
+[; ;mcc_generated_files/pwm/src/pwm5.c: 57:     PWM5DCL = 0xC0;
 [e = _PWM5DCL -> -> 192 `i `uc ]
-"60
-[; ;mcc_generated_files/pwm/src/pwm5.c: 60:     PWMTMRSbits.P5TSEL = 0x1;
-[e = . . _PWMTMRSbits 0 0 -> -> 1 `i `uc ]
 "61
-[; ;mcc_generated_files/pwm/src/pwm5.c: 61:  }
+[; ;mcc_generated_files/pwm/src/pwm5.c: 61:     PWMTMRSbits.P5TSEL = 0x1;
+[e = . . _PWMTMRSbits 0 0 -> -> 1 `i `uc ]
+"62
+[; ;mcc_generated_files/pwm/src/pwm5.c: 62:  }
 [e :UE 961 ]
 }
-"63
-[; ;mcc_generated_files/pwm/src/pwm5.c: 63:  void pwm_fan_LoadDutyValue(uint16_t dutyValue)
-[v _pwm_fan_LoadDutyValue `(v ~T0 @X0 1 ef1`us ]
 "64
-[; ;mcc_generated_files/pwm/src/pwm5.c: 64:  {
+[; ;mcc_generated_files/pwm/src/pwm5.c: 64:  void pwm_fan_LoadDutyValue(uint16_t dutyValue)
+[v _pwm_fan_LoadDutyValue `(v ~T0 @X0 1 ef1`us ]
+"65
+[; ;mcc_generated_files/pwm/src/pwm5.c: 65:  {
 {
 [e :U _pwm_fan_LoadDutyValue ]
-"63
-[; ;mcc_generated_files/pwm/src/pwm5.c: 63:  void pwm_fan_LoadDutyValue(uint16_t dutyValue)
-[v _dutyValue `us ~T0 @X0 1 r1 ]
 "64
-[; ;mcc_generated_files/pwm/src/pwm5.c: 64:  {
+[; ;mcc_generated_files/pwm/src/pwm5.c: 64:  void pwm_fan_LoadDutyValue(uint16_t dutyValue)
+[v _dutyValue `us ~T0 @X0 1 r1 ]
+"65
+[; ;mcc_generated_files/pwm/src/pwm5.c: 65:  {
 [f ]
-"66
-[; ;mcc_generated_files/pwm/src/pwm5.c: 66:      PWM5DCH = (uint8_t) ((dutyValue & 0x03FCu) >> 2);
+"67
+[; ;mcc_generated_files/pwm/src/pwm5.c: 67:      PWM5DCH = (uint8_t) ((dutyValue & 0x03FCu) >> 2);
 [e = _PWM5DCH -> >> & -> _dutyValue `ui -> 1020 `ui -> 2 `i `uc ]
-"69
-[; ;mcc_generated_files/pwm/src/pwm5.c: 69:      PWM5DCL = (uint8_t) ((dutyValue & 0x0003u) << 6);
-[e = _PWM5DCL -> << & -> _dutyValue `ui -> 3 `ui -> 6 `i `uc ]
 "70
-[; ;mcc_generated_files/pwm/src/pwm5.c: 70:  }
+[; ;mcc_generated_files/pwm/src/pwm5.c: 70:      PWM5DCL = (uint8_t) ((dutyValue & 0x0003u) << 6);
+[e = _PWM5DCL -> << & -> _dutyValue `ui -> 3 `ui -> 6 `i `uc ]
+"71
+[; ;mcc_generated_files/pwm/src/pwm5.c: 71:  }
 [e :UE 962 ]
 }

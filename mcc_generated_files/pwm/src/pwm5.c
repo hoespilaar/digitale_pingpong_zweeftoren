@@ -49,8 +49,9 @@
     // PWMPOL active_hi; PWMEN enabled; 
     PWM5CON = 0x80;
     
-    // PWMDCH 127; 
-    PWM5DCH = 0x7F;
+    
+    // PWMDCH 124; 
+    PWM5DCH = 0x7C;
 
     // PWMDCL 3; 
     PWM5DCL = 0xC0;

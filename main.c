@@ -43,11 +43,12 @@
 #include "controller.h"
 #include "mcc_generated_files/timer/tmr6.h"
 #include "ledstrip.h"
+#include "mcc_generated_files/pwm/pwm6.h"
 
 /*
     Main application
 */
-
+bool  buzzing = false;
 int main(void)
 {
     SYSTEM_Initialize();
@@ -71,14 +72,37 @@ int main(void)
     tmr_controller_OverflowCallbackRegister(controller);
     initLedstrip();
     
+    uint8_t counter = 0;
+    
     while(1)
     {
         uartHandler();
         
-        __delay_ms(1000); //korte delay voor zichtbaar effect
+        if (buzzing == false){
+           
+           if (getPomphoogte() >= 450) {
+            PWM_buzzer_LoadDutyValue(50); //output PWM signaal
+            buzzing = true;
+            counter += 1;
+            __delay_ms(20);
+            }   
+           
+           PWM_buzzer_LoadDutyValue(0); //output PWM signaal
+        } else {
+            if (getPomphoogte() <= 350) {
+                buzzing = false;
+            }
+        }
+        
+        __delay_ms(1); //korte delay voor zichtbaar effect
         
         // print
         printLogs();
+        
+        setSetpoint(45 + counter * 50);
+        char str[20];
+        sprintf(str, "counter: %u\n\r", counter);
+        printOut(str);
         
         tmr_ledstrip_Tasks();
     }    

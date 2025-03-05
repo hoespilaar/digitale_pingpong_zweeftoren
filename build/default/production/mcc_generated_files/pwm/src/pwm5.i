@@ -11218,7 +11218,8 @@ extern __bank0 __bit __timeout;
     PWM5CON = 0x80;
 
 
-    PWM5DCH = 0x7F;
+
+    PWM5DCH = 0x7C;
 
 
     PWM5DCL = 0xC0;

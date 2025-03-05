@@ -11377,7 +11377,7 @@ void CLOCK_Initialize(void);
 # 40 "mcc_generated_files/uart/src/../../system/config_bits.h" 2
 # 43 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../system/pins.h" 1
-# 267 "mcc_generated_files/uart/src/../../system/../system/pins.h"
+# 324 "mcc_generated_files/uart/src/../../system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -11416,11 +11416,12 @@ typedef enum
     channel_DAC1 = 0x3e,
     channel_FVR = 0x3f,
     potentiometer = 0x10,
-    hoogtesensor = 0x12
+    hoogtesensor = 0x12,
+    pomphoogte = 0x13
 } adc_channel_t;
-# 85 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
+# 86 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
 void ADC_Initialize(void);
-# 94 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
+# 95 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
 
 
@@ -11430,7 +11431,7 @@ void ADC_SelectChannel(adc_channel_t channel);
 
 
 void ADC_StartConversion(void);
-# 111 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
+# 112 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
 _Bool ADC_IsConversionDone(void);
 
 
@@ -11440,9 +11441,9 @@ _Bool ADC_IsConversionDone(void);
 
 
 adc_result_t ADC_GetConversionResult(void);
-# 128 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
+# 129 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 137 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
+# 138 "mcc_generated_files/uart/src/../../system/../adc/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 
 
@@ -11463,6 +11464,18 @@ void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
 # 45 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../eusart.h" 1
 # 46 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 1 "mcc_generated_files/uart/src/../../system/../pwm/pwm6.h" 1
+# 57 "mcc_generated_files/uart/src/../../system/../pwm/pwm6.h"
+ void PWM_buzzer_Initialize(void);
+
+
+
+
+
+
+
+ void PWM_buzzer_LoadDutyValue(uint16_t dutyValue);
+# 47 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../pwm/pwm5.h" 1
 # 57 "mcc_generated_files/uart/src/../../system/../pwm/pwm5.h"
  void pwm_fan_Initialize(void);
@@ -11474,7 +11487,7 @@ void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
 
 
  void pwm_fan_LoadDutyValue(uint16_t dutyValue);
-# 47 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 48 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../spi/mssp1.h" 1
 # 38 "mcc_generated_files/uart/src/../../system/../spi/mssp1.h"
 # 1 "mcc_generated_files/uart/src/../../system/../spi/spi_interface.h" 1
@@ -11576,7 +11589,7 @@ uint8_t SPI1_ByteRead(void);
 _Bool SPI1_IsRxReady(void);
 # 223 "mcc_generated_files/uart/src/../../system/../spi/mssp1.h"
 _Bool SPI1_IsTxReady(void);
-# 48 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 49 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../system/interrupt.h" 1
 # 85 "mcc_generated_files/uart/src/../../system/../system/interrupt.h"
 void INTERRUPT_Initialize (void);
@@ -11590,7 +11603,7 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 175 "mcc_generated_files/uart/src/../../system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
-# 49 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 50 "mcc_generated_files/uart/src/../../system/system.h" 2
 
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr2.h" 1
 # 41 "mcc_generated_files/uart/src/../../system/../timer/tmr2.h"
@@ -11658,7 +11671,7 @@ void TMR2_ISR(void);
 
 
 void TMR2_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-# 51 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 52 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr4.h" 1
 # 41 "mcc_generated_files/uart/src/../../system/../timer/tmr4.h"
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr4_deprecated.h" 1
@@ -11725,7 +11738,7 @@ void TMR4_ISR(void);
 
 
 void TMR4_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
-# 52 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 53 "mcc_generated_files/uart/src/../../system/system.h" 2
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr6.h" 1
 # 41 "mcc_generated_files/uart/src/../../system/../timer/tmr6.h"
 # 1 "mcc_generated_files/uart/src/../../system/../timer/tmr6_deprecated.h" 1
@@ -11786,7 +11799,7 @@ void TMR6_PeriodMatchStatusClear(void);
 
 
 void TMR6_Tasks(void);
-# 53 "mcc_generated_files/uart/src/../../system/system.h" 2
+# 54 "mcc_generated_files/uart/src/../../system/system.h" 2
 
 
 

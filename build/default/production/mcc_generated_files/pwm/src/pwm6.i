@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/system/src/pins.c"
+# 1 "mcc_generated_files/pwm/src/pwm6.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/system/src/pins.c" 2
-# 35 "mcc_generated_files/system/src/pins.c"
-# 1 "mcc_generated_files/system/src/../pins.h" 1
-# 38 "mcc_generated_files/system/src/../pins.h"
+# 1 "mcc_generated_files/pwm/src/pwm6.c" 2
+# 38 "mcc_generated_files/pwm/src/pwm6.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11194,9 +11192,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
-# 39 "mcc_generated_files/system/src/../pins.h" 2
-# 324 "mcc_generated_files/system/src/../pins.h"
-void PIN_MANAGER_Initialize (void);
+# 39 "mcc_generated_files/pwm/src/pwm6.c" 2
+# 1 "mcc_generated_files/pwm/src/../pwm6.h" 1
+# 57 "mcc_generated_files/pwm/src/../pwm6.h"
+ void PWM_buzzer_Initialize(void);
 
 
 
@@ -11204,85 +11203,36 @@ void PIN_MANAGER_Initialize (void);
 
 
 
-void PIN_MANAGER_IOC(void);
-# 36 "mcc_generated_files/system/src/pins.c" 2
-
-
-void PIN_MANAGER_Initialize(void)
-{
-
-
-
-    LATA = 0x0;
-    LATB = 0x0;
-    LATC = 0x0;
-
-
-
-
-    TRISA = 0x19;
-    TRISB = 0x20;
-    TRISC = 0x1F;
-
-
-
-
-    ANSELA = 0x10;
-    ANSELB = 0x80;
-    ANSELC = 0xBF;
-
-
-
-
-    WPUA = 0x0;
-    WPUB = 0x0;
-    WPUC = 0x0;
+ void PWM_buzzer_LoadDutyValue(uint16_t dutyValue);
+# 40 "mcc_generated_files/pwm/src/pwm6.c" 2
 
 
 
 
 
-    ODCONA = 0x0;
-    ODCONB = 0x0;
-    ODCONC = 0x0;
+ void PWM_buzzer_Initialize(void)
+ {
 
 
 
-    SLRCONA = 0x37;
-    SLRCONB = 0xF0;
-    SLRCONC = 0xFF;
+    PWM6CON = 0x80;
+
+
+    PWM6DCH = 0x7C;
+
+
+    PWM6DCL = 0xC0;
 
 
 
-    INLVLA = 0x3F;
-    INLVLB = 0xF0;
-    INLVLC = 0xFF;
+    PWMTMRSbits.P6TSEL = 0x1;
+ }
+
+ void PWM_buzzer_LoadDutyValue(uint16_t dutyValue)
+ {
+
+     PWM6DCH = (uint8_t) ((dutyValue & 0x03FCu) >> 2);
 
 
-
-
-    SSP1DATPPS = 0x0;
-    RXPPS = 0xD;
-    RB4PPS = 25;
-    RC5PPS = 2;
-    RC7PPS = 3;
-    RB7PPS = 20;
-    SSP1CLKPPS = 0xE;
-    RB6PPS = 24;
-# 107 "mcc_generated_files/system/src/pins.c"
-    IOCAP = 0x0;
-    IOCAN = 0x0;
-    IOCAF = 0x0;
-    IOCBP = 0x0;
-    IOCBN = 0x0;
-    IOCBF = 0x0;
-    IOCCP = 0x0;
-    IOCCN = 0x0;
-    IOCCF = 0x0;
-
-
-}
-
-void PIN_MANAGER_IOC(void)
-{
-}
+     PWM6DCL = (uint8_t) ((dutyValue & 0x0003u) << 6);
+ }
