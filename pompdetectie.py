@@ -36,7 +36,7 @@ def compute_angle(v1, v2):
 """ MAIN """
 
 pygame.mixer.init()
-sound = pygame.mixer.Sound("C:/Users/Pieter/Music/output.wav")
+sound = pygame.mixer.Sound("C:/Users/Pieter/Music/corrigeer.mp3")
 cap = cv2.VideoCapture(0)
 kernel = np.ones((5, 5), np.uint8)
 green = {"name": 'green', "bgr": [0, 255, 0]}
