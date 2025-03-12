@@ -1,5 +1,7 @@
-build/default/production/main.p1:  \
-main.c  \
+build/default/production/PushUp.p1:  \
+PushUp.c  \
+mcc_generated_files/pwm/pwm6.h  \
+adcMeasurements.h  \
 mcc_generated_files/system/system.h  \
 mcc_generated_files/system/config_bits.h  \
 mcc_generated_files/system/../system/clock.h  \
@@ -20,13 +22,4 @@ mcc_generated_files/system/../timer/tmr4.h  \
 mcc_generated_files/system/../timer/tmr4_deprecated.h  \
 mcc_generated_files/system/../timer/tmr6.h  \
 mcc_generated_files/system/../timer/tmr6_deprecated.h  \
-mcc_generated_files/system/pins.h  \
-mcc_generated_files/adc/adc.h  \
-adcMeasurements.h  \
-UART.h  \
-mcc_generated_files/timer/tmr4.h  \
-controller.h  \
-mcc_generated_files/timer/tmr6.h  \
-ledstrip.h  \
-mcc_generated_files/pwm/pwm6.h  \
-PushUp.h 
+controller.h 

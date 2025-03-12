@@ -22,4 +22,5 @@ mcc_generated_files/uart/uart_drv_interface.h  \
 mcc_generated_files/uart/uart_types.h  \
 adcMeasurements.h  \
 mcc_generated_files/pwm/pwm5.h  \
-controller.h 
+controller.h  \
+PushUp.h 

@@ -12092,6 +12092,12 @@ void setDutycycle(uint16_t);
 void setKp(float);
 void setKi(float);
 # 8 "UART.c" 2
+# 1 "./PushUp.h" 1
+# 15 "./PushUp.h"
+void check_push_up(void);
+
+uint16_t getCounter(void);
+# 9 "UART.c" 2
 _Bool mustPrintLogs = 1;
 
 
@@ -12170,9 +12176,10 @@ void printLogs(void) {
 
 
 
+        printf("Count: %u", getCounter());
         printf (", pomp: %u", getPomphoogte());
         printf("\r\n");
-            }
+    }
 }
 
 void printOut(char* str) {

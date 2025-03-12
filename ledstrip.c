@@ -2,6 +2,7 @@
 #include "mcc_generated_files/timer/tmr6.h"
 #include "adcMeasurements.h"
 #include "controller.h"
+#include "PushUp.h"
 
 void sendLedstripStartFrame(void) {
     //de eerste 4 bytes moeten allemaal 0 zijn
@@ -108,14 +109,26 @@ void position_led_strip(){
     sendLedstripEndFrame();
 }
 
-void two_data_points(void) {
+void counter_led() {
+    uint16_t counter = getCounter();
+    uint16_t loops = counter / 60;
+    counter -= 60 * (loops);
     
+    sendLedstripStartFrame();
+    for (uint8_t led = 0; led < NUMBER_OF_LEDS; led++) { //dan sturen we de waarde van alle leds door.
+        if (led <= counter) {
+            sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
+        } else {
+            sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
+        }
+    }
+    //stop frame: uiteindelijk laten we weten dat we alle data hebben doorgestuurd
+    sendLedstripEndFrame();
 }
 
 
-
 void updateLedstripAnimation(void) {
-    dutycycle_led_strip();
+    counter_led();
 }
 
 void initLedstrip(void) {

@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "PushUp.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,31 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 35 "main.c"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/musl_xc8.h" 1 3
-# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
-# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef long int wchar_t;
-# 128 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef unsigned size_t;
-# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef int ptrdiff_t;
-# 174 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 210 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
-# 36 "main.c" 2
-
-# 1 "./mcc_generated_files/system/system.h" 1
-# 39 "./mcc_generated_files/system/system.h"
+# 1 "PushUp.c" 2
+# 1 "./mcc_generated_files/pwm/pwm6.h" 1
+# 41 "./mcc_generated_files/pwm/pwm6.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -43,11 +21,28 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
+
+
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/features.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef long int wchar_t;
+# 128 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef unsigned size_t;
+# 174 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 210 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef __uint24 uint24_t;
 # 22 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdlib.h" 2 3
 
 int atoi (const char *);
@@ -11198,8 +11193,29 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
-# 40 "./mcc_generated_files/system/system.h" 2
+# 42 "./mcc_generated_files/pwm/pwm6.h" 2
+# 57 "./mcc_generated_files/pwm/pwm6.h"
+ void PWM_buzzer_Initialize(void);
 
+
+
+
+
+
+
+ void PWM_buzzer_LoadDutyValue(uint16_t dutyValue);
+# 2 "PushUp.c" 2
+# 1 "./adcMeasurements.h" 1
+# 16 "./adcMeasurements.h"
+void adcConversionDoneHandler(void);
+void initAdcMultiplexer(void);
+
+uint16_t getPotentiometer(void);
+uint16_t getHoogtesensor(void);
+uint16_t getPomphoogte(void);
+# 3 "PushUp.c" 2
+# 1 "./mcc_generated_files/system/system.h" 1
+# 41 "./mcc_generated_files/system/system.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stdbool.h" 1 3
 # 42 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/config_bits.h" 1
@@ -11453,7 +11469,14 @@ char *tempnam(const char *, const char *);
 # 1 "./mcc_generated_files/system/system.h" 1
 # 47 "./mcc_generated_files/system/../uart/eusart.h" 2
 # 1 "./mcc_generated_files/system/../uart/uart_drv_interface.h" 1
-# 42 "./mcc_generated_files/system/../uart/uart_drv_interface.h"
+# 41 "./mcc_generated_files/system/../uart/uart_drv_interface.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 1 3
+# 19 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 1 3
+# 138 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/bits/alltypes.h" 3
+typedef int ptrdiff_t;
+# 20 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include\\c99/stddef.h" 2 3
+# 42 "./mcc_generated_files/system/../uart/uart_drv_interface.h" 2
 # 1 "./mcc_generated_files/system/../uart/uart_types.h" 1
 # 57 "./mcc_generated_files/system/../uart/uart_types.h"
 enum UART_STANDARD_BAUDS{
@@ -11726,18 +11749,7 @@ int getch(void);
 
 void putch(char txData);
 # 46 "./mcc_generated_files/system/system.h" 2
-# 1 "./mcc_generated_files/system/../pwm/pwm6.h" 1
-# 57 "./mcc_generated_files/system/../pwm/pwm6.h"
- void PWM_buzzer_Initialize(void);
 
-
-
-
-
-
-
- void PWM_buzzer_LoadDutyValue(uint16_t dutyValue);
-# 47 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../pwm/pwm5.h" 1
 # 57 "./mcc_generated_files/system/../pwm/pwm5.h"
  void pwm_fan_Initialize(void);
@@ -12058,28 +12070,7 @@ void TMR6_Tasks(void);
 
 
 void SYSTEM_Initialize(void);
-# 38 "main.c" 2
-
-
-# 1 "./adcMeasurements.h" 1
-# 16 "./adcMeasurements.h"
-void adcConversionDoneHandler(void);
-void initAdcMultiplexer(void);
-
-uint16_t getPotentiometer(void);
-uint16_t getHoogtesensor(void);
-uint16_t getPomphoogte(void);
-# 41 "main.c" 2
-# 1 "./UART.h" 1
-# 15 "./UART.h"
-void printLogs(void);
-void uartHandler(void);
-void printFloat(float);
-float str2float(char);
-
-void printOut(char*);
-# 42 "main.c" 2
-
+# 4 "PushUp.c" 2
 # 1 "./controller.h" 1
 # 15 "./controller.h"
 void controller(void);
@@ -12093,62 +12084,30 @@ void setSetpoint(uint16_t);
 void setDutycycle(uint16_t);
 void setKp(float);
 void setKi(float);
-# 44 "main.c" 2
-
-# 1 "./ledstrip.h" 1
-# 15 "./ledstrip.h"
-void initLedstrip(void);
-void updateLedstripAnimation(void);
-void sendLedstripFrame(uint8_t, uint8_t, uint8_t, uint8_t);
-void sendLedstripEndFrame(void);
-void sendLedstripStartFrame(void);
-void dutycycle_led_strip(void);
-# 46 "main.c" 2
-
-# 1 "./PushUp.h" 1
-# 15 "./PushUp.h"
-void check_push_up(void);
-
-uint16_t getCounter(void);
-# 48 "main.c" 2
+# 5 "PushUp.c" 2
 
 
+_Bool buzzing = 0;
+static uint16_t counter = 0;
 
+void check_push_up(void) {
+    if (buzzing == 0){
 
-int main(void)
-{
-    SYSTEM_Initialize();
+       if (getPomphoogte() >= 450) {
+        PWM_buzzer_LoadDutyValue(400);
+        buzzing = 1;
+        counter += 1;
+        setSetpoint(45 + counter * 50);
+        _delay((unsigned long)((20)*(32000000U/4000.0)));
+        }
 
-
-
-
-
-    (INTCONbits.GIE = 1);
-
-
-
-
-
-    (INTCONbits.PEIE = 1);
-
-
-
-
-    initAdcMultiplexer();
-    TMR4_PeriodMatchCallbackRegister(controller);
-    initLedstrip();
-
-    while(1)
-    {
-        uartHandler();
-
-        check_push_up();
-
-        _delay((unsigned long)((10)*(32000000U/4000.0)));
-
-
-        printLogs();
-
-        TMR6_Tasks();
+       PWM_buzzer_LoadDutyValue(0);
+    } else {
+        if (getPomphoogte() <= 350) {
+            buzzing = 0;
+        }
     }
 }
+
+
+uint16_t getCounter(void) {return counter;}

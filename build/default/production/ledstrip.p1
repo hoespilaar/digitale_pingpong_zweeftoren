@@ -11,26 +11,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16 ./controller.h
 [; ;./controller.h: 16: uint16_t getSetpoint(void);
 [v _getSetpoint `(us ~T0 @X0 0 ef ]
+"17 ./PushUp.h
+[; ;./PushUp.h: 17: uint16_t getCounter(void);
+[v _getCounter `(us ~T0 @X0 0 ef ]
 "144 ./mcc_generated_files/spi/mssp1.h
 [; ;./mcc_generated_files/spi/mssp1.h: 144: _Bool SPI1_Open(uint8_t spiConfigIndex);
 [v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
-"122 ledstrip.c
-[; ;ledstrip.c: 122:     SPI1_Open(HOST_CONFIG);
+"135 ledstrip.c
+[; ;ledstrip.c: 135:     SPI1_Open(HOST_CONFIG);
 [c E82 0 1 .. ]
 [n E82 . HOST_CONFIG MSSP1_DEFAULT  ]
 [v F119 `(v ~T0 @X0 0 tf ]
 "236 ./mcc_generated_files/timer/tmr6.h
 [; ;./mcc_generated_files/timer/tmr6.h: 236: void TMR6_PeriodMatchCallbackRegister(void (* CallbackHandler)(void));
 [v _TMR6_PeriodMatchCallbackRegister `(v ~T0 @X0 0 ef1`*F119 ]
-"6 ledstrip.c
-[; ;ledstrip.c: 6: void sendLedstripStartFrame(void) {
+"7 ledstrip.c
+[; ;ledstrip.c: 7: void sendLedstripStartFrame(void) {
 [v _sendLedstripStartFrame `(v ~T0 @X0 1 ef ]
 {
 [e :U _sendLedstripStartFrame ]
 [f ]
-"8
-[; ;ledstrip.c: 8:     SPI1_ByteExchange(0x00);
-[e ( _SPI1_ByteExchange (1 -> -> 0 `i `uc ]
 "9
 [; ;ledstrip.c: 9:     SPI1_ByteExchange(0x00);
 [e ( _SPI1_ByteExchange (1 -> -> 0 `i `uc ]
@@ -41,18 +41,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ledstrip.c: 11:     SPI1_ByteExchange(0x00);
 [e ( _SPI1_ByteExchange (1 -> -> 0 `i `uc ]
 "12
-[; ;ledstrip.c: 12: }
+[; ;ledstrip.c: 12:     SPI1_ByteExchange(0x00);
+[e ( _SPI1_ByteExchange (1 -> -> 0 `i `uc ]
+"13
+[; ;ledstrip.c: 13: }
 [e :UE 2 ]
 }
-"14
-[; ;ledstrip.c: 14: void sendLedstripEndFrame(void) {
+"15
+[; ;ledstrip.c: 15: void sendLedstripEndFrame(void) {
 [v _sendLedstripEndFrame `(v ~T0 @X0 1 ef ]
 {
 [e :U _sendLedstripEndFrame ]
 [f ]
-"16
-[; ;ledstrip.c: 16:     SPI1_ByteExchange(0xFF);
-[e ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
 "17
 [; ;ledstrip.c: 17:     SPI1_ByteExchange(0xFF);
 [e ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
@@ -63,11 +63,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ledstrip.c: 19:     SPI1_ByteExchange(0xFF);
 [e ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
 "20
-[; ;ledstrip.c: 20: }
+[; ;ledstrip.c: 20:     SPI1_ByteExchange(0xFF);
+[e ( _SPI1_ByteExchange (1 -> -> 255 `i `uc ]
+"21
+[; ;ledstrip.c: 21: }
 [e :UE 3 ]
 }
-"22
-[; ;ledstrip.c: 22: void sendLedstripFrame(uint8_t red, uint8_t green, uint8_t blue, uint8_t intensity) {
+"23
+[; ;ledstrip.c: 23: void sendLedstripFrame(uint8_t red, uint8_t green, uint8_t blue, uint8_t intensity) {
 [v _sendLedstripFrame `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
 {
 [e :U _sendLedstripFrame ]
@@ -76,56 +79,56 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _blue `uc ~T0 @X0 1 r3 ]
 [v _intensity `uc ~T0 @X0 1 r4 ]
 [f ]
-"23
-[; ;ledstrip.c: 23:     SPI1_ByteExchange(0xE0 | intensity);
+"24
+[; ;ledstrip.c: 24:     SPI1_ByteExchange(0xE0 | intensity);
 [e ( _SPI1_ByteExchange (1 -> | -> 224 `i -> _intensity `i `uc ]
-"25
-[; ;ledstrip.c: 25:     SPI1_ByteExchange(blue);
-[e ( _SPI1_ByteExchange (1 _blue ]
 "26
-[; ;ledstrip.c: 26:     SPI1_ByteExchange(green);
-[e ( _SPI1_ByteExchange (1 _green ]
+[; ;ledstrip.c: 26:     SPI1_ByteExchange(blue);
+[e ( _SPI1_ByteExchange (1 _blue ]
 "27
-[; ;ledstrip.c: 27:     SPI1_ByteExchange(red);
-[e ( _SPI1_ByteExchange (1 _red ]
+[; ;ledstrip.c: 27:     SPI1_ByteExchange(green);
+[e ( _SPI1_ByteExchange (1 _green ]
 "28
-[; ;ledstrip.c: 28: }
+[; ;ledstrip.c: 28:     SPI1_ByteExchange(red);
+[e ( _SPI1_ByteExchange (1 _red ]
+"29
+[; ;ledstrip.c: 29: }
 [e :UE 4 ]
 }
-"33
-[; ;ledstrip.c: 33: int getLedNumber(uint16_t height) {
+"34
+[; ;ledstrip.c: 34: int getLedNumber(uint16_t height) {
 [v _getLedNumber `(i ~T0 @X0 1 ef1`us ]
 {
 [e :U _getLedNumber ]
 [v _height `us ~T0 @X0 1 r1 ]
 [f ]
-"34
-[; ;ledstrip.c: 34:     float result = (0.068104825 * height - 5.4876957494);
+"35
+[; ;ledstrip.c: 35:     float result = (0.068104825 * height - 5.4876957494);
 [v _result `f ~T0 @X0 1 a ]
 [e = _result -> - * .0.068104825 -> -> _height `ui `d .5.4876957494 `f ]
-"35
-[; ;ledstrip.c: 35:     return result;
+"36
+[; ;ledstrip.c: 36:     return result;
 [e ) -> _result `i ]
 [e $UE 5  ]
-"39
-[; ;ledstrip.c: 39: }
+"40
+[; ;ledstrip.c: 40: }
 [e :UE 5 ]
 }
-"42
-[; ;ledstrip.c: 42: void dutycycle_led_strip(void) {
+"43
+[; ;ledstrip.c: 43: void dutycycle_led_strip(void) {
 [v _dutycycle_led_strip `(v ~T0 @X0 1 ef ]
 {
 [e :U _dutycycle_led_strip ]
 [f ]
-"43
-[; ;ledstrip.c: 43:     uint8_t target = (60 * getDutycycle()) / 1023;
+"44
+[; ;ledstrip.c: 44:     uint8_t target = (60 * getDutycycle()) / 1023;
 [v _target `uc ~T0 @X0 1 a ]
 [e = _target -> / * -> -> 60 `i `ui -> ( _getDutycycle ..  `ui -> -> 1023 `i `ui `uc ]
-"46
-[; ;ledstrip.c: 46:     sendLedstripStartFrame();
-[e ( _sendLedstripStartFrame ..  ]
 "47
-[; ;ledstrip.c: 47:     for (uint8_t led = 0; led < 60; led++) {
+[; ;ledstrip.c: 47:     sendLedstripStartFrame();
+[e ( _sendLedstripStartFrame ..  ]
+"48
+[; ;ledstrip.c: 48:     for (uint8_t led = 0; led < 60; led++) {
 {
 [v _led `uc ~T0 @X0 1 a ]
 [e = _led -> -> 0 `i `uc ]
@@ -133,98 +136,98 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 8  ]
 [e :U 7 ]
 {
-"48
-[; ;ledstrip.c: 48:         if (led <= target) {
+"49
+[; ;ledstrip.c: 49:         if (led <= target) {
 [e $ ! <= -> _led `i -> _target `i 10  ]
 {
-"49
-[; ;ledstrip.c: 49:             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
-[e ( _sendLedstripFrame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
 "50
-[; ;ledstrip.c: 50:         } else {
+[; ;ledstrip.c: 50:             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
+[e ( _sendLedstripFrame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"51
+[; ;ledstrip.c: 51:         } else {
 }
 [e $U 11  ]
 [e :U 10 ]
 {
-"51
-[; ;ledstrip.c: 51:             sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
-[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
 "52
-[; ;ledstrip.c: 52:         }
+[; ;ledstrip.c: 52:             sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
+[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"53
+[; ;ledstrip.c: 53:         }
 }
 [e :U 11 ]
-"53
-[; ;ledstrip.c: 53:     }
+"54
+[; ;ledstrip.c: 54:     }
 }
 [e ++ _led -> -> 1 `i `uc ]
 [e $ < -> _led `i -> 60 `i 7  ]
 [e :U 8 ]
 }
-"55
-[; ;ledstrip.c: 55:     sendLedstripEndFrame();
-[e ( _sendLedstripEndFrame ..  ]
 "56
-[; ;ledstrip.c: 56: }
+[; ;ledstrip.c: 56:     sendLedstripEndFrame();
+[e ( _sendLedstripEndFrame ..  ]
+"57
+[; ;ledstrip.c: 57: }
 [e :UE 6 ]
 }
-"58
-[; ;ledstrip.c: 58: static _Bool is_on_target = 0;
+"59
+[; ;ledstrip.c: 59: static _Bool is_on_target = 0;
 [v _is_on_target `a ~T0 @X0 1 s ]
 [i _is_on_target
 -> -> 0 `i `a
 ]
-"60
-[; ;ledstrip.c: 60: void position_led_strip(){
+"61
+[; ;ledstrip.c: 61: void position_led_strip(){
 [v _position_led_strip `(v ~T0 @X0 1 ef ]
 {
 [e :U _position_led_strip ]
 [f ]
-"61
-[; ;ledstrip.c: 61:     int led_on = getLedNumber(getHoogtesensor());
+"62
+[; ;ledstrip.c: 62:     int led_on = getLedNumber(getHoogtesensor());
 [v _led_on `i ~T0 @X0 1 a ]
 [e = _led_on ( _getLedNumber (1 ( _getHoogtesensor ..  ]
-"62
-[; ;ledstrip.c: 62:     if (led_on < 0) {
+"63
+[; ;ledstrip.c: 63:     if (led_on < 0) {
 [e $ ! < _led_on -> 0 `i 13  ]
 {
-"63
-[; ;ledstrip.c: 63:         led_on = 0;
-[e = _led_on -> 0 `i ]
 "64
-[; ;ledstrip.c: 64:     } else if (led_on > 60) {
+[; ;ledstrip.c: 64:         led_on = 0;
+[e = _led_on -> 0 `i ]
+"65
+[; ;ledstrip.c: 65:     } else if (led_on > 60) {
 }
 [e $U 14  ]
 [e :U 13 ]
 [e $ ! > _led_on -> 60 `i 15  ]
 {
-"65
-[; ;ledstrip.c: 65:         led_on = 60;
-[e = _led_on -> 60 `i ]
 "66
-[; ;ledstrip.c: 66:     }
+[; ;ledstrip.c: 66:         led_on = 60;
+[e = _led_on -> 60 `i ]
+"67
+[; ;ledstrip.c: 67:     }
 }
 [e :U 15 ]
 [e :U 14 ]
-"68
-[; ;ledstrip.c: 68:     int target = getLedNumber(getSetpoint());
+"69
+[; ;ledstrip.c: 69:     int target = getLedNumber(getSetpoint());
 [v _target `i ~T0 @X0 1 a ]
 [e = _target ( _getLedNumber (1 ( _getSetpoint ..  ]
-"69
-[; ;ledstrip.c: 69:     if (target < 0) {
+"70
+[; ;ledstrip.c: 70:     if (target < 0) {
 [e $ ! < _target -> 0 `i 16  ]
 {
-"70
-[; ;ledstrip.c: 70:         target = 0;
-[e = _target -> 0 `i ]
 "71
-[; ;ledstrip.c: 71:     }
+[; ;ledstrip.c: 71:         target = 0;
+[e = _target -> 0 `i ]
+"72
+[; ;ledstrip.c: 72:     }
 }
 [e :U 16 ]
-"74
-[; ;ledstrip.c: 74:     sendLedstripStartFrame();
-[e ( _sendLedstripStartFrame ..  ]
 "75
-[; ;ledstrip.c: 75:     for (uint8_t led = 0; led < 60; led++) {
+[; ;ledstrip.c: 75:     sendLedstripStartFrame();
+[e ( _sendLedstripStartFrame ..  ]
+"76
+[; ;ledstrip.c: 76:     for (uint8_t led = 0; led < 60; led++) {
 {
 [v _led `uc ~T0 @X0 1 a ]
 [e = _led -> -> 0 `i `uc ]
@@ -232,107 +235,160 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 18  ]
 [e :U 17 ]
 {
-"78
-[; ;ledstrip.c: 78:         if (led_on == target) {
+"79
+[; ;ledstrip.c: 79:         if (led_on == target) {
 [e $ ! == _led_on _target 20  ]
 {
-"79
-[; ;ledstrip.c: 79:             is_on_target = 1;
-[e = _is_on_target -> -> 1 `i `a ]
 "80
-[; ;ledstrip.c: 80:         }
+[; ;ledstrip.c: 80:             is_on_target = 1;
+[e = _is_on_target -> -> 1 `i `a ]
+"81
+[; ;ledstrip.c: 81:         }
 }
 [e :U 20 ]
-"96
-[; ;ledstrip.c: 96:                   if (led == led_on) {
+"97
+[; ;ledstrip.c: 97:                   if (led == led_on) {
 [e $ ! == -> _led `i _led_on 21  ]
 {
-"97
-[; ;ledstrip.c: 97:             sendLedstripFrame(0x44, 0x44, 0x44, 0x05);
-[e ( _sendLedstripFrame (4 , , , -> -> 68 `i `uc -> -> 68 `i `uc -> -> 68 `i `uc -> -> 5 `i `uc ]
 "98
-[; ;ledstrip.c: 98:             is_on_target = 0;
-[e = _is_on_target -> -> 0 `i `a ]
+[; ;ledstrip.c: 98:             sendLedstripFrame(0x44, 0x44, 0x44, 0x05);
+[e ( _sendLedstripFrame (4 , , , -> -> 68 `i `uc -> -> 68 `i `uc -> -> 68 `i `uc -> -> 5 `i `uc ]
 "99
-[; ;ledstrip.c: 99:         } else if (led == target) {
+[; ;ledstrip.c: 99:             is_on_target = 0;
+[e = _is_on_target -> -> 0 `i `a ]
+"100
+[; ;ledstrip.c: 100:         } else if (led == target) {
 }
 [e $U 22  ]
 [e :U 21 ]
 [e $ ! == -> _led `i _target 23  ]
 {
-"100
-[; ;ledstrip.c: 100:             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
-[e ( _sendLedstripFrame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
 "101
-[; ;ledstrip.c: 101:             is_on_target = 0;
-[e = _is_on_target -> -> 0 `i `a ]
+[; ;ledstrip.c: 101:             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
+[e ( _sendLedstripFrame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
 "102
-[; ;ledstrip.c: 102:         } else {
+[; ;ledstrip.c: 102:             is_on_target = 0;
+[e = _is_on_target -> -> 0 `i `a ]
+"103
+[; ;ledstrip.c: 103:         } else {
 }
 [e $U 24  ]
 [e :U 23 ]
 {
-"103
-[; ;ledstrip.c: 103:             sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
-[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
 "104
-[; ;ledstrip.c: 104:             is_on_target = 0;
-[e = _is_on_target -> -> 0 `i `a ]
+[; ;ledstrip.c: 104:             sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
+[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
 "105
-[; ;ledstrip.c: 105:         }
+[; ;ledstrip.c: 105:             is_on_target = 0;
+[e = _is_on_target -> -> 0 `i `a ]
+"106
+[; ;ledstrip.c: 106:         }
 }
 [e :U 24 ]
 [e :U 22 ]
-"106
-[; ;ledstrip.c: 106:     }
+"107
+[; ;ledstrip.c: 107:     }
 }
 [e ++ _led -> -> 1 `i `uc ]
 [e $ < -> _led `i -> 60 `i 17  ]
 [e :U 18 ]
 }
-"108
-[; ;ledstrip.c: 108:     sendLedstripEndFrame();
-[e ( _sendLedstripEndFrame ..  ]
 "109
-[; ;ledstrip.c: 109: }
+[; ;ledstrip.c: 109:     sendLedstripEndFrame();
+[e ( _sendLedstripEndFrame ..  ]
+"110
+[; ;ledstrip.c: 110: }
 [e :UE 12 ]
 }
-"111
-[; ;ledstrip.c: 111: void two_data_points(void) {
-[v _two_data_points `(v ~T0 @X0 1 ef ]
+"112
+[; ;ledstrip.c: 112: void counter_led() {
+[v _counter_led `(v ~T0 @X0 1 ef ]
 {
-[e :U _two_data_points ]
+[e :U _counter_led ]
 [f ]
 "113
-[; ;ledstrip.c: 113: }
+[; ;ledstrip.c: 113:     uint16_t counter = getCounter();
+[v _counter `us ~T0 @X0 1 a ]
+[e = _counter ( _getCounter ..  ]
+"114
+[; ;ledstrip.c: 114:     uint16_t loops = counter / 60;
+[v _loops `us ~T0 @X0 1 a ]
+[e = _loops -> / -> _counter `ui -> -> 60 `i `ui `us ]
+"115
+[; ;ledstrip.c: 115:     counter -= 60 * (loops);
+[e =- _counter -> * -> -> 60 `i `ui -> _loops `ui `us ]
+"117
+[; ;ledstrip.c: 117:     sendLedstripStartFrame();
+[e ( _sendLedstripStartFrame ..  ]
+"118
+[; ;ledstrip.c: 118:     for (uint8_t led = 0; led < 60; led++) {
+{
+[v _led `uc ~T0 @X0 1 a ]
+[e = _led -> -> 0 `i `uc ]
+[e $ < -> _led `i -> 60 `i 26  ]
+[e $U 27  ]
+[e :U 26 ]
+{
+"119
+[; ;ledstrip.c: 119:         if (led <= counter) {
+[e $ ! <= -> _led `ui -> _counter `ui 29  ]
+{
+"120
+[; ;ledstrip.c: 120:             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
+[e ( _sendLedstripFrame (4 , , , -> -> 255 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"121
+[; ;ledstrip.c: 121:         } else {
+}
+[e $U 30  ]
+[e :U 29 ]
+{
+"122
+[; ;ledstrip.c: 122:             sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
+[e ( _sendLedstripFrame (4 , , , -> -> 0 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc -> -> 5 `i `uc ]
+"123
+[; ;ledstrip.c: 123:         }
+}
+[e :U 30 ]
+"124
+[; ;ledstrip.c: 124:     }
+}
+[e ++ _led -> -> 1 `i `uc ]
+[e $ < -> _led `i -> 60 `i 26  ]
+[e :U 27 ]
+}
+"126
+[; ;ledstrip.c: 126:     sendLedstripEndFrame();
+[e ( _sendLedstripEndFrame ..  ]
+"127
+[; ;ledstrip.c: 127: }
 [e :UE 25 ]
 }
-"117
-[; ;ledstrip.c: 117: void updateLedstripAnimation(void) {
+"130
+[; ;ledstrip.c: 130: void updateLedstripAnimation(void) {
 [v _updateLedstripAnimation `(v ~T0 @X0 1 ef ]
 {
 [e :U _updateLedstripAnimation ]
 [f ]
-"118
-[; ;ledstrip.c: 118:     dutycycle_led_strip();
-[e ( _dutycycle_led_strip ..  ]
-"119
-[; ;ledstrip.c: 119: }
-[e :UE 26 ]
+"131
+[; ;ledstrip.c: 131:     counter_led();
+[e ( _counter_led ..  ]
+"132
+[; ;ledstrip.c: 132: }
+[e :UE 31 ]
 }
-"121
-[; ;ledstrip.c: 121: void initLedstrip(void) {
+"134
+[; ;ledstrip.c: 134: void initLedstrip(void) {
 [v _initLedstrip `(v ~T0 @X0 1 ef ]
 {
 [e :U _initLedstrip ]
 [f ]
-"122
-[; ;ledstrip.c: 122:     SPI1_Open(HOST_CONFIG);
+"135
+[; ;ledstrip.c: 135:     SPI1_Open(HOST_CONFIG);
 [e ( _SPI1_Open (1 -> . `E82 0 `uc ]
-"123
-[; ;ledstrip.c: 123:     TMR6_PeriodMatchCallbackRegister(updateLedstripAnimation);
+"136
+[; ;ledstrip.c: 136:     TMR6_PeriodMatchCallbackRegister(updateLedstripAnimation);
 [e ( _TMR6_PeriodMatchCallbackRegister (1 &U _updateLedstripAnimation ]
-"124
-[; ;ledstrip.c: 124: }
-[e :UE 27 ]
+"137
+[; ;ledstrip.c: 137: }
+[e :UE 32 ]
 }

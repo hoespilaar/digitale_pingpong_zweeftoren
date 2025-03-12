@@ -5,4 +5,5 @@ mcc_generated_files/spi/spi_interface.h  \
 mcc_generated_files/timer/tmr6.h  \
 mcc_generated_files/timer/tmr6_deprecated.h  \
 adcMeasurements.h  \
-controller.h 
+controller.h  \
+PushUp.h 

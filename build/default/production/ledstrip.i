@@ -305,6 +305,12 @@ void setDutycycle(uint16_t);
 void setKp(float);
 void setKi(float);
 # 5 "ledstrip.c" 2
+# 1 "./PushUp.h" 1
+# 15 "./PushUp.h"
+void check_push_up(void);
+
+uint16_t getCounter(void);
+# 6 "ledstrip.c" 2
 
 void sendLedstripStartFrame(void) {
 
@@ -381,7 +387,7 @@ void position_led_strip(){
         if (led_on == target) {
             is_on_target = 1;
         }
-# 96 "ledstrip.c"
+# 97 "ledstrip.c"
                   if (led == led_on) {
             sendLedstripFrame(0x44, 0x44, 0x44, 0x05);
             is_on_target = 0;
@@ -397,14 +403,26 @@ void position_led_strip(){
     sendLedstripEndFrame();
 }
 
-void two_data_points(void) {
+void counter_led() {
+    uint16_t counter = getCounter();
+    uint16_t loops = counter / 60;
+    counter -= 60 * (loops);
 
+    sendLedstripStartFrame();
+    for (uint8_t led = 0; led < 60; led++) {
+        if (led <= counter) {
+            sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
+        } else {
+            sendLedstripFrame(0x00, 0x00, 0x00, 0x05);
+        }
+    }
+
+    sendLedstripEndFrame();
 }
 
 
-
 void updateLedstripAnimation(void) {
-    dutycycle_led_strip();
+    counter_led();
 }
 
 void initLedstrip(void) {
