@@ -1082,110 +1082,87 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _integraal
 -> -> 0 `i `f
 ]
-"9
-[; ;controller.c: 9: static int16_t lasterror = 0;
-[v _lasterror `s ~T0 @X0 1 s ]
-[i _lasterror
--> -> 0 `i `s
-]
-"11
-[; ;controller.c: 11: static float kp = 0.9;
+"10
+[; ;controller.c: 10: static float kp = 0.9;
 [v _kp `f ~T0 @X0 1 s ]
 [i _kp
 -> .0.9 `f
 ]
-"12
-[; ;controller.c: 12: static float ki = 4.5;
+"11
+[; ;controller.c: 11: static float ki = 3.5;
 [v _ki `f ~T0 @X0 1 s ]
 [i _ki
--> .4.5 `f
+-> .3.5 `f
 ]
 "13
-[; ;controller.c: 13: static float kd = 0;
-[v _kd `f ~T0 @X0 1 s ]
-[i _kd
--> -> 0 `i `f
-]
-"15
-[; ;controller.c: 15: void controller(void) {
+[; ;controller.c: 13: void controller(void) {
 [v _controller `(v ~T0 @X0 1 ef ]
 {
 [e :U _controller ]
 [f ]
-"16
-[; ;controller.c: 16:     hoogte_bal = getHoogtesensor();
+"14
+[; ;controller.c: 14:     hoogte_bal = getHoogtesensor();
 [e = _hoogte_bal ( _getHoogtesensor ..  ]
-"20
-[; ;controller.c: 20:     int16_t error = setpoint - hoogte_bal;
+"17
+[; ;controller.c: 17:     int16_t error = setpoint - hoogte_bal;
 [v _error `s ~T0 @X0 1 a ]
 [e = _error -> - -> _setpoint `ui -> _hoogte_bal `ui `s ]
-"22
-[; ;controller.c: 22:     integraal += error * 0.0005;
-[e =+ _integraal -> * -> -> _error `i `d .0.0005 `f ]
-"23
-[; ;controller.c: 23:     int16_t difference = lasterror - error;
-[v _difference `s ~T0 @X0 1 a ]
-[e = _difference -> - -> _lasterror `i -> _error `i `s ]
-"24
-[; ;controller.c: 24:     lasterror = error;
-[e = _lasterror _error ]
-"26
-[; ;controller.c: 26:     int16_t P = kp * error;
+"19
+[; ;controller.c: 19:     integraal += error * 0.002;
+[e =+ _integraal -> * -> -> _error `i `d .0.002 `f ]
+"21
+[; ;controller.c: 21:     int16_t P = kp * error;
 [v _P `s ~T0 @X0 1 a ]
 [e = _P -> * _kp -> -> _error `i `f `s ]
-"27
-[; ;controller.c: 27:     int16_t I = ki * integraal;
+"22
+[; ;controller.c: 22:     int16_t I = ki * integraal;
 [v _I `s ~T0 @X0 1 a ]
 [e = _I -> * _ki _integraal `s ]
-"28
-[; ;controller.c: 28:     int16_t D = kd * difference;
-[v _D `s ~T0 @X0 1 a ]
-[e = _D -> * _kd -> -> _difference `i `f `s ]
-"30
-[; ;controller.c: 30:     dutycycle = P + I + D;
-[e = _dutycycle -> + + -> _P `i -> _I `i -> _D `i `us ]
-"32
-[; ;controller.c: 32:     if (dutycycle > 1023 && error > 0) {
+"24
+[; ;controller.c: 24:     dutycycle = P + I;
+[e = _dutycycle -> + -> _P `i -> _I `i `us ]
+"26
+[; ;controller.c: 26:     if (dutycycle > 1023 && error > 0) {
 [e $ ! && > -> _dutycycle `ui -> -> 1023 `i `ui > -> _error `i -> 0 `i 962  ]
 {
-"33
-[; ;controller.c: 33:         dutycycle = 1023;
+"27
+[; ;controller.c: 27:         dutycycle = 1023;
 [e = _dutycycle -> -> 1023 `i `us ]
-"34
-[; ;controller.c: 34:     } else if (dutycycle > 1023 && error < 0) {
+"28
+[; ;controller.c: 28:     } else if (dutycycle > 1023 && error < 0) {
 }
 [e $U 963  ]
 [e :U 962 ]
 [e $ ! && > -> _dutycycle `ui -> -> 1023 `i `ui < -> _error `i -> 0 `i 964  ]
 {
-"35
-[; ;controller.c: 35:         dutycycle = 0;
+"29
+[; ;controller.c: 29:         dutycycle = 0;
 [e = _dutycycle -> -> 0 `i `us ]
-"36
-[; ;controller.c: 36:     } else if (dutycycle < 0) {
+"30
+[; ;controller.c: 30:     } else if (dutycycle < 0) {
 }
 [e $U 965  ]
 [e :U 964 ]
 [e $ ! < -> _dutycycle `ui -> -> 0 `i `ui 966  ]
 {
-"37
-[; ;controller.c: 37:         dutycycle = 0;
+"31
+[; ;controller.c: 31:         dutycycle = 0;
 [e = _dutycycle -> -> 0 `i `us ]
-"38
-[; ;controller.c: 38:     }
+"32
+[; ;controller.c: 32:     }
 }
 [e :U 966 ]
 [e :U 965 ]
 [e :U 963 ]
-"40
-[; ;controller.c: 40:     pwm_fan_LoadDutyValue(dutycycle);
+"34
+[; ;controller.c: 34:     pwm_fan_LoadDutyValue(dutycycle);
 [e ( _pwm_fan_LoadDutyValue (1 _dutycycle ]
-"41
-[; ;controller.c: 41: }
+"35
+[; ;controller.c: 35: }
 [e :UE 961 ]
 }
-"44
-[; ;controller.c: 44: uint16_t getSetpoint(void) {return setpoint;}
+"38
+[; ;controller.c: 38: uint16_t getSetpoint(void) {return setpoint;}
 [v _getSetpoint `(us ~T0 @X0 1 ef ]
 {
 [e :U _getSetpoint ]
@@ -1194,8 +1171,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 967  ]
 [e :UE 967 ]
 }
-"45
-[; ;controller.c: 45: uint16_t getDutycycle(void) {return dutycycle;}
+"39
+[; ;controller.c: 39: uint16_t getDutycycle(void) {return dutycycle;}
 [v _getDutycycle `(us ~T0 @X0 1 ef ]
 {
 [e :U _getDutycycle ]
@@ -1204,8 +1181,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 968  ]
 [e :UE 968 ]
 }
-"46
-[; ;controller.c: 46: float getKp(void) {return kp;}
+"40
+[; ;controller.c: 40: float getKp(void) {return kp;}
 [v _getKp `(f ~T0 @X0 1 ef ]
 {
 [e :U _getKp ]
@@ -1214,8 +1191,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 969  ]
 [e :UE 969 ]
 }
-"47
-[; ;controller.c: 47: float getKi(void) {return ki;}
+"41
+[; ;controller.c: 41: float getKi(void) {return ki;}
 [v _getKi `(f ~T0 @X0 1 ef ]
 {
 [e :U _getKi ]
@@ -1224,63 +1201,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $UE 970  ]
 [e :UE 970 ]
 }
-"48
-[; ;controller.c: 48: float getKd(void) {return kd;}
-[v _getKd `(f ~T0 @X0 1 ef ]
-{
-[e :U _getKd ]
-[f ]
-[e ) _kd ]
-[e $UE 971  ]
-[e :UE 971 ]
-}
-"51
-[; ;controller.c: 51: void setSetpoint(uint16_t new_setpoint) {setpoint = new_setpoint;}
+"44
+[; ;controller.c: 44: void setSetpoint(uint16_t new_setpoint) {setpoint = new_setpoint;}
 [v _setSetpoint `(v ~T0 @X0 1 ef1`us ]
 {
 [e :U _setSetpoint ]
 [v _new_setpoint `us ~T0 @X0 1 r1 ]
 [f ]
 [e = _setpoint _new_setpoint ]
-[e :UE 972 ]
+[e :UE 971 ]
 }
-"52
-[; ;controller.c: 52: void setDutycycle(uint16_t new_dutycycle) {dutycycle = new_dutycycle;}
+"45
+[; ;controller.c: 45: void setDutycycle(uint16_t new_dutycycle) {dutycycle = new_dutycycle;}
 [v _setDutycycle `(v ~T0 @X0 1 ef1`us ]
 {
 [e :U _setDutycycle ]
 [v _new_dutycycle `us ~T0 @X0 1 r1 ]
 [f ]
 [e = _dutycycle _new_dutycycle ]
-[e :UE 973 ]
+[e :UE 972 ]
 }
-"53
-[; ;controller.c: 53: void setKp(float new_kp) {kp = new_kp;}
+"46
+[; ;controller.c: 46: void setKp(float new_kp) {kp = new_kp;}
 [v _setKp `(v ~T0 @X0 1 ef1`f ]
 {
 [e :U _setKp ]
 [v _new_kp `f ~T0 @X0 1 r1 ]
 [f ]
 [e = _kp _new_kp ]
-[e :UE 974 ]
+[e :UE 973 ]
 }
-"54
-[; ;controller.c: 54: void setKi(float new_ki) {ki = new_ki;}
+"47
+[; ;controller.c: 47: void setKi(float new_ki) {ki = new_ki;}
 [v _setKi `(v ~T0 @X0 1 ef1`f ]
 {
 [e :U _setKi ]
 [v _new_ki `f ~T0 @X0 1 r1 ]
 [f ]
 [e = _ki _new_ki ]
-[e :UE 975 ]
-}
-"55
-[; ;controller.c: 55: void setKd(float new_kd) {kd = new_kd;}
-[v _setKd `(v ~T0 @X0 1 ef1`f ]
-{
-[e :U _setKd ]
-[v _new_kd `f ~T0 @X0 1 r1 ]
-[f ]
-[e = _kd _new_kd ]
-[e :UE 976 ]
+[e :UE 974 ]
 }

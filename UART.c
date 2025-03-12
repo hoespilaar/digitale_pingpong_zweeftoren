@@ -76,15 +76,14 @@ char* readLine(void) {
 void printLogs(void) {
     //Schrijf naar de COM poort
     if (mustPrintLogs) {
-        printf("hoogte: %u", getHoogtesensor());
-        printf(", setpoint: %u", getSetpoint());
-        printf(", duty cycle: %u", getDutycycle());
+        // printf("hoogte: %u", getHoogtesensor());
+        // printf(", setpoint: %u", getSetpoint());
+        // printf(", duty cycle: %u", getDutycycle());
         //Dit zijn dure prints qua geheugen (zo'n 5 %). Als je microcontroller
         //volgeraakt, kan je de printFloat uitschakelen
-        printf(", kp: "); printFloat(getKp());
-        printf(", ki: "); printFloat(getKi());
-        printf(", kd: "); printFloat(getKd());
-        printf(", pomp: %u", getPomphoogte());
+        //printf(", kp: "); printFloat(getKp());
+        // printf(", ki: "); printFloat(getKi());
+        printf (", pomp: %u", getPomphoogte());
         printf("\r\n");
             }
 }
@@ -114,11 +113,6 @@ void uartHandler(void) {
         case 'i':
             setKi(str2float(str + 1));
             printf("changed ki\r\n");
-            break;
-        case 'D': //Verander integrerende versterking
-        case 'd':
-            setKd(str2float(str + 1));
-            printf("changed kd\r\n");
             break;
         case 'L': //Toggle logs
         case 'l':

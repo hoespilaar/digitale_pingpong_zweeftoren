@@ -298,14 +298,12 @@ uint16_t getSetpoint(void);
 uint16_t getDutycycle(void);
 float getKp(void);
 float getKi(void);
-float getKd(void);
 
 
 void setSetpoint(uint16_t);
 void setDutycycle(uint16_t);
 void setKp(float);
 void setKi(float);
-void setKd(float);
 # 5 "ledstrip.c" 2
 
 void sendLedstripStartFrame(void) {
@@ -345,11 +343,11 @@ int getLedNumber(uint16_t height) {
 
 
 void dutycycle_led_strip(void) {
-    uint8_t target = (59 * getDutycycle()) / 1023;
+    uint8_t target = (60 * getDutycycle()) / 1023;
 
 
     sendLedstripStartFrame();
-    for (uint8_t led = 0; led < 59; led++) {
+    for (uint8_t led = 0; led < 60; led++) {
         if (led <= target) {
             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
         } else {
@@ -366,8 +364,8 @@ void position_led_strip(){
     int led_on = getLedNumber(getHoogtesensor());
     if (led_on < 0) {
         led_on = 0;
-    } else if (led_on > 59) {
-        led_on = 59;
+    } else if (led_on > 60) {
+        led_on = 60;
     }
 
     int target = getLedNumber(getSetpoint());
@@ -377,7 +375,7 @@ void position_led_strip(){
 
 
     sendLedstripStartFrame();
-    for (uint8_t led = 0; led < 59; led++) {
+    for (uint8_t led = 0; led < 60; led++) {
 
 
         if (led_on == target) {
@@ -399,9 +397,14 @@ void position_led_strip(){
     sendLedstripEndFrame();
 }
 
+void two_data_points(void) {
+
+}
+
+
 
 void updateLedstripAnimation(void) {
-    position_led_strip();
+    dutycycle_led_strip();
 }
 
 void initLedstrip(void) {

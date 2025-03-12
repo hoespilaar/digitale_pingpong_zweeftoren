@@ -5,15 +5,14 @@
         <group>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/ledstrip.h</file>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/adcMeasurements.c</file>
-            <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/mcc_generated_files/timer/tmr4_deprecated.h</file>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/controller.c</file>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/main.c</file>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/mcc_generated_files/adc/adc.h</file>
+            <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/mcc_generated_files/spi/src/mssp1.c</file>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/adcMeasurements.h</file>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/UART.c</file>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/ledstrip.c</file>
             <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/controller.h</file>
-            <file>file:/C:/Users/Wednesday/MPLABXProjects/digitale_pingpong_zweeftoren/mcc_generated_files/pwm/src/pwm5.c</file>
         </group>
     </open-files>
 </project-private>

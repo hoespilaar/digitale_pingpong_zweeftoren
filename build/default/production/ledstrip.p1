@@ -14,8 +14,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "144 ./mcc_generated_files/spi/mssp1.h
 [; ;./mcc_generated_files/spi/mssp1.h: 144: _Bool SPI1_Open(uint8_t spiConfigIndex);
 [v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
-"117 ledstrip.c
-[; ;ledstrip.c: 117:     SPI1_Open(HOST_CONFIG);
+"122 ledstrip.c
+[; ;ledstrip.c: 122:     SPI1_Open(HOST_CONFIG);
 [c E82 0 1 .. ]
 [n E82 . HOST_CONFIG MSSP1_DEFAULT  ]
 [v F119 `(v ~T0 @X0 0 tf ]
@@ -118,18 +118,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _dutycycle_led_strip ]
 [f ]
 "43
-[; ;ledstrip.c: 43:     uint8_t target = (59 * getDutycycle()) / 1023;
+[; ;ledstrip.c: 43:     uint8_t target = (60 * getDutycycle()) / 1023;
 [v _target `uc ~T0 @X0 1 a ]
-[e = _target -> / * -> -> 59 `i `ui -> ( _getDutycycle ..  `ui -> -> 1023 `i `ui `uc ]
+[e = _target -> / * -> -> 60 `i `ui -> ( _getDutycycle ..  `ui -> -> 1023 `i `ui `uc ]
 "46
 [; ;ledstrip.c: 46:     sendLedstripStartFrame();
 [e ( _sendLedstripStartFrame ..  ]
 "47
-[; ;ledstrip.c: 47:     for (uint8_t led = 0; led < 59; led++) {
+[; ;ledstrip.c: 47:     for (uint8_t led = 0; led < 60; led++) {
 {
 [v _led `uc ~T0 @X0 1 a ]
 [e = _led -> -> 0 `i `uc ]
-[e $ < -> _led `i -> 59 `i 7  ]
+[e $ < -> _led `i -> 60 `i 7  ]
 [e $U 8  ]
 [e :U 7 ]
 {
@@ -157,7 +157,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ledstrip.c: 53:     }
 }
 [e ++ _led -> -> 1 `i `uc ]
-[e $ < -> _led `i -> 59 `i 7  ]
+[e $ < -> _led `i -> 60 `i 7  ]
 [e :U 8 ]
 }
 "55
@@ -191,15 +191,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ledstrip.c: 63:         led_on = 0;
 [e = _led_on -> 0 `i ]
 "64
-[; ;ledstrip.c: 64:     } else if (led_on > 59) {
+[; ;ledstrip.c: 64:     } else if (led_on > 60) {
 }
 [e $U 14  ]
 [e :U 13 ]
-[e $ ! > _led_on -> 59 `i 15  ]
+[e $ ! > _led_on -> 60 `i 15  ]
 {
 "65
-[; ;ledstrip.c: 65:         led_on = 59;
-[e = _led_on -> 59 `i ]
+[; ;ledstrip.c: 65:         led_on = 60;
+[e = _led_on -> 60 `i ]
 "66
 [; ;ledstrip.c: 66:     }
 }
@@ -224,11 +224,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ledstrip.c: 74:     sendLedstripStartFrame();
 [e ( _sendLedstripStartFrame ..  ]
 "75
-[; ;ledstrip.c: 75:     for (uint8_t led = 0; led < 59; led++) {
+[; ;ledstrip.c: 75:     for (uint8_t led = 0; led < 60; led++) {
 {
 [v _led `uc ~T0 @X0 1 a ]
 [e = _led -> -> 0 `i `uc ]
-[e $ < -> _led `i -> 59 `i 17  ]
+[e $ < -> _led `i -> 60 `i 17  ]
 [e $U 18  ]
 [e :U 17 ]
 {
@@ -287,7 +287,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ledstrip.c: 106:     }
 }
 [e ++ _led -> -> 1 `i `uc ]
-[e $ < -> _led `i -> 59 `i 17  ]
+[e $ < -> _led `i -> 60 `i 17  ]
 [e :U 18 ]
 }
 "108
@@ -297,32 +297,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ledstrip.c: 109: }
 [e :UE 12 ]
 }
-"112
-[; ;ledstrip.c: 112: void updateLedstripAnimation(void) {
+"111
+[; ;ledstrip.c: 111: void two_data_points(void) {
+[v _two_data_points `(v ~T0 @X0 1 ef ]
+{
+[e :U _two_data_points ]
+[f ]
+"113
+[; ;ledstrip.c: 113: }
+[e :UE 25 ]
+}
+"117
+[; ;ledstrip.c: 117: void updateLedstripAnimation(void) {
 [v _updateLedstripAnimation `(v ~T0 @X0 1 ef ]
 {
 [e :U _updateLedstripAnimation ]
 [f ]
-"113
-[; ;ledstrip.c: 113:     position_led_strip();
-[e ( _position_led_strip ..  ]
-"114
-[; ;ledstrip.c: 114: }
-[e :UE 25 ]
+"118
+[; ;ledstrip.c: 118:     dutycycle_led_strip();
+[e ( _dutycycle_led_strip ..  ]
+"119
+[; ;ledstrip.c: 119: }
+[e :UE 26 ]
 }
-"116
-[; ;ledstrip.c: 116: void initLedstrip(void) {
+"121
+[; ;ledstrip.c: 121: void initLedstrip(void) {
 [v _initLedstrip `(v ~T0 @X0 1 ef ]
 {
 [e :U _initLedstrip ]
 [f ]
-"117
-[; ;ledstrip.c: 117:     SPI1_Open(HOST_CONFIG);
+"122
+[; ;ledstrip.c: 122:     SPI1_Open(HOST_CONFIG);
 [e ( _SPI1_Open (1 -> . `E82 0 `uc ]
-"118
-[; ;ledstrip.c: 118:     TMR6_PeriodMatchCallbackRegister(updateLedstripAnimation);
+"123
+[; ;ledstrip.c: 123:     TMR6_PeriodMatchCallbackRegister(updateLedstripAnimation);
 [e ( _TMR6_PeriodMatchCallbackRegister (1 &U _updateLedstripAnimation ]
-"119
-[; ;ledstrip.c: 119: }
-[e :UE 26 ]
+"124
+[; ;ledstrip.c: 124: }
+[e :UE 27 ]
 }

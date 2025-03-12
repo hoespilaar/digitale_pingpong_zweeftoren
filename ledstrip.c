@@ -27,7 +27,7 @@ void sendLedstripFrame(uint8_t red, uint8_t green, uint8_t blue, uint8_t intensi
     SPI1_ByteExchange(red); //8 bits voor de rode kleur
 }
 
-#define NUMBER_OF_LEDS 59
+#define NUMBER_OF_LEDS 60
 
 
 int getLedNumber(uint16_t height) {
@@ -108,9 +108,14 @@ void position_led_strip(){
     sendLedstripEndFrame();
 }
 
+void two_data_points(void) {
+    
+}
+
+
 
 void updateLedstripAnimation(void) {
-    position_led_strip();
+    dutycycle_led_strip();
 }
 
 void initLedstrip(void) {
