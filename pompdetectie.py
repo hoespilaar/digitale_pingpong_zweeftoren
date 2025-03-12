@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import math
+import pygame  # Import pygame for playing sound
 
 
 """ FUNCTIONS """
@@ -64,6 +65,12 @@ def compute_angle(v1, v2):
 """ MAIN """
 
 
+# Initialize pygame mixer for sound playback
+pygame.mixer.init()
+
+# Load your sound (ensure the sound file is in the same directory or provide the full path)
+sound = pygame.mixer.Sound("C:/Users/Pieter/Music/output.wav")  # Replace with your sound file
+
 # Setup webcam feed
 cap = cv2.VideoCapture(0)
 
@@ -121,6 +128,10 @@ while True:
         # Display the angle on the frame
         cv2.putText(frame, f"Angle: {angle:.2f} degrees", (50, 50), cv2.FONT_HERSHEY_SIMPLEX,
                     1, (255, 255, 255), 2, cv2.LINE_AA)
+
+        # Play sound if angle is more than 25 degrees from 180
+        if abs(angle - 180) > 25:
+            sound.play()
 
     # Show the frame with the drawn lines
     cv2.imshow("Frame", frame)
