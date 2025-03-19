@@ -11225,7 +11225,7 @@ extern __bank0 __bit __timeout;
 # 3 "controller.c" 2
 
 static uint16_t hoogte_bal;
-static uint16_t setpoint = 50;
+static uint16_t setpoint = 150;
 static uint16_t dutycycle;
 
 static float integraal = 0;

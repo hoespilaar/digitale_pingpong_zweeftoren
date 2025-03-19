@@ -8,6 +8,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22 ./controller.h
 [; ;./controller.h: 22: void setSetpoint(uint16_t);
 [v _setSetpoint `(v ~T0 @X0 0 ef1`us ]
+"16
+[; ;./controller.h: 16: uint16_t getSetpoint(void);
+[v _getSetpoint `(us ~T0 @X0 0 ef ]
 [v F202 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF202 ~T0 @X0 0 e ]
@@ -1083,74 +1086,102 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _counter
 -> -> 0 `i `us
 ]
-"10
-[; ;PushUp.c: 10: void check_push_up(void) {
+"9
+[; ;PushUp.c: 9: uint16_t increment_setpoint = 35;
+[v _increment_setpoint `us ~T0 @X0 1 e ]
+[i _increment_setpoint
+-> -> 35 `i `us
+]
+"11
+[; ;PushUp.c: 11: void check_push_up(void) {
 [v _check_push_up `(v ~T0 @X0 1 ef ]
 {
 [e :U _check_push_up ]
 [f ]
-"11
-[; ;PushUp.c: 11:     if (buzzing == 0){
+"12
+[; ;PushUp.c: 12:     if (buzzing == 0){
 [e $ ! == -> _buzzing `i -> 0 `i 969  ]
 {
-"13
-[; ;PushUp.c: 13:        if (getPomphoogte() >= 450) {
+"14
+[; ;PushUp.c: 14:        if (getPomphoogte() >= 450) {
 [e $ ! >= -> ( _getPomphoogte ..  `ui -> -> 450 `i `ui 970  ]
 {
-"14
-[; ;PushUp.c: 14:         PWM_buzzer_LoadDutyValue(400);
-[e ( _PWM_buzzer_LoadDutyValue (1 -> -> 400 `i `us ]
 "15
-[; ;PushUp.c: 15:         buzzing = 1;
-[e = _buzzing -> -> 1 `i `a ]
+[; ;PushUp.c: 15:         PWM_buzzer_LoadDutyValue(400);
+[e ( _PWM_buzzer_LoadDutyValue (1 -> -> 400 `i `us ]
 "16
-[; ;PushUp.c: 16:         counter += 1;
-[e =+ _counter -> -> 1 `i `us ]
+[; ;PushUp.c: 16:         buzzing = 1;
+[e = _buzzing -> -> 1 `i `a ]
 "17
-[; ;PushUp.c: 17:         setSetpoint(45 + counter * 50);
-[e ( _setSetpoint (1 -> + -> -> 45 `i `ui * -> _counter `ui -> -> 50 `i `ui `us ]
+[; ;PushUp.c: 17:         counter += 1;
+[e =+ _counter -> -> 1 `i `us ]
 "18
-[; ;PushUp.c: 18:         _delay((unsigned long)((20)*(32000000U/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+[; ;PushUp.c: 18:         setSetpoint(getSetpoint() + increment_setpoint);
+[e ( _setSetpoint (1 -> + -> ( _getSetpoint ..  `ui -> _increment_setpoint `ui `us ]
 "19
-[; ;PushUp.c: 19:         }
-}
-[e :U 970 ]
+[; ;PushUp.c: 19:         _delay((unsigned long)((20)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
 "21
-[; ;PushUp.c: 21:        PWM_buzzer_LoadDutyValue(0);
-[e ( _PWM_buzzer_LoadDutyValue (1 -> -> 0 `i `us ]
-"22
-[; ;PushUp.c: 22:     } else {
-}
-[e $U 971  ]
-[e :U 969 ]
+[; ;PushUp.c: 21:         if (getSetpoint() >= 850) {
+[e $ ! >= -> ( _getSetpoint ..  `ui -> -> 850 `i `ui 971  ]
 {
+"22
+[; ;PushUp.c: 22:             increment_setpoint = -increment_setpoint;
+[e = _increment_setpoint -> -U -> _increment_setpoint `ui `us ]
 "23
-[; ;PushUp.c: 23:         if (getPomphoogte() <= 350) {
-[e $ ! <= -> ( _getPomphoogte ..  `ui -> -> 350 `i `ui 972  ]
+[; ;PushUp.c: 23:         } else if (getSetpoint() <= 150) {
+}
+[e $U 972  ]
+[e :U 971 ]
+[e $ ! <= -> ( _getSetpoint ..  `ui -> -> 150 `i `ui 973  ]
 {
 "24
-[; ;PushUp.c: 24:             buzzing = 0;
-[e = _buzzing -> -> 0 `i `a ]
+[; ;PushUp.c: 24:             increment_setpoint = -increment_setpoint;
+[e = _increment_setpoint -> -U -> _increment_setpoint `ui `us ]
 "25
 [; ;PushUp.c: 25:         }
 }
+[e :U 973 ]
 [e :U 972 ]
-"26
-[; ;PushUp.c: 26:     }
-}
-[e :U 971 ]
 "27
-[; ;PushUp.c: 27: }
+[; ;PushUp.c: 27:         }
+}
+[e :U 970 ]
+"29
+[; ;PushUp.c: 29:        PWM_buzzer_LoadDutyValue(0);
+[e ( _PWM_buzzer_LoadDutyValue (1 -> -> 0 `i `us ]
+"30
+[; ;PushUp.c: 30:     } else {
+}
+[e $U 974  ]
+[e :U 969 ]
+{
+"31
+[; ;PushUp.c: 31:         if (getPomphoogte() <= 350) {
+[e $ ! <= -> ( _getPomphoogte ..  `ui -> -> 350 `i `ui 975  ]
+{
+"32
+[; ;PushUp.c: 32:             buzzing = 0;
+[e = _buzzing -> -> 0 `i `a ]
+"33
+[; ;PushUp.c: 33:         }
+}
+[e :U 975 ]
+"34
+[; ;PushUp.c: 34:     }
+}
+[e :U 974 ]
+"35
+[; ;PushUp.c: 35: }
 [e :UE 968 ]
 }
-"30
-[; ;PushUp.c: 30: uint16_t getCounter(void) {return counter;}
+"38
+[; ;PushUp.c: 38: uint16_t getCounter(void) {return counter;}
 [v _getCounter `(us ~T0 @X0 1 ef ]
 {
 [e :U _getCounter ]
 [f ]
 [e ) _counter ]
-[e $UE 973  ]
-[e :UE 973 ]
+[e $UE 976  ]
+[e :UE 976 ]
 }

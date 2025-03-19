@@ -410,7 +410,7 @@ void counter_led() {
 
     sendLedstripStartFrame();
     for (uint8_t led = 0; led < 60; led++) {
-        if (led <= counter) {
+        if (led < counter) {
             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
         } else {
             sendLedstripFrame(0x00, 0x00, 0x00, 0x05);

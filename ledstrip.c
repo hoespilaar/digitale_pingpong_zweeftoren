@@ -116,7 +116,7 @@ void counter_led() {
     
     sendLedstripStartFrame();
     for (uint8_t led = 0; led < NUMBER_OF_LEDS; led++) { //dan sturen we de waarde van alle leds door.
-        if (led <= counter) {
+        if (led < counter) {
             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);
         } else {
             sendLedstripFrame(0x00, 0x00, 0x00, 0x05);

@@ -330,8 +330,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 26 ]
 {
 "119
-[; ;ledstrip.c: 119:         if (led <= counter) {
-[e $ ! <= -> _led `ui -> _counter `ui 29  ]
+[; ;ledstrip.c: 119:         if (led < counter) {
+[e $ ! < -> _led `ui -> _counter `ui 29  ]
 {
 "120
 [; ;ledstrip.c: 120:             sendLedstripFrame(0xFF, 0x00, 0x00, 0x05);

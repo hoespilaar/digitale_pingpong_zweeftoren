@@ -1068,10 +1068,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;controller.c: 4: static uint16_t hoogte_bal;
 [v _hoogte_bal `us ~T0 @X0 1 s ]
 "5
-[; ;controller.c: 5: static uint16_t setpoint = 50;
+[; ;controller.c: 5: static uint16_t setpoint = 150;
 [v _setpoint `us ~T0 @X0 1 s ]
 [i _setpoint
--> -> 50 `i `us
+-> -> 150 `i `us
 ]
 "6
 [; ;controller.c: 6: static uint16_t dutycycle;

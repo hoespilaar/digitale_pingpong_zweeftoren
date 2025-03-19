@@ -2,7 +2,7 @@
 #include "mcc_generated_files/pwm/pwm5.h"
 
 static uint16_t hoogte_bal;
-static uint16_t setpoint = 50;
+static uint16_t setpoint = 150;
 static uint16_t dutycycle; //PWM5 heeft 10 bits resolutie -> neem uint16_t als type
 
 static float integraal = 0;

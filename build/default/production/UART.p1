@@ -8,6 +8,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "307
 [; ;./mcc_generated_files/uart/eusart.h: 307: uint8_t EUSART_Read(void);
 [v _EUSART_Read `(uc ~T0 @X0 0 ef ]
+"16 ./controller.h
+[; ;./controller.h: 16: uint16_t getSetpoint(void);
+[v _getSetpoint `(us ~T0 @X0 0 ef ]
 "17 ./PushUp.h
 [; ;./PushUp.h: 17: uint16_t getCounter(void);
 [v _getCounter `(us ~T0 @X0 0 ef ]
@@ -1327,15 +1330,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;UART.c: 79:     if (mustPrintLogs) {
 [e $ ! != -> _mustPrintLogs `i -> 0 `i 992  ]
 {
+"81
+[; ;UART.c: 81:         printf(", setpoint: %u ", getSetpoint());
+[e ( _printf , (. :s 3C -> ( _getSetpoint ..  `ui ]
 "87
 [; ;UART.c: 87:         printf("Count: %u", getCounter());
-[e ( _printf , (. :s 3C -> ( _getCounter ..  `ui ]
+[e ( _printf , (. :s 4C -> ( _getCounter ..  `ui ]
 "88
 [; ;UART.c: 88:         printf (", pomp: %u", getPomphoogte());
-[e ( _printf , (. :s 4C -> ( _getPomphoogte ..  `ui ]
+[e ( _printf , (. :s 5C -> ( _getPomphoogte ..  `ui ]
 "89
 [; ;UART.c: 89:         printf("\r\n");
-[e ( _printf :s 5C ]
+[e ( _printf :s 6C ]
 "90
 [; ;UART.c: 90:     }
 }
@@ -1389,7 +1395,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setSetpoint (1 -> ( _atoi (1 -> + _str * -> -> 1 `i `x -> -> # *U _str `i `x `*Cuc `us ]
 "106
 [; ;UART.c: 106:             printf("changed setpoint to %u\r\n", (uint16_t) atoi(str + 1));
-[e ( _printf , (. :s 6C -> -> ( _atoi (1 -> + _str * -> -> 1 `i `x -> -> # *U _str `i `x `*Cuc `us `ui ]
+[e ( _printf , (. :s 7C -> -> ( _atoi (1 -> + _str * -> -> 1 `i `x -> -> # *U _str `i `x `*Cuc `us `ui ]
 "107
 [; ;UART.c: 107:             break;
 [e $U 995  ]
@@ -1404,7 +1410,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setKp (1 ( _str2float (1 + _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
 "112
 [; ;UART.c: 112:             printf("changed kp\r\n");
-[e ( _printf :s 7C ]
+[e ( _printf :s 8C ]
 "113
 [; ;UART.c: 113:             break;
 [e $U 995  ]
@@ -1419,7 +1425,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setKi (1 ( _str2float (1 + _str * -> -> 1 `i `x -> -> # *U _str `i `x ]
 "117
 [; ;UART.c: 117:             printf("changed ki\r\n");
-[e ( _printf :s 8C ]
+[e ( _printf :s 9C ]
 "118
 [; ;UART.c: 118:             break;
 [e $U 995  ]
@@ -1434,7 +1440,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _mustPrintLogs -> -> ! != -> _mustPrintLogs `i -> 0 `i `i `a ]
 "122
 [; ;UART.c: 122:             printf("logs toggled\r\n");
-[e ( _printf :s 9C ]
+[e ( _printf :s 10C ]
 "123
 [; ;UART.c: 123:             break;
 [e $U 995  ]
@@ -1443,7 +1449,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1006 ]
 "127
 [; ;UART.c: 127:             printf("Unkown command\r\n");
-[e ( _printf :s 10C ]
+[e ( _printf :s 11C ]
 "128
 [; ;UART.c: 128:     };
 }
@@ -1466,12 +1472,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [p f _printf 9471620 ]
 [a 1C 37 105 46 37 48 51 117 0 ]
-[a 3C 67 111 117 110 116 58 32 37 117 0 ]
-[a 4C 44 32 112 111 109 112 58 32 37 117 0 ]
+[a 4C 67 111 117 110 116 58 32 37 117 0 ]
+[a 5C 44 32 112 111 109 112 58 32 37 117 0 ]
+[a 3C 44 32 115 101 116 112 111 105 110 116 58 32 37 117 32 0 ]
 [a 2C 105 110 112 117 116 32 98 117 102 102 101 114 32 111 118 101 114 102 108 111 119 13 10 0 ]
-[a 6C 99 104 97 110 103 101 100 32 115 101 116 112 111 105 110 116 32 116 111 32 37 117 13 10 0 ]
-[a 7C 99 104 97 110 103 101 100 32 107 112 13 10 0 ]
-[a 8C 99 104 97 110 103 101 100 32 107 105 13 10 0 ]
-[a 10C 85 110 107 111 119 110 32 99 111 109 109 97 110 100 13 10 0 ]
-[a 9C 108 111 103 115 32 116 111 103 103 108 101 100 13 10 0 ]
-[a 5C 13 10 0 ]
+[a 7C 99 104 97 110 103 101 100 32 115 101 116 112 111 105 110 116 32 116 111 32 37 117 13 10 0 ]
+[a 8C 99 104 97 110 103 101 100 32 107 112 13 10 0 ]
+[a 9C 99 104 97 110 103 101 100 32 107 105 13 10 0 ]
+[a 11C 85 110 107 111 119 110 32 99 111 109 109 97 110 100 13 10 0 ]
+[a 10C 108 111 103 115 32 116 111 103 103 108 101 100 13 10 0 ]
+[a 6C 13 10 0 ]

@@ -12170,7 +12170,7 @@ void printLogs(void) {
 
     if (mustPrintLogs) {
 
-
+        printf(", setpoint: %u ", getSetpoint());
 
 
 
